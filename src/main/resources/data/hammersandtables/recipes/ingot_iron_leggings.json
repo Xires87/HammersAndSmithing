@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:gold_ingot"
+  },
+  "base": {
+    "item": "hammersandtables:nugget_iron_leggings"
+  },
+  "result": {
+    "item": "hammersandtables:ingot_iron_leggings"
+  }
+}

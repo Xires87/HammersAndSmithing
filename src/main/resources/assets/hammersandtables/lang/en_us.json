@@ -1,0 +1,110 @@
+{
+  "item.minecraft.golden_helmet": "Shiny Golden Helmet",
+  "item.minecraft.golden_chestplate": "Shiny Golden Chestplate",
+  "item.minecraft.golden_leggings": "Shiny Golden Leggings",
+  "item.minecraft.golden_boots": "Shiny Golden Boots",
+  "item.minecraft.golden_axe": "Shiny Golden Axe",
+  "item.minecraft.golden_pickaxe": "Shiny Golden Pickaxe",
+  "item.minecraft.golden_sword": "Shiny Golden Sword",
+  "item.minecraft.golden_hoe": "Shiny Golden Hoe",
+  "item.minecraft.golden_shovel": "Shiny Golden Shovel",
+
+  "item.hammersandtables.copper_pickaxe": "Copper Pickaxe",
+  "item.hammersandtables.copper_axe": "Copper Axe",
+  "item.hammersandtables.copper_sword": "Copper Sword",
+  "item.hammersandtables.copper_shovel": "Copper Shovel",
+  "item.hammersandtables.copper_hoe": "Copper Hoe",
+  "item.hammersandtables.copper_hammer": "Copper Hammer",
+
+  "item.hammersandtables.nugget_copper_pickaxe": "Reinforced Copper Pickaxe",
+  "item.hammersandtables.ingot_copper_pickaxe": "Upgraded Copper Pickaxe",
+  "item.hammersandtables.nugget_copper_axe": "Reinforced Copper Axe",
+  "item.hammersandtables.ingot_copper_axe": "Upgraded Copper Axe",
+  "item.hammersandtables.nugget_copper_sword": "Reinforced Copper Sword",
+  "item.hammersandtables.ingot_copper_sword": "Upgraded Copper Sword",
+  "item.hammersandtables.nugget_copper_shovel": "Reinforced Copper Shovel",
+  "item.hammersandtables.ingot_copper_shovel": "Upgraded Copper Shovel",
+  "item.hammersandtables.nugget_copper_hoe": "Reinforced Copper Hoe",
+  "item.hammersandtables.ingot_copper_hoe": "Upgraded Copper Hoe",
+  "item.hammersandtables.nugget_copper_hammer": "Reinforced Copper Hammer",
+  "item.hammersandtables.ingot_copper_hammer": "Upgraded Copper Hammer",
+
+  "item.hammersandtables.copper_helmet": "Copper Helmet",
+  "item.hammersandtables.copper_chestplate": "Copper Chestplate",
+  "item.hammersandtables.copper_leggings": "Copper Leggings",
+  "item.hammersandtables.copper_boots": "Copper Boots",
+
+  "item.hammersandtables.nugget_copper_helmet": "Reinforced Copper Helmet",
+  "item.hammersandtables.ingot_copper_helmet": "Upgraded Copper Helmet",
+  "item.hammersandtables.nugget_copper_chestplate": "Reinforced Copper Chestplate",
+  "item.hammersandtables.ingot_copper_chestplate": "Upgraded Copper Chestplate",
+  "item.hammersandtables.nugget_copper_leggings": "Reinforced Copper Leggings",
+  "item.hammersandtables.ingot_copper_leggings": "Upgraded Copper Leggings",
+  "item.hammersandtables.nugget_copper_boots": "Reinforced Copper Boots",
+  "item.hammersandtables.ingot_copper_boots": "Upgraded Copper Boots",
+
+  "item.hammersandtables.iron_hammer": "Iron Hammer",
+
+  "item.hammersandtables.nugget_iron_pickaxe": "Reinforced Iron Pickaxe",
+  "item.hammersandtables.nugget_iron_axe": "Reinforced Iron Axe",
+  "item.hammersandtables.nugget_iron_sword": "Reinforced Iron Sword",
+  "item.hammersandtables.nugget_iron_shovel": "Reinforced Iron Shovel",
+  "item.hammersandtables.nugget_iron_hoe": "Reinforced Iron Hoe",
+  "item.hammersandtables.nugget_iron_hammer": "Reinforced Iron Hammer",
+
+  "item.hammersandtables.ingot_iron_pickaxe": "Upgraded Iron Pickaxe",
+  "item.hammersandtables.ingot_iron_axe": "Upgraded Iron Axe",
+  "item.hammersandtables.ingot_iron_sword": "Upgraded Iron Sword",
+  "item.hammersandtables.ingot_iron_shovel": "Upgraded Iron Shovel",
+  "item.hammersandtables.ingot_iron_hoe": "Upgraded Iron Hoe",
+  "item.hammersandtables.ingot_iron_hammer": "Upgraded Iron Hammer",
+
+  "item.hammersandtables.nugget_iron_helmet": "Reinforced Iron Helmet",
+  "item.hammersandtables.ingot_iron_helmet": "Upgraded Iron Helmet",
+  "item.hammersandtables.nugget_iron_chestplate": "Reinforced Iron Chestplate",
+  "item.hammersandtables.ingot_iron_chestplate": "Upgraded Iron Chestplate",
+  "item.hammersandtables.nugget_iron_leggings": "Reinforced Iron Leggings",
+  "item.hammersandtables.ingot_iron_leggings": "Upgraded Iron Leggings",
+  "item.hammersandtables.nugget_iron_boots": "Reinforced Iron Boots",
+  "item.hammersandtables.ingot_iron_boots": "Upgraded Iron Boots",
+
+  "item.hammersandtables.golden_pickaxe": "Golden Pickaxe",
+  "item.hammersandtables.golden_axe": "Golden Axe",
+  "item.hammersandtables.golden_sword": "Golden Sword",
+  "item.hammersandtables.golden_shovel": "Golden Shovel",
+  "item.hammersandtables.golden_hoe": "Golden Hoe",
+  "item.hammersandtables.golden_hammer": "Golden Hammer",
+
+  "item.hammersandtables.golden_helmet": "Golden Helmet",
+  "item.hammersandtables.golden_chestplate": "Golden Chestplate",
+  "item.hammersandtables.golden_leggings": "Golden Leggings",
+  "item.hammersandtables.golden_boots": "Golden Boots",
+
+  "item.hammersandtables.diamond_hammer": "Diamond Hammer",
+  "item.hammersandtables.netherite_hammer": "Netherite Hammer",
+
+
+  "block.hammersandtables.copper_table": "Copper Smithing Table",
+  "block.hammersandtables.iron_table": "Iron Smithing Table",
+  "block.hammersandtables.gold_table": "Golden Smithing Table",
+  "block.hammersandtables.diamond_table": "Diamond Smithing Table",
+
+
+  "item.hammersandtables.bone_helmet": "Bone Helmet",
+  "item.hammersandtables.bone_chestplate": "Bone Chestplate",
+  "item.hammersandtables.bone_leggings": "Bone Leggings",
+  "item.hammersandtables.bone_boots": "Bone Boots",
+
+
+  "item.hammersandtables.diamond_golden_pickaxe": "Reinforced Golden Pickaxe",
+  "item.hammersandtables.diamond_golden_axe": "Reinforced Golden Axe",
+  "item.hammersandtables.diamond_golden_sword": "Reinforced Golden Sword",
+  "item.hammersandtables.diamond_golden_shovel": "Reinforced Golden Shovel",
+  "item.hammersandtables.diamond_golden_hoe": "Reinforced Golden Hoe",
+  "item.hammersandtables.diamond_golden_hammer": "Reinforced Golden Hammer",
+
+  "item.hammersandtables.diamond_golden_helmet": "Reinforced Golden Helmet",
+  "item.hammersandtables.diamond_golden_chestplate": "Reinforced Golden Chestplate",
+  "item.hammersandtables.diamond_golden_leggings": "Reinforced Golden Leggings",
+  "item.hammersandtables.diamond_golden_boots": "Reinforced Golden Boots"
+}

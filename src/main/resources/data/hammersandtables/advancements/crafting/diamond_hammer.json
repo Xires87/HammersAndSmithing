@@ -1,0 +1,33 @@
+{
+  "parent": "hammersandtables:crafting/diamond_workshop",
+  "criteria": {
+    "iron_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hammersandtables:diamond_hammer"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": "Use it in Diamond Smithing Table to craft Netherite items",
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "hammersandtables:diamond_hammer"
+    },
+    "show_toast": true,
+    "title": "Diamond Hammer"
+  },
+  "requirements": [
+    [
+      "iron_pickaxe"
+    ]
+  ]
+}

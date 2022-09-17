@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:diamond"
+  },
+  "base": {
+    "item": "hammersandtables:golden_shovel"
+  },
+  "result": {
+    "item": "hammersandtables:diamond_golden_shovel"
+  }
+}

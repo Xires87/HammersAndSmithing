@@ -1,0 +1,33 @@
+{
+  "parent": "hammersandtables:crafting/stone_pickaxe",
+  "criteria": {
+    "iron_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:copper_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": "Smelt a Copper Ingot",
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:copper_ingot"
+    },
+    "show_toast": true,
+    "title": "Smelter"
+  },
+  "requirements": [
+    [
+      "iron_pickaxe"
+    ]
+  ]
+}

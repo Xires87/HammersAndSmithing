@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "hammersandtables",
+  "version": "${version}",
+
+  "name": "Hammers and Tables",
+  "description": "Adds hammers and smithing tables which are required for crafting",
+  "authors": [
+    "Wookash Fryc"
+  ],
+  "contact": {
+    "email": "frycmod@gmail.com"
+  },
+
+  "license": "MIT",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.fryc.hammersandtables.HammersAndTables"
+    ],
+    "client": [
+      "net.fryc.hammersandtables.HammersAndTablesClient"
+    ]
+  },
+  "mixins": [
+    "hammersandtables.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric-api": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

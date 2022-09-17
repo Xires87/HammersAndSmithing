@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "hammersandtables:block/gold_table_front",
+    "north": "hammersandtables:block/gold_table_front",
+    "south": "hammersandtables:block/gold_table_front",
+    "east": "hammersandtables:block/gold_table_side",
+    "west": "hammersandtables:block/gold_table_side",
+    "up": "hammersandtables:block/gold_table_top",
+    "down": "hammersandtables:block/gold_table_bottom"
+  }
+}

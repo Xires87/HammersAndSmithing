@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "hammersandtables:block/copper_table_front",
+    "north": "hammersandtables:block/copper_table_front",
+    "south": "hammersandtables:block/copper_table_front",
+    "east": "hammersandtables:block/copper_table_side",
+    "west": "hammersandtables:block/copper_table_side",
+    "up": "hammersandtables:block/copper_table_top",
+    "down": "hammersandtables:block/copper_table_bottom"
+  }
+}

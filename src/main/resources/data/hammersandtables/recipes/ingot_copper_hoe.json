@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:iron_ingot"
+  },
+  "base": {
+    "item": "hammersandtables:nugget_copper_hoe"
+  },
+  "result": {
+    "item": "hammersandtables:ingot_copper_hoe"
+  }
+}

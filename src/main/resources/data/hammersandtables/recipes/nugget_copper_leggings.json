@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:iron_nugget"
+  },
+  "base": {
+    "item": "hammersandtables:copper_leggings"
+  },
+  "result": {
+    "item": "hammersandtables:nugget_copper_leggings"
+  }
+}

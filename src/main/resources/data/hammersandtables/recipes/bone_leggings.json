@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X",
+    "X#X"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:leather_leggings"
+    },
+    "X": {
+      "item": "minecraft:bone"
+    }
+  },
+  "result": {
+    "item": "hammersandtables:bone_leggings"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "hammersandtables:copper_hammer",
+    "hammersandtables:copper_pickaxe",
+    "hammersandtables:copper_axe",
+    "hammersandtables:copper_shovel",
+    "hammersandtables:copper_hoe",
+    "hammersandtables:copper_sword",
+    "hammersandtables:copper_helmet",
+    "hammersandtables:copper_chestplate",
+    "hammersandtables:copper_leggings",
+    "hammersandtables:copper_boots"
+  ]
+}

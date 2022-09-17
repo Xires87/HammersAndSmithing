@@ -1,0 +1,33 @@
+{
+  "parent": "hammersandtables:crafting/gold_workshop",
+  "criteria": {
+    "iron_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hammersandtables:diamond_golden_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": "Reinforce Golden Pickaxe with Diamond",
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "hammersandtables:diamond_golden_pickaxe"
+    },
+    "show_toast": true,
+    "title": "Advanced Smithing"
+  },
+  "requirements": [
+    [
+      "iron_pickaxe"
+    ]
+  ]
+}

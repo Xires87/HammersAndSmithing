@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "hammersandtables:copper_hammer",
+    "hammersandtables:nugget_copper_hammer",
+    "hammersandtables:ingot_copper_hammer",
+    "hammersandtables:iron_hammer",
+    "hammersandtables:nugget_iron_hammer",
+    "hammersandtables:ingot_iron_hammer",
+    "hammersandtables:golden_hammer",
+    "hammersandtables:diamond_golden_hammer",
+    "hammersandtables:diamond_hammer",
+    "hammersandtables:netherite_hammer"
+  ]
+}

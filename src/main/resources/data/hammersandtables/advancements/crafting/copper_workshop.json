@@ -1,0 +1,33 @@
+{
+  "parent": "hammersandtables:crafting/copper_ingot",
+  "criteria": {
+    "iron_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hammersandtables:copper_table"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": "You have to stand near smithing table to craft tools!",
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "hammersandtables:copper_table"
+    },
+    "show_toast": true,
+    "title": "Copper Workshop"
+  },
+  "requirements": [
+    [
+      "iron_pickaxe"
+    ]
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hammersandtables:item/bone_helmet",
+    "layer1": "hammersandtables:item/bone_helmet_overlay"
+  }
+}

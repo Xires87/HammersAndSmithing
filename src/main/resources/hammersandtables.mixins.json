@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.fryc.hammersandtables.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "SmithingTableMixin",
+    "ToolMaterialsMixin",
+    "ArmorMaterialsMixin",
+    "CraftingScreenHandlerMixin",
+    "PowderSnowBlockMixin",
+    "RuinedPortalMixin",
+    "VillagerEntityMixin",
+    "WitherSkeletonMixin",
+    "MobEntityMixin"
+  ],
+  "client": [
+    "ExampleMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

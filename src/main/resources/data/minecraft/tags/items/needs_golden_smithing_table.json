@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "hammersandtables:golden_hammer",
+    "hammersandtables:golden_pickaxe",
+    "hammersandtables:golden_axe",
+    "hammersandtables:golden_shovel",
+    "hammersandtables:golden_hoe",
+    "hammersandtables:golden_sword",
+    "hammersandtables:golden_helmet",
+    "hammersandtables:golden_chestplate",
+    "hammersandtables:golden_leggings",
+    "hammersandtables:golden_boots"
+  ]
+}

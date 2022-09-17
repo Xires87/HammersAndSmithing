@@ -1,0 +1,33 @@
+{
+  "parent": "hammersandtables:crafting/copper_workshop",
+  "criteria": {
+    "iron_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hammersandtables:nugget_copper_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": "Use three Iron Nuggets to reinforce Copper Pickaxe",
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "hammersandtables:nugget_copper_pickaxe"
+    },
+    "show_toast": true,
+    "title": "Smithing"
+  },
+  "requirements": [
+    [
+      "iron_pickaxe"
+    ]
+  ]
+}

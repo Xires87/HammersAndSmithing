@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X#X"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:leather_helmet"
+    },
+    "X": {
+      "item": "minecraft:bone"
+    }
+  },
+  "result": {
+    "item": "hammersandtables:bone_helmet"
+  }
+}

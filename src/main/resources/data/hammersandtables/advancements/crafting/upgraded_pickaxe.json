@@ -1,0 +1,33 @@
+{
+  "parent": "hammersandtables:crafting/iron_workshop",
+  "criteria": {
+    "iron_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hammersandtables:ingot_copper_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": "Upgrade Reinforced Copper Pickaxe with Iron Ingot using Iron Hammer or better",
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:iron_pickaxe"
+    },
+    "show_toast": true,
+    "title": "Almost like Iron Pickaxe"
+  },
+  "requirements": [
+    [
+      "iron_pickaxe"
+    ]
+  ]
+}

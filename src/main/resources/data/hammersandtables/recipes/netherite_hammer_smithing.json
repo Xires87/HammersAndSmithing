@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "hammersandtables:diamond_hammer"
+  },
+  "result": {
+    "item": "hammersandtables:netherite_hammer"
+  }
+}

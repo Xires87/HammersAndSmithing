@@ -1,0 +1,33 @@
+{
+  "parent": "hammersandtables:crafting/iron_workshop",
+  "criteria": {
+    "iron_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hammersandtables:gold_table"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": "Place it near Crafting Table and craft Golden items!",
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "hammersandtables:gold_table"
+    },
+    "show_toast": true,
+    "title": "Golden Workshop"
+  },
+  "requirements": [
+    [
+      "iron_pickaxe"
+    ]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:diamond"
+  },
+  "base": {
+    "item": "hammersandtables:golden_helmet"
+  },
+  "result": {
+    "item": "hammersandtables:diamond_golden_helmet"
+  }
+}
