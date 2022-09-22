@@ -4,7 +4,7 @@
     "item": "minecraft:iron_nugget"
   },
   "base": {
-    "item": "hammersandtables:copper_axe"
+    "item": "hammersandtables:copper_hammer"
   },
   "result": {
     "item": "hammersandtables:nugget_copper_hammer"

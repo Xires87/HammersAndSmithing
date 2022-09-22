@@ -1,13 +1,11 @@
 package net.fryc.hammersandtables.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import net.minecraft.client.gui.screen.ingame.ForgingScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.screen.ForgingScreenHandler;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerListener;
 import net.minecraft.text.Text;
@@ -54,9 +52,12 @@ public class ModForgingScreen<T extends ModForgingScreenHandler> extends Handled
         int j = (this.height - this.backgroundHeight) / 2;
         this.drawTexture(matrices, i, j, 0, 0, this.backgroundWidth, this.backgroundHeight);
         this.drawTexture(matrices, i + 59, j + 20, 0, this.backgroundHeight + (((ModForgingScreenHandler)this.handler).getSlot(0).hasStack() ? 0 : 16), 110, 16);
+        /* draws red X on smithing screen
         if ((((ModForgingScreenHandler)this.handler).getSlot(0).hasStack() || ((ModForgingScreenHandler)this.handler).getSlot(1).hasStack()) && !((ModForgingScreenHandler)this.handler).getSlot(2).hasStack()) {
             this.drawTexture(matrices, i + 99, j + 45, this.backgroundWidth, 0, 28, 21);
         }
+
+         */
 
     }
 
