@@ -2,6 +2,7 @@ package net.fryc.hammersandtables;
 
 import net.fabricmc.api.ModInitializer;
 import net.fryc.hammersandtables.blocks.ModBlocks;
+import net.fryc.hammersandtables.gamerules.ModGameRules;
 import net.fryc.hammersandtables.items.ModItems;
 import net.fryc.hammersandtables.screen.ModScreenHandlers;
 import org.slf4j.Logger;
@@ -17,5 +18,7 @@ public class HammersAndTables implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModScreenHandlers.registerAllScreenHandlers();
+
+		ModGameRules.registerGameRules();
 	}
 }

@@ -1,13 +1,13 @@
 package net.fryc.hammersandtables.mixin;
 
 import net.fryc.hammersandtables.blocks.ModBlocks;
+import net.fryc.hammersandtables.gamerules.ModGameRules;
 import net.fryc.hammersandtables.tag.ModBlockTags;
 import net.fryc.hammersandtables.tag.ModItemTags;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.CraftingInventory;
 import net.minecraft.inventory.CraftingResultInventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.screen.AbstractRecipeScreenHandler;
 import net.minecraft.screen.CraftingScreenHandler;
 import net.minecraft.screen.ScreenHandler;
@@ -45,30 +45,30 @@ abstract class CraftingScreenHandlerMixin extends AbstractRecipeScreenHandler<Cr
             if(!gold){
                 if(!iron){
                     if(!copper){
-                        if(resultInventory.getStack(0).isIn(ModItemTags.NEEDS_COPPER_SMITHING_TABLE) ||
-                                resultInventory.getStack(0).isIn(ModItemTags.NEEDS_IRON_SMITHING_TABLE) ||
-                                resultInventory.getStack(0).isIn(ModItemTags.NEEDS_GOLDEN_SMITHING_TABLE) ||
-                                resultInventory.getStack(0).isIn(ModItemTags.NEEDS_DIAMOND_SMITHING_TABLE)){
+                        if((resultInventory.getStack(0).isIn(ModItemTags.NEEDS_COPPER_SMITHING_TABLE) && world.getGameRules().getBoolean(ModGameRules.BLOCK_COPPER_RECIPES)) ||
+                                (resultInventory.getStack(0).isIn(ModItemTags.NEEDS_IRON_SMITHING_TABLE) && world.getGameRules().getBoolean(ModGameRules.BLOCK_IRON_RECIPES)) ||
+                                (resultInventory.getStack(0).isIn(ModItemTags.NEEDS_GOLDEN_SMITHING_TABLE) && world.getGameRules().getBoolean(ModGameRules.BLOCK_GOLDEN_RECIPES)) ||
+                                (resultInventory.getStack(0).isIn(ModItemTags.NEEDS_DIAMOND_SMITHING_TABLE) && world.getGameRules().getBoolean(ModGameRules.BLOCK_DIAMOND_RECIPES))){
                             resultInventory.setStack(0, ItemStack.EMPTY);
                         }
                     }
                     else{
-                        if(resultInventory.getStack(0).isIn(ModItemTags.NEEDS_IRON_SMITHING_TABLE) ||
-                                resultInventory.getStack(0).isIn(ModItemTags.NEEDS_GOLDEN_SMITHING_TABLE) ||
-                                resultInventory.getStack(0).isIn(ModItemTags.NEEDS_DIAMOND_SMITHING_TABLE)){
+                        if((resultInventory.getStack(0).isIn(ModItemTags.NEEDS_IRON_SMITHING_TABLE) && world.getGameRules().getBoolean(ModGameRules.BLOCK_IRON_RECIPES)) ||
+                                (resultInventory.getStack(0).isIn(ModItemTags.NEEDS_GOLDEN_SMITHING_TABLE) && world.getGameRules().getBoolean(ModGameRules.BLOCK_GOLDEN_RECIPES)) ||
+                                (resultInventory.getStack(0).isIn(ModItemTags.NEEDS_DIAMOND_SMITHING_TABLE) && world.getGameRules().getBoolean(ModGameRules.BLOCK_DIAMOND_RECIPES))){
                             resultInventory.setStack(0, ItemStack.EMPTY);
                         }
                     }
                 }
                 else{
-                    if(resultInventory.getStack(0).isIn(ModItemTags.NEEDS_GOLDEN_SMITHING_TABLE) ||
-                            resultInventory.getStack(0).isIn(ModItemTags.NEEDS_DIAMOND_SMITHING_TABLE)){
+                    if((resultInventory.getStack(0).isIn(ModItemTags.NEEDS_GOLDEN_SMITHING_TABLE) && world.getGameRules().getBoolean(ModGameRules.BLOCK_GOLDEN_RECIPES)) ||
+                            (resultInventory.getStack(0).isIn(ModItemTags.NEEDS_DIAMOND_SMITHING_TABLE) && world.getGameRules().getBoolean(ModGameRules.BLOCK_DIAMOND_RECIPES))){
                         resultInventory.setStack(0, ItemStack.EMPTY);
                     }
                 }
             }
             else{
-                if(resultInventory.getStack(0).isIn(ModItemTags.NEEDS_DIAMOND_SMITHING_TABLE)){
+                if(resultInventory.getStack(0).isIn(ModItemTags.NEEDS_DIAMOND_SMITHING_TABLE) && world.getGameRules().getBoolean(ModGameRules.BLOCK_DIAMOND_RECIPES)){
                     resultInventory.setStack(0, ItemStack.EMPTY);
                 }
             }

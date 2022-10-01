@@ -106,5 +106,20 @@
   "item.hammersandtables.diamond_golden_helmet": "Reinforced Golden Helmet",
   "item.hammersandtables.diamond_golden_chestplate": "Reinforced Golden Chestplate",
   "item.hammersandtables.diamond_golden_leggings": "Reinforced Golden Leggings",
-  "item.hammersandtables.diamond_golden_boots": "Reinforced Golden Boots"
+  "item.hammersandtables.diamond_golden_boots": "Reinforced Golden Boots",
+
+
+  "gamerule.overwriteToolTradeOffers": "Change trade offers for Toolsmith, Weaponsmith and Armorer",
+  "gamerule.overwriteToolTradeOffers.description": "When turned off, these villagers use vanilla trade offers, which are overpowered with this mod",
+  "gamerule.overwriteLibrarianTradeOffers": "Change trade offers for Librarian",
+  "gamerule.overwriteLibrarianTradeOffers.description": "When turned off, Librarians sell enchanted books from first level (novice)",
+
+  "gamerule.blockCopperRecipes": "Block copper recipes",
+  "gamerule.blockCopperRecipes.description": "When turned on, you have to stand near Copper Smithing Table to craft copper items",
+  "gamerule.blockIronRecipes": "Block iron recipes",
+  "gamerule.blockIronRecipes.description": "When turned on, you have to stand near Iron Smithing Table to craft iron items",
+  "gamerule.blockGoldenRecipes": "Block gold recipes",
+  "gamerule.blockGoldenRecipes.description": "When turned on, you have to stand near Golden Smithing Table to craft golden items",
+  "gamerule.blockDiamondRecipes": "Block diamond recipes",
+  "gamerule.blockDiamondRecipes.description": "When turned on, you have to stand near Diamond Smithing Table to craft diamond items"
 }
