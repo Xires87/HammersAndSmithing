@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fryc.hammersandtables.blocks.ModBlocks;
 import net.fryc.hammersandtables.gamerules.ModGameRules;
 import net.fryc.hammersandtables.items.ModItems;
+import net.fryc.hammersandtables.villagers.ModTradeOffers;
 import net.fryc.hammersandtables.screen.ModScreenHandlers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,5 +21,7 @@ public class HammersAndTables implements ModInitializer {
 		ModScreenHandlers.registerAllScreenHandlers();
 
 		ModGameRules.registerGameRules();
+
+		ModTradeOffers.registerModTradeOffers();
 	}
 }

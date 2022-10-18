@@ -10,7 +10,6 @@
     "CraftingScreenHandlerMixin",
     "PowderSnowBlockMixin",
     "RuinedPortalMixin",
-    "VillagerEntityMixin",
     "WitherSkeletonMixin",
     "MobEntityMixin"
   ],
