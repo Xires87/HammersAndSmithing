@@ -1,0 +1,148 @@
+{
+  "profession": "toolsmith",
+  "trades": {
+    "novice": [
+      {
+        "type": "numismatic-overhaul:buy_stack",
+        "price": 250,
+        "buy": {
+          "item": "minecraft:coal",
+          "count": 25
+        },
+        "max_uses": 10
+      },
+      {
+        "type": "numismatic-overhaul:buy_stack",
+        "price": 180,
+        "buy": {
+          "item": "minecraft:copper_ingot",
+          "count": 14
+        },
+        "max_uses": 10
+      }
+    ],
+    "apprentice": [
+      {
+        "type": "numismatic-overhaul:buy_stack",
+        "price": 200,
+        "buy": {
+          "item": "minecraft:iron_ingot",
+          "count": 7
+        },
+        "max_uses": 8,
+        "villager_experience": 10
+      },
+      {
+        "type": "numismatic-overhaul:sell_stack",
+        "price": 450,
+        "sell": {
+          "item": "hammersandtables:copper_pickaxe",
+          "count": 1
+        },
+        "max_uses": 8,
+        "villager_experience": 10
+      },
+      {
+        "type": "numismatic-overhaul:sell_stack",
+        "price": 325,
+        "sell": {
+          "item": "hammersandtables:copper_shovel",
+          "count": 1
+        },
+        "max_uses": 8,
+        "villager_experience": 10
+      }
+    ],
+    "journeyman": [
+      {
+        "type": "numismatic-overhaul:sell_stack",
+        "price": 3000,
+        "sell": {
+          "item": "minecraft:bell",
+          "count": 1
+        },
+        "villager_experience": 25
+      },
+      {
+        "type": "numismatic-overhaul:enchant_item",
+        "base_price": 450,
+        "allow_treasure": false,
+        "level": 15,
+        "item": {
+          "item": "hammersandtables:copper_pickaxe"
+        },
+        "max_uses": 5,
+        "villager_experience": 15
+      },
+      {
+        "type": "numismatic-overhaul:enchant_item",
+        "base_price": 300,
+        "allow_treasure": false,
+        "level": 15,
+        "item": {
+          "item": "hammersandtables:copper_shovel"
+        },
+        "max_uses": 5,
+        "villager_experience": 15
+      }
+    ],
+    "expert": [
+      {
+        "type": "numismatic-overhaul:buy_stack",
+        "price": 225,
+        "buy": {
+          "item": "minecraft:gold_ingot",
+          "count": 6
+        },
+        "max_uses": 8,
+        "villager_experience": 20
+      },
+      {
+        "type": "numismatic-overhaul:enchant_item",
+        "base_price": 400,
+        "allow_treasure": false,
+        "level": 20,
+        "item": {
+          "item": "minecraft:iron_shovel"
+        },
+        "max_uses": 4,
+        "villager_experience": 20
+      },
+      {
+        "type": "numismatic-overhaul:enchant_item",
+        "base_price": 700,
+        "allow_treasure": false,
+        "level": 20,
+        "item": {
+          "item": "minecraft:iron_pickaxe"
+        },
+        "max_uses": 4,
+        "villager_experience": 20
+      }
+    ],
+    "master": [
+      {
+        "type": "numismatic-overhaul:enchant_item",
+        "base_price": 1050,
+        "allow_treasure": false,
+        "level": 30,
+        "item": {
+          "item": "hammersandtables:golden_pickaxe"
+        },
+        "max_uses": 3,
+        "villager_experience": 30
+      },
+      {
+        "type": "numismatic-overhaul:enchant_item",
+        "base_price": 850,
+        "allow_treasure": true,
+        "level": 30,
+        "item": {
+          "item": "hammersandtables:golden_shovel"
+        },
+        "max_uses": 3,
+        "villager_experience": 30
+      }
+    ]
+  }
+}

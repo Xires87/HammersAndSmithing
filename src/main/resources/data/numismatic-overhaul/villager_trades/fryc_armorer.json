@@ -1,0 +1,213 @@
+{
+  "profession": "armorer",
+  "trades": {
+    "novice": [
+      {
+        "type": "numismatic-overhaul:buy_stack",
+        "price": 180,
+        "buy": {
+          "item": "minecraft:coal",
+          "count": 18
+        },
+        "max_uses": 14,
+        "villager_experience": 2
+      },
+      {
+        "type": "numismatic-overhaul:sell_stack",
+        "price": 800,
+        "sell": {
+          "item": "hammersandtables:copper_helmet",
+          "count": 1
+        },
+        "max_uses": 8,
+        "villager_experience": 4
+      },
+      {
+        "type": "numismatic-overhaul:sell_stack",
+        "price": 1050,
+        "sell": {
+          "item": "hammersandtables:copper_chestplate",
+          "count": 1
+        },
+        "max_uses": 8,
+        "villager_experience": 6
+      },
+      {
+        "type": "numismatic-overhaul:sell_stack",
+        "price": 925,
+        "sell": {
+          "item": "hammersandtables:copper_leggings",
+          "count": 1
+        },
+        "max_uses": 8,
+        "villager_experience": 5
+      },
+      {
+        "type": "numismatic-overhaul:sell_stack",
+        "price": 675,
+        "sell": {
+          "item": "hammersandtables:copper_boots",
+          "count": 1
+        },
+        "max_uses": 8,
+        "villager_experience": 4
+      }
+    ],
+    "apprentice": [
+      {
+        "type": "numismatic-overhaul:buy_stack",
+        "price": 200,
+        "buy": {
+          "item": "minecraft:iron_ingot",
+          "count": 5
+        },
+        "max_uses": 8,
+        "villager_experience": 10
+      },
+      {
+        "type": "numismatic-overhaul:sell_stack",
+        "price": 2200,
+        "sell": {
+          "item": "minecraft:chainmail_helmet",
+          "count": 1
+        },
+        "max_uses": 5,
+        "villager_experience": 15
+      },
+      {
+        "type": "numismatic-overhaul:sell_stack",
+        "price": 1950,
+        "sell": {
+          "item": "minecraft:chainmail_boots",
+          "count": 1
+        },
+        "max_uses": 5,
+        "villager_experience": 15
+      }
+    ],
+    "journeyman": [
+      {
+        "type": "numismatic-overhaul:sell_stack",
+        "price": 2900,
+        "sell": {
+          "item": "minecraft:chainmail_chestplate",
+          "count": 1
+        },
+        "max_uses": 4,
+        "villager_experience": 20
+      },
+      {
+        "type": "numismatic-overhaul:sell_stack",
+        "price": 2500,
+        "sell": {
+          "item": "minecraft:chainmail_leggings",
+          "count": 1
+        },
+        "max_uses": 4,
+        "villager_experience": 20
+      },
+      {
+        "type": "numismatic-overhaul:buy_stack",
+        "price": 225,
+        "buy": {
+          "item": "minecraft:gold_ingot",
+          "count": 4
+        },
+        "max_uses": 8,
+        "villager_experience": 20
+      }
+    ],
+    "expert": [
+      {
+        "type": "numismatic-overhaul:enchant_item",
+        "base_price": 625,
+        "allow_treasure": false,
+        "level": 20,
+        "item": {
+          "item": "minecraft:iron_helmet"
+        },
+        "max_uses": 3,
+        "villager_experience": 20
+      },
+      {
+        "type": "numismatic-overhaul:enchant_item",
+        "base_price": 625,
+        "allow_treasure": false,
+        "level": 20,
+        "item": {
+          "item": "minecraft:iron_chestplate"
+        },
+        "max_uses": 3,
+        "villager_experience": 20
+      },
+      {
+        "type": "numismatic-overhaul:enchant_item",
+        "base_price": 625,
+        "allow_treasure": false,
+        "level": 20,
+        "item": {
+          "item": "minecraft:iron_leggings"
+        },
+        "max_uses": 3,
+        "villager_experience": 20
+      },
+      {
+        "type": "numismatic-overhaul:enchant_item",
+        "base_price": 625,
+        "allow_treasure": false,
+        "level": 20,
+        "item": {
+          "item": "minecraft:iron_boots"
+        },
+        "max_uses": 3,
+        "villager_experience": 20
+      }
+    ],
+    "master": [
+      {
+        "type": "numismatic-overhaul:enchant_item",
+        "base_price": 1100,
+        "allow_treasure": false,
+        "level": 30,
+        "item": {
+          "item": "hammersandtables:golden_helmet"
+        },
+        "max_uses": 2,
+        "villager_experience": 30
+      },
+      {
+        "type": "numismatic-overhaul:enchant_item",
+        "base_price": 1100,
+        "allow_treasure": false,
+        "level": 30,
+        "item": {
+          "item": "hammersandtables:golden_chestplate"
+        },
+        "max_uses": 2,
+        "villager_experience": 30
+      },
+      {
+        "type": "numismatic-overhaul:enchant_item",
+        "base_price": 1100,
+        "allow_treasure": false,
+        "level": 30,
+        "item": {
+          "item": "hammersandtables:golden_leggings"
+        },
+        "max_uses": 2,
+        "villager_experience": 30
+      },
+      {
+        "type": "numismatic-overhaul:enchant_item",
+        "base_price": 1100,
+        "allow_treasure": false,
+        "level": 30,
+        "item": {
+          "item": "hammersandtables:golden_boots"
+        },
+        "max_uses": 2,
+        "villager_experience": 30
+      }
+    ]
+  }
+}
