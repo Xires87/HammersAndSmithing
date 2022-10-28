@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "hammersandtables:copper_table",
     "hammersandtables:iron_table",
     "hammersandtables:gold_table",
     "hammersandtables:diamond_table"

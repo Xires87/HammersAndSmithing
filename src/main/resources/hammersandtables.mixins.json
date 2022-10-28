@@ -7,7 +7,6 @@
     "SmithingTableMixin",
     "ToolMaterialsMixin",
     "ArmorMaterialsMixin",
-    "CraftingScreenHandlerMixin",
     "PowderSnowBlockMixin",
     "RuinedPortalMixin",
     "WitherSkeletonMixin",
