@@ -1,6 +1,7 @@
 package net.fryc.hammersandtables;
 
 import net.fabricmc.api.ModInitializer;
+import net.fryc.craftingmanipulator.rules.RecipeBlockingRules;
 import net.fryc.craftingmanipulator.rules.StandNearBlockRBR;
 import net.fryc.hammersandtables.blocks.ModBlocks;
 import net.fryc.hammersandtables.items.ModItems;
@@ -19,6 +20,7 @@ public class HammersAndTables implements ModInitializer {
 	StandNearBlockRBR IRON = new StandNearBlockRBR("Workshop: Iron Smithing Table", ModItemTags.NEEDS_IRON_SMITHING_TABLE, ModBlockTags.IRON_TABLES);
 	StandNearBlockRBR GOLD = new StandNearBlockRBR("Workshop: Golden Smithing Table", ModItemTags.NEEDS_GOLDEN_SMITHING_TABLE, ModBlockTags.GOLDEN_TABLES);
 	StandNearBlockRBR DIAMOND = new StandNearBlockRBR("Workshop: Diamond Smithing Table", ModItemTags.NEEDS_DIAMOND_SMITHING_TABLE, ModBlockTags.DIAMOND_TABLES);
+	RecipeBlockingRules VANILLA_GOLDEN_ITEMS = new RecipeBlockingRules("Recipe disabled by: Hammers and Smithing", ModItemTags.VANILLA_GOLDEN_ITEMS);
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
