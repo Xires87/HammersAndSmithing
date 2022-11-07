@@ -10,7 +10,8 @@
     "PowderSnowBlockMixin",
     "RuinedPortalMixin",
     "WitherSkeletonMixin",
-    "MobEntityMixin"
+    "MobEntityMixin",
+    "VillagerEntityMixin"
   ],
   "client": [
   ],

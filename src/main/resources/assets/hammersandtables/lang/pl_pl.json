@@ -1,0 +1,129 @@
+{
+  "item.minecraft.golden_helmet": "Lśniący Złoty Hełm",
+  "item.minecraft.golden_chestplate": "Lśniący Złoty Napierśnik",
+  "item.minecraft.golden_leggings": "Lśniące Złote Nogawice",
+  "item.minecraft.golden_boots": "Lśniące Złote Buty",
+  "item.minecraft.golden_axe": "Lśniąca Złota Siekiera",
+  "item.minecraft.golden_pickaxe": "Lśniący Złoty Kilof",
+  "item.minecraft.golden_sword": "Lśniący Złoty Miecz",
+  "item.minecraft.golden_hoe": "Lśniąca Złota Motyka",
+  "item.minecraft.golden_shovel": "Lśniąca Złota Łopata",
+
+  "item.hammersandtables.copper_pickaxe": "Miedziany Kilof",
+  "item.hammersandtables.copper_axe": "Miedziana Siekiera",
+  "item.hammersandtables.copper_sword": "Miedziany Miecz",
+  "item.hammersandtables.copper_shovel": "Miedziana Łopata",
+  "item.hammersandtables.copper_hoe": "Miedziana Motyka",
+  "item.hammersandtables.copper_hammer": "Miedziany Młot",
+
+  "item.hammersandtables.nugget_copper_pickaxe": "Wzmocniony Miedziany Kilof",
+  "item.hammersandtables.ingot_copper_pickaxe": "Ulepszony Miedziany Kilof",
+  "item.hammersandtables.nugget_copper_axe": "Wzmocniona Miedziana Siekiera",
+  "item.hammersandtables.ingot_copper_axe": "Ulepszona Miedziana Siekiera",
+  "item.hammersandtables.nugget_copper_sword": "Wzmocniony Miedziany Miecz",
+  "item.hammersandtables.ingot_copper_sword": "Ulepszony Miedziany Miecz",
+  "item.hammersandtables.nugget_copper_shovel": "Wzmocniona Miedziana Łopata",
+  "item.hammersandtables.ingot_copper_shovel": "Ulepszona Miedziana Łopata",
+  "item.hammersandtables.nugget_copper_hoe": "Wzmocniona Miedziana Motyka",
+  "item.hammersandtables.ingot_copper_hoe": "Ulepszona Miedziana Motyka",
+  "item.hammersandtables.nugget_copper_hammer": "Wzmocniony Miedziany Młot",
+  "item.hammersandtables.ingot_copper_hammer": "Ulepszony Miedziany Młot",
+
+  "item.hammersandtables.copper_helmet": "Miedziany Hełm",
+  "item.hammersandtables.copper_chestplate": "Miedziany Napierśnik",
+  "item.hammersandtables.copper_leggings": "Miedziane Nogawice",
+  "item.hammersandtables.copper_boots": "Miedziane Buty",
+
+  "item.hammersandtables.nugget_copper_helmet": "Wzmocniony Miedziany Hełm",
+  "item.hammersandtables.ingot_copper_helmet": "Ulepszony Miedziany Hełm",
+  "item.hammersandtables.nugget_copper_chestplate": "Wzmocniony Miedziany Napierśnik",
+  "item.hammersandtables.ingot_copper_chestplate": "Ulepszony Miedziany Napierśnik",
+  "item.hammersandtables.nugget_copper_leggings": "Wzmocnione Miedziane Nogawice",
+  "item.hammersandtables.ingot_copper_leggings": "Ulepszone Miedziane Nogawice",
+  "item.hammersandtables.nugget_copper_boots": "Wzmocnione Miedziane Buty",
+  "item.hammersandtables.ingot_copper_boots": "Ulepszone Miedziane Buty",
+
+  "item.hammersandtables.iron_hammer": "Żelazny Młot",
+
+  "item.hammersandtables.nugget_iron_pickaxe": "Wzmocniony Żelazny Kilof",
+  "item.hammersandtables.nugget_iron_axe": "Wzmocniona Żelazna Siekiera",
+  "item.hammersandtables.nugget_iron_sword": "Wzmocniony Żelazny Miecz",
+  "item.hammersandtables.nugget_iron_shovel": "Wzmocniona Żelazna Łopata",
+  "item.hammersandtables.nugget_iron_hoe": "Wzmocniona Żelazna Motyka",
+  "item.hammersandtables.nugget_iron_hammer": "Wzmocniony Żelazny Młot",
+
+  "item.hammersandtables.ingot_iron_pickaxe": "Ulepszony Żelazny Kilof",
+  "item.hammersandtables.ingot_iron_axe": "Ulepszona Żelazna Siekiera",
+  "item.hammersandtables.ingot_iron_sword": "Ulepszony Żelazny Miecz",
+  "item.hammersandtables.ingot_iron_shovel": "Ulepszona Żelazna Łopata",
+  "item.hammersandtables.ingot_iron_hoe": "Ulepszona Żelazna Motyka",
+  "item.hammersandtables.ingot_iron_hammer": "Ulepszony Żelazny Młot",
+
+  "item.hammersandtables.nugget_iron_helmet": "Wzmocniony Żelazny Hełm",
+  "item.hammersandtables.ingot_iron_helmet": "Ulepszony Żelazny Hełm",
+  "item.hammersandtables.nugget_iron_chestplate": "Wzmocniony Żelazny Napierśnik",
+  "item.hammersandtables.ingot_iron_chestplate": "Ulepszony Żelazny Napierśnik",
+  "item.hammersandtables.nugget_iron_leggings": "Wzmocnione Żelazne Nogawice",
+  "item.hammersandtables.ingot_iron_leggings": "Ulepszone Żelazne Nogawice",
+  "item.hammersandtables.nugget_iron_boots": "Wzmocnione Żelazne Buty",
+  "item.hammersandtables.ingot_iron_boots": "Ulepszone Żelazne Buty",
+
+  "item.hammersandtables.golden_pickaxe": "Złoty Kilof",
+  "item.hammersandtables.golden_axe": "Złota Siekiera",
+  "item.hammersandtables.golden_sword": "Złoty Miecz",
+  "item.hammersandtables.golden_shovel": "Złota Łopata",
+  "item.hammersandtables.golden_hoe": "Złota Motyka",
+  "item.hammersandtables.golden_hammer": "Złoty Młot",
+
+  "item.hammersandtables.golden_helmet": "Złoty Hełm",
+  "item.hammersandtables.golden_chestplate": "Złoty Napierśnik",
+  "item.hammersandtables.golden_leggings": "Złote Nogawice",
+  "item.hammersandtables.golden_boots": "Złote Buty",
+
+  "item.hammersandtables.diamond_hammer": "Diamentowy Młot",
+  "item.hammersandtables.netherite_hammer": "Netherytowy Młot",
+
+
+  "block.hammersandtables.copper_table": "Miedziany Stół Kowalski",
+  "block.hammersandtables.iron_table": "Żelazny Stół Kowalski",
+  "block.hammersandtables.gold_table": "Złoty Stół Kowalski",
+  "block.hammersandtables.diamond_table": "Diamentowy Stół Kowalski",
+
+
+  "item.hammersandtables.bone_helmet": "Kościany Hełm",
+  "item.hammersandtables.bone_chestplate": "Kościany Napierśnik",
+  "item.hammersandtables.bone_leggings": "Kościane Nogawice",
+  "item.hammersandtables.bone_boots": "Kościane Buty",
+
+
+  "item.hammersandtables.diamond_golden_pickaxe": "Wzmocniony Złoty Kilof",
+  "item.hammersandtables.diamond_golden_axe": "Wzmocniona Złota Siekiera",
+  "item.hammersandtables.diamond_golden_sword": "Wzmocniony Złoty Miecz",
+  "item.hammersandtables.diamond_golden_shovel": "Wzmocniona Złota Łopata",
+  "item.hammersandtables.diamond_golden_hoe": "Wzmocniona Złota Motyka",
+  "item.hammersandtables.diamond_golden_hammer": "Wzmocniony Złoty Młot",
+
+  "item.hammersandtables.diamond_golden_helmet": "Wzmocniony Złoty Hełm",
+  "item.hammersandtables.diamond_golden_chestplate": "Wzmocniony Złoty Napierśnik",
+  "item.hammersandtables.diamond_golden_leggings": "Wzmocnione Złote Nogawice",
+  "item.hammersandtables.diamond_golden_boots": "Wzmocnione Złote Buty",
+
+  "text.autoconfig.hammersandtables.title": "Konfiguracja Hammers and Smithing",
+  "text.autoconfig.hammersandtables.option.isTooltipsEnabled": "Dodaj podpisy dla przedmiotów, które wymagają stołu kowalskiego do wytworzenia [Wymagany Restart]",
+  "text.autoconfig.hammersandtables.option.isTooltipsEnabled.@Tooltip": "Dodaje podpisy informujące który stół kowalski jest wymagany aby stworzyć przedmiot",
+  "text.autoconfig.hammersandtables.option.isCopperRecipeBlocked": "Zablokuj miedziane receptury [Wymagany Restart]",
+  "text.autoconfig.hammersandtables.option.isCopperRecipeBlocked.@Tooltip": "Miedziane przedmioty nie mogą zostać wytworzone jeśli nie stoisz przy Miedzianym Stole Kowalskim (lub lepszym stole kowalskim)",
+  "text.autoconfig.hammersandtables.option.isIronRecipeBlocked": "Zablokuj żelazne receptury [Wymagany Restart]",
+  "text.autoconfig.hammersandtables.option.isIronRecipeBlocked.@Tooltip": "Żelazne przedmioty nie mogą zostać wytworzone jeśli nie stoisz przy Żelaznym Stole Kowalskim (lub lepszym stole kowalskim)",
+  "text.autoconfig.hammersandtables.option.isGoldRecipeBlocked": "Zablokuj złote receptury [Wymagany Restart]",
+  "text.autoconfig.hammersandtables.option.isGoldRecipeBlocked.@Tooltip": "Złote przedmioty nie mogą zostać wytworzone jeśli nie stoisz przy Złotym Stole Kowalskim (lub lepszym stole kowalskim)",
+  "text.autoconfig.hammersandtables.option.isDiamondRecipeBlocked": "Zablokuj diamentowe receptury [Wymagany Restart]",
+  "text.autoconfig.hammersandtables.option.isDiamondRecipeBlocked.@Tooltip": "Diamentowe przedmioty nie mogą zostać wytworzone jeśli nie stoisz przy Diamentowym Stole Kowalskim",
+
+  "text.autoconfig.hammersandtables.option.isTradeOffersModified": "Zmodyfikuj oferty handlowe [Wymagany Restart]",
+  "text.autoconfig.hammersandtables.option.isTradeOffersModified.@Tooltip": "Modyfikuje oferty dla Płatnerza, Narzędziarza (XD) i Zbrojmistrza (może zepsuć oferty z innych modów)",
+
+  "text.autoconfig.hammersandtables.option.forceModifiedTradeOffers": "Wymuś oferty z Hammers and Smithing (!!! Oferty z innych modów nie będą działać !!!)",
+  "text.autoconfig.hammersandtables.option.forceModifiedTradeOffers.@Tooltip": "Modyfikuje oferty dla Płatnerza, Narzędziarza i Zbrojmistrza i powstrzymuje inne mody przed dodawaniem nowych ofert (lub zmienianiem istniejących) dla WSZYSTKICH profesji"
+
+}

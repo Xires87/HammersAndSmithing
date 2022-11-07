@@ -106,6 +106,24 @@
   "item.hammersandtables.diamond_golden_helmet": "Reinforced Golden Helmet",
   "item.hammersandtables.diamond_golden_chestplate": "Reinforced Golden Chestplate",
   "item.hammersandtables.diamond_golden_leggings": "Reinforced Golden Leggings",
-  "item.hammersandtables.diamond_golden_boots": "Reinforced Golden Boots"
+  "item.hammersandtables.diamond_golden_boots": "Reinforced Golden Boots",
+
+  "text.autoconfig.hammersandtables.title": "Hammers and Smithing Config",
+  "text.autoconfig.hammersandtables.option.isTooltipsEnabled": "Add tooltips for items, that require smithing table to craft [Restart Required]",
+  "text.autoconfig.hammersandtables.option.isTooltipsEnabled.@Tooltip": "Adds tooltips telling you which smithing table is required to craft item",
+  "text.autoconfig.hammersandtables.option.isCopperRecipeBlocked": "Block copper recipes [Restart required]",
+  "text.autoconfig.hammersandtables.option.isCopperRecipeBlocked.@Tooltip": "Copper items cannot be crafted if you don't stand near Copper Smithing Table (or better smithing table)",
+  "text.autoconfig.hammersandtables.option.isIronRecipeBlocked": "Block iron recipes [Restart required]",
+  "text.autoconfig.hammersandtables.option.isIronRecipeBlocked.@Tooltip": "Iron items cannot be crafted if you don't stand near Iron Smithing Table (or better smithing table)",
+  "text.autoconfig.hammersandtables.option.isGoldRecipeBlocked": "Block gold recipes [Restart required]",
+  "text.autoconfig.hammersandtables.option.isGoldRecipeBlocked.@Tooltip": "Golden items cannot be crafted if you don't stand near Golden Smithing Table (or better smithing table)",
+  "text.autoconfig.hammersandtables.option.isDiamondRecipeBlocked": "Block diamond recipes [Restart required]",
+  "text.autoconfig.hammersandtables.option.isDiamondRecipeBlocked.@Tooltip": "Diamond items cannot be crafted if you don't stand near Diamond Smithing Table",
+
+  "text.autoconfig.hammersandtables.option.isTradeOffersModified": "Modify trade offers [Restart required]",
+  "text.autoconfig.hammersandtables.option.isTradeOffersModified.@Tooltip": "Modifies trade offers for Armorer, Toolsmith and Weaponsmith (may break trade offers from other mods)",
+
+  "text.autoconfig.hammersandtables.option.forceModifiedTradeOffers": "Force trade offers from Hammers and Smithing (!!! Trade offers from other mods will not work !!!)",
+  "text.autoconfig.hammersandtables.option.forceModifiedTradeOffers.@Tooltip": "Modifies trade offers for Armorer, Toolsmith and Weaponsmith and prevents other mods from adding new trade offers (or changing existing ones) for ALL professions"
 
 }

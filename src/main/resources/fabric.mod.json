@@ -9,11 +9,13 @@
     "Wookash Fryc"
   ],
   "contact": {
-    "email": "frycmod@gmail.com"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/hammers-and-smithing",
+    "sources": "https://github.com/Xires87/HammersAndSmithing",
+    "issues": "https://github.com/Xires87/HammersAndSmithing/issues"
   },
 
   "license": "MIT",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/hammersandtables/textures/item/golden_hammer.png",
 
   "environment": "*",
   "entrypoints": {
@@ -22,6 +24,9 @@
     ],
     "client": [
       "net.fryc.hammersandtables.HammersAndTablesClient"
+    ],
+    "modmenu": [
+      "net.fryc.hammersandtables.config.ModMenuIntegration"
     ]
   },
   "mixins": [
@@ -33,7 +38,8 @@
     "fabric-api": "*",
     "minecraft": "~1.19",
     "java": ">=17",
-    "craftingmanipulator": ">=1.0.0"
+    "craftingmanipulator": ">=1.0.1",
+    "cloth-config": ">=8.2.88"
   },
   "suggests": {
     "another-mod": "*"
