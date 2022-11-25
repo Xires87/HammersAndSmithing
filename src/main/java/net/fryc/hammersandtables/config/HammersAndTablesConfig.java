@@ -7,17 +7,42 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 @Config(name = "hammersandtables")
 public class HammersAndTablesConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.Category("recipes")
+    @ConfigEntry.Gui.RequiresRestart
     public boolean isTooltipsEnabled = true;
     @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.Category("recipes")
+    @ConfigEntry.Gui.RequiresRestart
     public boolean isCopperRecipeBlocked = true;
     @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.Category("recipes")
+    @ConfigEntry.Gui.RequiresRestart
     public boolean isIronRecipeBlocked = true;
     @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.Category("recipes")
+    @ConfigEntry.Gui.RequiresRestart
     public boolean isGoldRecipeBlocked = true;
     @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.Category("recipes")
+    @ConfigEntry.Gui.RequiresRestart
     public boolean isDiamondRecipeBlocked = true;
     @ConfigEntry.Gui.Tooltip
-    public boolean isTradeOffersModified = true;
+    @ConfigEntry.Category("trades")
+    @ConfigEntry.Gui.RequiresRestart
+    public boolean modifyTradeOffersForArmorer = true;
     @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.Category("trades")
+    @ConfigEntry.Gui.RequiresRestart
+    public boolean modifyTradeOffersForToolsmith = true;
+    @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.Category("trades")
+    @ConfigEntry.Gui.RequiresRestart
+    public boolean modifyTradeOffersForWeaponsmith = true;
+    @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.Category("trades")
+    @ConfigEntry.Gui.RequiresRestart
+    public boolean modifyTradeOffersForLibrarian = false;
+    @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.Category("trades")
     public boolean forceModifiedTradeOffers = false;
 }

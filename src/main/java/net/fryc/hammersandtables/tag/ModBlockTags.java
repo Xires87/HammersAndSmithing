@@ -1,5 +1,6 @@
 package net.fryc.hammersandtables.tag;
 
+import net.fryc.hammersandtables.HammersAndTables;
 import net.minecraft.block.Block;
 import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
@@ -15,6 +16,6 @@ public class ModBlockTags {
     }
 
     private static TagKey<Block> register(String id) {
-        return TagKey.of(Registry.BLOCK_KEY, new Identifier(id));
+        return TagKey.of(Registry.BLOCK_KEY, new Identifier(HammersAndTables.MOD_ID, id));
     }
 }

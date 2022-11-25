@@ -2,5 +2,13 @@
   "parent": "item/handheld",
   "textures": {
     "layer0": "minecraft:item/golden_axe"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "axeparry": 1
+      },
+      "model": "hammersandtables:item/golden_axe_parry"
+    }
+  ]
 }

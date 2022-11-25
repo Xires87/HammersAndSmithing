@@ -30,7 +30,7 @@ abstract class VillagerEntityMixin extends MerchantEntity implements Interaction
         if(HammersAndTables.config.forceModifiedTradeOffers){
             if(int2ObjectMap != null){
                 VillagerData villagerData = ((VillagerEntity)(Object)this).getVillagerData();
-                int2ObjectMap = ModTradeOffers.PROFESSION_TO_LEVELED_TRADE.get(villagerData.getProfession());
+                int2ObjectMap = ModTradeOffers.MOD_PROFESSION_TO_LEVELED_TRADE.get(villagerData.getProfession());
             }
         }
         return int2ObjectMap;

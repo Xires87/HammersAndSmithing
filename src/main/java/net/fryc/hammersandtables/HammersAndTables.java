@@ -55,8 +55,7 @@ public class HammersAndTables implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModScreenHandlers.registerAllScreenHandlers();
 
-		if(config.isTradeOffersModified){
-			ModTradeOffers.registerModTradeOffers();
-		}
+		ModTradeOffers.registerModTradeOffers();
+
 	}
 }
