@@ -109,6 +109,8 @@
   "item.hammersandtables.diamond_golden_boots": "Wzmocnione Złote Buty",
 
   "text.autoconfig.hammersandtables.title": "Konfiguracja Hammers and Smithing",
+  "text.autoconfig.hammersandtables.category.recipes": "Przedmioty i Receptury",
+  "text.autoconfig.hammersandtables.category.trades": "Oferty Handlowe",
   "text.autoconfig.hammersandtables.option.isTooltipsEnabled": "Dodaj podpisy dla przedmiotów, które wymagają stołu kowalskiego do wytworzenia [Wymagany Restart]",
   "text.autoconfig.hammersandtables.option.isTooltipsEnabled.@Tooltip": "Dodaje podpisy informujące który stół kowalski jest wymagany aby stworzyć przedmiot",
   "text.autoconfig.hammersandtables.option.isCopperRecipeBlocked": "Zablokuj miedziane receptury [Wymagany Restart]",
@@ -120,10 +122,12 @@
   "text.autoconfig.hammersandtables.option.isDiamondRecipeBlocked": "Zablokuj diamentowe receptury [Wymagany Restart]",
   "text.autoconfig.hammersandtables.option.isDiamondRecipeBlocked.@Tooltip": "Diamentowe przedmioty nie mogą zostać wytworzone jeśli nie stoisz przy Diamentowym Stole Kowalskim",
 
-  "text.autoconfig.hammersandtables.option.isTradeOffersModified": "Zmodyfikuj oferty handlowe [Wymagany Restart]",
-  "text.autoconfig.hammersandtables.option.isTradeOffersModified.@Tooltip": "Modyfikuje oferty dla Płatnerza, Narzędziarza (XD) i Zbrojmistrza (może zepsuć oferty z innych modów)",
+  "text.autoconfig.hammersandtables.option.modifyTradeOffersForLibrarian": "Zmodyfikuj oferty handlowe Bibliotekarza (Bibliotekarze nie będą sprzedawać zaklętych książek na pierwszym poziomie) [Wymagany Restart] ",
+  "text.autoconfig.hammersandtables.option.modifyTradeOffersForToolsmith": "Zmodyfikuj oferty handlowe Narzędziarza (XD) [Wymagany Restart]",
+  "text.autoconfig.hammersandtables.option.modifyTradeOffersForWeaponsmith": "Zmodyfikuj oferty handlowe Zbrojmistrza [Wymagany Restart]",
+  "text.autoconfig.hammersandtables.option.modifyTradeOffersForArmorer": "Zmodyfikuj oferty handlowe Płatnerza [Wymagany Restart]",
 
   "text.autoconfig.hammersandtables.option.forceModifiedTradeOffers": "Wymuś oferty z Hammers and Smithing (!!! Oferty z innych modów nie będą działać !!!)",
-  "text.autoconfig.hammersandtables.option.forceModifiedTradeOffers.@Tooltip": "Modyfikuje oferty dla Płatnerza, Narzędziarza i Zbrojmistrza i powstrzymuje inne mody przed dodawaniem nowych ofert (lub zmienianiem istniejących) dla WSZYSTKICH profesji"
+  "text.autoconfig.hammersandtables.option.forceModifiedTradeOffers.@Tooltip": "Modyfikuje oferty dla Płatnerza, Narzędziarza, Bibliotekarza i Zbrojmistrza i powstrzymuje inne mody przed dodawaniem nowych ofert (lub zmienianiem istniejących) dla WSZYSTKICH profesji"
 
 }

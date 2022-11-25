@@ -109,6 +109,8 @@
   "item.hammersandtables.diamond_golden_boots": "Reinforced Golden Boots",
 
   "text.autoconfig.hammersandtables.title": "Hammers and Smithing Config",
+  "text.autoconfig.hammersandtables.category.recipes": "Items and Recipes",
+  "text.autoconfig.hammersandtables.category.trades": "Trade Offers",
   "text.autoconfig.hammersandtables.option.isTooltipsEnabled": "Add tooltips for items, that require smithing table to craft [Restart Required]",
   "text.autoconfig.hammersandtables.option.isTooltipsEnabled.@Tooltip": "Adds tooltips telling you which smithing table is required to craft item",
   "text.autoconfig.hammersandtables.option.isCopperRecipeBlocked": "Block copper recipes [Restart required]",
@@ -120,8 +122,10 @@
   "text.autoconfig.hammersandtables.option.isDiamondRecipeBlocked": "Block diamond recipes [Restart required]",
   "text.autoconfig.hammersandtables.option.isDiamondRecipeBlocked.@Tooltip": "Diamond items cannot be crafted if you don't stand near Diamond Smithing Table",
 
-  "text.autoconfig.hammersandtables.option.isTradeOffersModified": "Modify trade offers [Restart required]",
-  "text.autoconfig.hammersandtables.option.isTradeOffersModified.@Tooltip": "Modifies trade offers for Armorer, Toolsmith and Weaponsmith (may break trade offers from other mods)",
+  "text.autoconfig.hammersandtables.option.modifyTradeOffersForLibrarian": "Modify trade offers for Librarian (Librarian won't sell enchanted book on first level) [Restart required]",
+  "text.autoconfig.hammersandtables.option.modifyTradeOffersForToolsmith": "Modify trade offers for Toolsmith [Restart required]",
+  "text.autoconfig.hammersandtables.option.modifyTradeOffersForWeaponsmith": "Modify trade offers for Weaponsmith [Restart required]",
+  "text.autoconfig.hammersandtables.option.modifyTradeOffersForArmorer": "Modify trade offers for Armorer [Restart required]",
 
   "text.autoconfig.hammersandtables.option.forceModifiedTradeOffers": "Force trade offers from Hammers and Smithing (!!! Trade offers from other mods will not work !!!)",
   "text.autoconfig.hammersandtables.option.forceModifiedTradeOffers.@Tooltip": "Modifies trade offers for Armorer, Toolsmith and Weaponsmith and prevents other mods from adding new trade offers (or changing existing ones) for ALL professions"

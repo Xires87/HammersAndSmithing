@@ -26,19 +26,15 @@ public class HammersAndTablesConfig implements ConfigData {
     @ConfigEntry.Category("recipes")
     @ConfigEntry.Gui.RequiresRestart
     public boolean isDiamondRecipeBlocked = true;
-    @ConfigEntry.Gui.Tooltip
     @ConfigEntry.Category("trades")
     @ConfigEntry.Gui.RequiresRestart
     public boolean modifyTradeOffersForArmorer = true;
-    @ConfigEntry.Gui.Tooltip
     @ConfigEntry.Category("trades")
     @ConfigEntry.Gui.RequiresRestart
     public boolean modifyTradeOffersForToolsmith = true;
-    @ConfigEntry.Gui.Tooltip
     @ConfigEntry.Category("trades")
     @ConfigEntry.Gui.RequiresRestart
     public boolean modifyTradeOffersForWeaponsmith = true;
-    @ConfigEntry.Gui.Tooltip
     @ConfigEntry.Category("trades")
     @ConfigEntry.Gui.RequiresRestart
     public boolean modifyTradeOffersForLibrarian = false;
