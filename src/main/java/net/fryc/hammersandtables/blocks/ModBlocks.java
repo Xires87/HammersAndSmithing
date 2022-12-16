@@ -8,31 +8,31 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
 
     public static final Block COPPER_TABLE = registerBlock("copper_table",
-            new ModSmithingTableBlock(FabricBlockSettings.of(Material.WOOD).strength(2f , 3f).sounds(BlockSoundGroup.WOOD)), ItemGroup.MISC);
+            new ModSmithingTableBlock(FabricBlockSettings.of(Material.WOOD).strength(2f , 3f).sounds(BlockSoundGroup.WOOD)));
 
     public static final Block IRON_TABLE = registerBlock("iron_table",
-            new ModSmithingTableBlock(FabricBlockSettings.of(Material.WOOD).strength(2f , 3f).sounds(BlockSoundGroup.WOOD)), ItemGroup.MISC);
+            new ModSmithingTableBlock(FabricBlockSettings.of(Material.WOOD).strength(2f , 3f).sounds(BlockSoundGroup.WOOD)));
     public static final Block GOLD_TABLE = registerBlock("gold_table",
-            new ModSmithingTableBlock(FabricBlockSettings.of(Material.WOOD).strength(2f , 3f).sounds(BlockSoundGroup.WOOD)), ItemGroup.MISC);
+            new ModSmithingTableBlock(FabricBlockSettings.of(Material.WOOD).strength(2f , 3f).sounds(BlockSoundGroup.WOOD)));
     public static final Block DIAMOND_TABLE = registerBlock("diamond_table",
-            new ModSmithingTableBlock(FabricBlockSettings.of(Material.WOOD).strength(2f , 3f).sounds(BlockSoundGroup.WOOD)), ItemGroup.MISC);
+            new ModSmithingTableBlock(FabricBlockSettings.of(Material.WOOD).strength(2f , 3f).sounds(BlockSoundGroup.WOOD)));
 
-    private static Block registerBlock(String name, Block block, ItemGroup group){
-        registerBlockItem(name, block, group);
-        return Registry.register(Registry.BLOCK, new Identifier(HammersAndTables.MOD_ID, name), block);
+    private static Block registerBlock(String name, Block block){
+        registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, new Identifier(HammersAndTables.MOD_ID, name), block);
     }
 
-    private static Item registerBlockItem(String name, Block block, ItemGroup group){
-        return Registry.register(Registry.ITEM, new Identifier(HammersAndTables.MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings().group(group)));
+    private static Item registerBlockItem(String name, Block block){
+        return Registry.register(Registries.ITEM, new Identifier(HammersAndTables.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings()));
     }
     public static void registerModBlocks() {
         HammersAndTables.LOGGER.info("Registering ModBlocks for " +HammersAndTables.MOD_ID);

@@ -10,7 +10,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.item.map.MapIcon;
-import net.minecraft.tag.StructureTags;
+import net.minecraft.registry.tag.StructureTags;
 import net.minecraft.util.Util;
 import net.minecraft.village.*;
 

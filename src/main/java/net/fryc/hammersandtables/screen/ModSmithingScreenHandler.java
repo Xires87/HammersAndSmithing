@@ -1,7 +1,6 @@
 package net.fryc.hammersandtables.screen;
 
 import net.fryc.hammersandtables.blocks.ModBlocks;
-import net.fryc.hammersandtables.items.ModItems;
 import net.fryc.hammersandtables.tag.ModItemTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
