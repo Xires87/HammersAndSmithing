@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fryc.hammersandtables.HammersAndTables;
 import net.fryc.hammersandtables.blocks.custom.ModSmithingTableBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -24,6 +25,9 @@ public class ModBlocks {
             new ModSmithingTableBlock(FabricBlockSettings.of(Material.WOOD).strength(2f , 3f).sounds(BlockSoundGroup.WOOD)));
     public static final Block DIAMOND_TABLE = registerBlock("diamond_table",
             new ModSmithingTableBlock(FabricBlockSettings.of(Material.WOOD).strength(2f , 3f).sounds(BlockSoundGroup.WOOD)));
+
+    public static final Block PIGLINS_FORGE = registerBlock("piglins_forge",
+            new Block(FabricBlockSettings.of(Material.STONE, MapColor.BLACK).strength(1.5f , 6f).requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE)));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

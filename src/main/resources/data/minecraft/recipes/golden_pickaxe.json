@@ -1,19 +1,24 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "XXX",
-    " # ",
-    " # "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "minecraft:glowstone_dust"
     },
-    "X": {
-      "item": "minecraft:gold_ingot"
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "item": "hammersandtables:golden_pickaxe"
     }
-  },
+  ],
   "result": {
-    "item": "hammersandtables:golden_pickaxe"
+    "item": "minecraft:golden_pickaxe"
   }
 }

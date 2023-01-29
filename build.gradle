@@ -34,7 +34,7 @@ dependencies {
 
 	modApi "com.terraformersmc:modmenu:5.0.2"
 
-	modImplementation 'com.github.Xires87:CraftingManipulator:2.0.0'
+	modImplementation 'com.github.Xires87:CraftingManipulator:2.0.1'
 
 	// Uncomment the following line to enable the deprecated Fabric API modules. 
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.

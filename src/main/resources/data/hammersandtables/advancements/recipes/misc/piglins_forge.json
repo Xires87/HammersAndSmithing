@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:golden_hoe"
+      "hammersandtables:piglins_forge"
     ]
   },
   "criteria": {
-    "has_gold_ingot": {
+    "has_iron_ingot": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "hammersandtables:gold_table"
+              "minecraft:gilded_blackstone"
             ]
           }
         ]
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:golden_hoe"
+        "recipe": "hammersandtables:piglins_forge"
       }
     }
   },
   "requirements": [
     [
-      "has_gold_ingot",
+      "has_iron_ingot",
       "has_the_recipe"
     ]
   ]

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "hammersandtables:block/piglins_forge_front",
+    "north": "hammersandtables:block/piglins_forge_back",
+    "south": "hammersandtables:block/piglins_forge_front",
+    "east": "hammersandtables:block/piglins_forge_side",
+    "west": "hammersandtables:block/piglins_forge_side",
+    "up": "hammersandtables:block/piglins_forge_top",
+    "down": "minecraft:block/gilded_blackstone"
+  }
+}

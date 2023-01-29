@@ -88,6 +88,7 @@
   "block.hammersandtables.iron_table": "Iron Smithing Table",
   "block.hammersandtables.gold_table": "Golden Smithing Table",
   "block.hammersandtables.diamond_table": "Diamond Smithing Table",
+  "block.hammersandtables.piglins_forge": "Piglins Forge",
 
 
   "item.hammersandtables.bone_helmet": "Bone Helmet",
@@ -111,8 +112,10 @@
   "text.autoconfig.hammersandtables.title": "Hammers and Smithing Config",
   "text.autoconfig.hammersandtables.category.recipes": "Items and Recipes",
   "text.autoconfig.hammersandtables.category.trades": "Trade Offers",
+  "text.autoconfig.hammersandtables.category.tooltips": "Tooltips",
   "text.autoconfig.hammersandtables.option.isTooltipsEnabled": "Add tooltips for items, that require smithing table to craft [Restart Required]",
   "text.autoconfig.hammersandtables.option.isTooltipsEnabled.@Tooltip": "Adds tooltips telling you which smithing table is required to craft item",
+  "text.autoconfig.hammersandtables.option.isTooltipsForGoldenItemsEnabled": "Add tooltips for items that can be used to trade with piglins [Restart Required]",
   "text.autoconfig.hammersandtables.option.isCopperRecipeBlocked": "Block copper recipes [Restart required]",
   "text.autoconfig.hammersandtables.option.isCopperRecipeBlocked.@Tooltip": "Copper items cannot be crafted if you don't stand near Copper Smithing Table (or better smithing table)",
   "text.autoconfig.hammersandtables.option.isIronRecipeBlocked": "Block iron recipes [Restart required]",
@@ -121,6 +124,8 @@
   "text.autoconfig.hammersandtables.option.isGoldRecipeBlocked.@Tooltip": "Golden items cannot be crafted if you don't stand near Golden Smithing Table (or better smithing table)",
   "text.autoconfig.hammersandtables.option.isDiamondRecipeBlocked": "Block diamond recipes [Restart required]",
   "text.autoconfig.hammersandtables.option.isDiamondRecipeBlocked.@Tooltip": "Diamond items cannot be crafted if you don't stand near Diamond Smithing Table",
+  "text.autoconfig.hammersandtables.option.isVanillaGoldenRecipeBlocked": "Block vanilla golden recipes [Restart required]",
+  "text.autoconfig.hammersandtables.option.isVanillaGoldenRecipeBlocked.@Tooltip": "Vanilla golden items cannot be crafted if you don't stand near Piglins Forge",
 
   "text.autoconfig.hammersandtables.option.modifyTradeOffersForLibrarian": "Modify trade offers for Librarian (Librarian won't sell enchanted book on first level) [Restart required]",
   "text.autoconfig.hammersandtables.option.modifyTradeOffersForToolsmith": "Modify trade offers for Toolsmith [Restart required]",

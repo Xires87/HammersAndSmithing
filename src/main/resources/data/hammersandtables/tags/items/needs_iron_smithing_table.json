@@ -14,6 +14,28 @@
     "minecraft:chain",
     "minecraft:shield",
     "minecraft:anvil",
-    "minecraft:smithing_table"
+    "minecraft:smithing_table",
+
+    "hammersandtables:nugget_iron_hammer",
+    "hammersandtables:nugget_iron_pickaxe",
+    "hammersandtables:nugget_iron_axe",
+    "hammersandtables:nugget_iron_shovel",
+    "hammersandtables:nugget_iron_hoe",
+    "hammersandtables:nugget_iron_sword",
+    "hammersandtables:nugget_iron_helmet",
+    "hammersandtables:nugget_iron_chestplate",
+    "hammersandtables:nugget_iron_leggings",
+    "hammersandtables:nugget_iron_boots",
+
+    "hammersandtables:ingot_iron_hammer",
+    "hammersandtables:ingot_iron_pickaxe",
+    "hammersandtables:ingot_iron_axe",
+    "hammersandtables:ingot_iron_shovel",
+    "hammersandtables:ingot_iron_hoe",
+    "hammersandtables:ingot_iron_sword",
+    "hammersandtables:ingot_iron_helmet",
+    "hammersandtables:ingot_iron_chestplate",
+    "hammersandtables:ingot_iron_leggings",
+    "hammersandtables:ingot_iron_boots"
   ]
 }

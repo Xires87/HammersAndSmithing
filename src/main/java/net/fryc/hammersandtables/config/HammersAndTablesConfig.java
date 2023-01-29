@@ -7,9 +7,13 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 @Config(name = "hammersandtables")
 public class HammersAndTablesConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
-    @ConfigEntry.Category("recipes")
+    @ConfigEntry.Category("tooltips")
     @ConfigEntry.Gui.RequiresRestart
     public boolean isTooltipsEnabled = true;
+    @ConfigEntry.Category("tooltips")
+    @ConfigEntry.Gui.RequiresRestart
+    public boolean isTooltipsForGoldenItemsEnabled = true;
+
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.Category("recipes")
     @ConfigEntry.Gui.RequiresRestart
@@ -26,6 +30,10 @@ public class HammersAndTablesConfig implements ConfigData {
     @ConfigEntry.Category("recipes")
     @ConfigEntry.Gui.RequiresRestart
     public boolean isDiamondRecipeBlocked = true;
+    @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.Category("recipes")
+    @ConfigEntry.Gui.RequiresRestart
+    public boolean isVanillaGoldenRecipeBlocked = true;
     @ConfigEntry.Category("trades")
     @ConfigEntry.Gui.RequiresRestart
     public boolean modifyTradeOffersForArmorer = true;

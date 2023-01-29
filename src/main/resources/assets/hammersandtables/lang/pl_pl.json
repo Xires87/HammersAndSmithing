@@ -88,6 +88,7 @@
   "block.hammersandtables.iron_table": "Żelazny Stół Kowalski",
   "block.hammersandtables.gold_table": "Złoty Stół Kowalski",
   "block.hammersandtables.diamond_table": "Diamentowy Stół Kowalski",
+  "block.hammersandtables.piglins_forge": "Kuźnia Piglinów",
 
 
   "item.hammersandtables.bone_helmet": "Kościany Hełm",
@@ -110,9 +111,11 @@
 
   "text.autoconfig.hammersandtables.title": "Konfiguracja Hammers and Smithing",
   "text.autoconfig.hammersandtables.category.recipes": "Przedmioty i Receptury",
+  "text.autoconfig.hammersandtables.category.tooltips": "Podpisy",
   "text.autoconfig.hammersandtables.category.trades": "Oferty Handlowe",
   "text.autoconfig.hammersandtables.option.isTooltipsEnabled": "Dodaj podpisy dla przedmiotów, które wymagają stołu kowalskiego do wytworzenia [Wymagany Restart]",
   "text.autoconfig.hammersandtables.option.isTooltipsEnabled.@Tooltip": "Dodaje podpisy informujące który stół kowalski jest wymagany aby stworzyć przedmiot",
+  "text.autoconfig.hammersandtables.option.isTooltipsForGoldenItemsEnabled": "Dodaj podpisy dla przedmiotów, które mogą być użyte do handlu z Piglinami [Wymagany Restart]",
   "text.autoconfig.hammersandtables.option.isCopperRecipeBlocked": "Zablokuj miedziane receptury [Wymagany Restart]",
   "text.autoconfig.hammersandtables.option.isCopperRecipeBlocked.@Tooltip": "Miedziane przedmioty nie mogą zostać wytworzone jeśli nie stoisz przy Miedzianym Stole Kowalskim (lub lepszym stole kowalskim)",
   "text.autoconfig.hammersandtables.option.isIronRecipeBlocked": "Zablokuj żelazne receptury [Wymagany Restart]",
@@ -121,6 +124,8 @@
   "text.autoconfig.hammersandtables.option.isGoldRecipeBlocked.@Tooltip": "Złote przedmioty nie mogą zostać wytworzone jeśli nie stoisz przy Złotym Stole Kowalskim (lub lepszym stole kowalskim)",
   "text.autoconfig.hammersandtables.option.isDiamondRecipeBlocked": "Zablokuj diamentowe receptury [Wymagany Restart]",
   "text.autoconfig.hammersandtables.option.isDiamondRecipeBlocked.@Tooltip": "Diamentowe przedmioty nie mogą zostać wytworzone jeśli nie stoisz przy Diamentowym Stole Kowalskim",
+  "text.autoconfig.hammersandtables.option.isVanillaGoldenRecipeBlocked": "Zablokuj vanilla złote receptury [Wymagany Restart]",
+  "text.autoconfig.hammersandtables.option.isVanillaGoldenRecipeBlocked.@Tooltip": "Złote itemy z vanilli nie mogą zostać wytworzone jeśli nie stoisz przy Kuźni Piglinów",
 
   "text.autoconfig.hammersandtables.option.modifyTradeOffersForLibrarian": "Zmodyfikuj oferty handlowe Bibliotekarza (Bibliotekarze nie będą sprzedawać zaklętych książek na pierwszym poziomie) [Wymagany Restart] ",
   "text.autoconfig.hammersandtables.option.modifyTradeOffersForToolsmith": "Zmodyfikuj oferty handlowe Narzędziarza (XD) [Wymagany Restart]",

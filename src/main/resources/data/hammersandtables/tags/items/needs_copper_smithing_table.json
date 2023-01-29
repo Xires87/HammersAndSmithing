@@ -10,6 +10,28 @@
     "hammersandtables:copper_helmet",
     "hammersandtables:copper_chestplate",
     "hammersandtables:copper_leggings",
-    "hammersandtables:copper_boots"
+    "hammersandtables:copper_boots",
+
+    "hammersandtables:nugget_copper_hammer",
+    "hammersandtables:nugget_copper_pickaxe",
+    "hammersandtables:nugget_copper_axe",
+    "hammersandtables:nugget_copper_shovel",
+    "hammersandtables:nugget_copper_hoe",
+    "hammersandtables:nugget_copper_sword",
+    "hammersandtables:nugget_copper_helmet",
+    "hammersandtables:nugget_copper_chestplate",
+    "hammersandtables:nugget_copper_leggings",
+    "hammersandtables:nugget_copper_boots",
+
+    "hammersandtables:ingot_copper_hammer",
+    "hammersandtables:ingot_copper_pickaxe",
+    "hammersandtables:ingot_copper_axe",
+    "hammersandtables:ingot_copper_shovel",
+    "hammersandtables:ingot_copper_hoe",
+    "hammersandtables:ingot_copper_sword",
+    "hammersandtables:ingot_copper_helmet",
+    "hammersandtables:ingot_copper_chestplate",
+    "hammersandtables:ingot_copper_leggings",
+    "hammersandtables:ingot_copper_boots"
   ]
 }

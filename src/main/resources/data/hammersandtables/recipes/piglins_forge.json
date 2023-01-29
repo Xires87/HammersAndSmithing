@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "ACA",
+    "BBB"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:chiseled_polished_blackstone"
+    },
+    "B": {
+      "item": "minecraft:gilded_blackstone"
+    },
+    "C": {
+      "item": "minecraft:lava_bucket"
+    }
+  },
+  "result": {
+    "item": "hammersandtables:piglins_forge"
+  }
+}
