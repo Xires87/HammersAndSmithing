@@ -10,7 +10,7 @@
       "tag": "minecraft:planks"
     },
     "B": {
-      "tag": "minecraft:copper_blocks"
+      "tag": "hammersandtables:copper_blocks"
     }
   },
   "result": {
