@@ -1,6 +1,6 @@
 package net.fryc.hammersandtables.mixin;
 
-import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Items;
@@ -14,10 +14,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 abstract class ArmorMaterialsMixin implements ArmorMaterial {
 
     //sets chainmail boots armor to 2
-    @Inject(method = "getProtectionAmount(Lnet/minecraft/entity/EquipmentSlot;)I", at = @At("HEAD"), cancellable = true)
-    private void armor(EquipmentSlot slot,CallbackInfoReturnable<Integer> dur) {
+    @Inject(method = "getProtection(Lnet/minecraft/item/ArmorItem$Type;)I", at = @At("HEAD"), cancellable = true)
+    private void armor(ArmorItem.Type type, CallbackInfoReturnable<Integer> dur) {
         ArmorMaterials dys = ((ArmorMaterials)(Object)this);
-        if(slot.getEntitySlotId() == 0 && dys.equals(ArmorMaterials.CHAIN)) dur.setReturnValue(2);
+        if(type == ArmorItem.Type.BOOTS && dys.equals(ArmorMaterials.CHAIN)) dur.setReturnValue(2);
     }
 
     //sets chainmal armors toughness to 0.75

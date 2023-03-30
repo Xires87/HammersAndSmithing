@@ -3,7 +3,6 @@ package net.fryc.hammersandtables.items;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fryc.hammersandtables.HammersAndTables;
 import net.fryc.hammersandtables.items.custom.*;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -73,19 +72,19 @@ public class ModItems {
                     new FabricItemSettings()));
 
     public static final Item COPPER_HELMET = registerItem("copper_helmet" ,
-            new ArmorItem(ModArmorMaterials.COPPER , EquipmentSlot.HEAD ,
+            new ArmorItem(ModArmorMaterials.COPPER , ArmorItem.Type.HELMET ,
                     new FabricItemSettings()));
 
     public static final Item COPPER_CHESTPLATE = registerItem("copper_chestplate" ,
-            new ArmorItem(ModArmorMaterials.COPPER , EquipmentSlot.CHEST ,
+            new ArmorItem(ModArmorMaterials.COPPER , ArmorItem.Type.CHESTPLATE ,
                     new FabricItemSettings()));
 
     public static final Item COPPER_LEGGINGS = registerItem("copper_leggings" ,
-            new ArmorItem(ModArmorMaterials.COPPER , EquipmentSlot.LEGS ,
+            new ArmorItem(ModArmorMaterials.COPPER , ArmorItem.Type.LEGGINGS ,
                     new FabricItemSettings()));
 
     public static final Item COPPER_BOOTS = registerItem("copper_boots" ,
-            new ArmorItem(ModArmorMaterials.COPPER , EquipmentSlot.FEET ,
+            new ArmorItem(ModArmorMaterials.COPPER , ArmorItem.Type.BOOTS ,
                     new FabricItemSettings()));
 
     //nugget copper---------------------------------------------------------------------------------------
@@ -111,19 +110,19 @@ public class ModItems {
                     new FabricItemSettings()));
 
     public static final Item NUGGET_COPPER_HELMET = registerItem("nugget_copper_helmet" ,
-            new ArmorItem(ModArmorMaterials.NUGGET_COPPER , EquipmentSlot.HEAD ,
+            new ArmorItem(ModArmorMaterials.NUGGET_COPPER , ArmorItem.Type.HELMET ,
                     new FabricItemSettings()));
 
     public static final Item NUGGET_COPPER_CHESTPLATE = registerItem("nugget_copper_chestplate" ,
-            new ArmorItem(ModArmorMaterials.NUGGET_COPPER , EquipmentSlot.CHEST ,
+            new ArmorItem(ModArmorMaterials.NUGGET_COPPER , ArmorItem.Type.CHESTPLATE ,
                     new FabricItemSettings()));
 
     public static final Item NUGGET_COPPER_LEGGINGS = registerItem("nugget_copper_leggings" ,
-            new ArmorItem(ModArmorMaterials.NUGGET_COPPER , EquipmentSlot.LEGS ,
+            new ArmorItem(ModArmorMaterials.NUGGET_COPPER , ArmorItem.Type.LEGGINGS ,
                     new FabricItemSettings()));
 
     public static final Item NUGGET_COPPER_BOOTS = registerItem("nugget_copper_boots" ,
-            new ArmorItem(ModArmorMaterials.NUGGET_COPPER , EquipmentSlot.FEET ,
+            new ArmorItem(ModArmorMaterials.NUGGET_COPPER , ArmorItem.Type.BOOTS ,
                     new FabricItemSettings()));
 
     //ingot copper-----------------------------------------------------------------------------------------
@@ -148,19 +147,19 @@ public class ModItems {
                     new FabricItemSettings()));
 
     public static final Item INGOT_COPPER_HELMET = registerItem("ingot_copper_helmet" ,
-            new ArmorItem(ModArmorMaterials.INGOT_COPPER , EquipmentSlot.HEAD ,
+            new ArmorItem(ModArmorMaterials.INGOT_COPPER , ArmorItem.Type.HELMET ,
                     new FabricItemSettings()));
 
     public static final Item INGOT_COPPER_CHESTPLATE = registerItem("ingot_copper_chestplate" ,
-            new ArmorItem(ModArmorMaterials.INGOT_COPPER , EquipmentSlot.CHEST ,
+            new ArmorItem(ModArmorMaterials.INGOT_COPPER , ArmorItem.Type.CHESTPLATE ,
                     new FabricItemSettings()));
 
     public static final Item INGOT_COPPER_LEGGINGS = registerItem("ingot_copper_leggings" ,
-            new ArmorItem(ModArmorMaterials.INGOT_COPPER , EquipmentSlot.LEGS ,
+            new ArmorItem(ModArmorMaterials.INGOT_COPPER , ArmorItem.Type.LEGGINGS ,
                     new FabricItemSettings()));
 
     public static final Item INGOT_COPPER_BOOTS = registerItem("ingot_copper_boots" ,
-            new ArmorItem(ModArmorMaterials.INGOT_COPPER , EquipmentSlot.FEET ,
+            new ArmorItem(ModArmorMaterials.INGOT_COPPER , ArmorItem.Type.BOOTS ,
                     new FabricItemSettings()));
 
     //nugget iron---------------------------------------------------------------------------------------------
@@ -185,19 +184,19 @@ public class ModItems {
                     new FabricItemSettings()));
 
     public static final Item NUGGET_IRON_HELMET = registerItem("nugget_iron_helmet" ,
-            new ArmorItem(ModArmorMaterials.NUGGET_IRON , EquipmentSlot.HEAD ,
+            new ArmorItem(ModArmorMaterials.NUGGET_IRON , ArmorItem.Type.HELMET ,
                     new FabricItemSettings()));
 
     public static final Item NUGGET_IRON_CHESTPLATE = registerItem("nugget_iron_chestplate" ,
-            new ArmorItem(ModArmorMaterials.NUGGET_IRON , EquipmentSlot.CHEST ,
+            new ArmorItem(ModArmorMaterials.NUGGET_IRON , ArmorItem.Type.CHESTPLATE ,
                     new FabricItemSettings()));
 
     public static final Item NUGGET_IRON_LEGGINGS = registerItem("nugget_iron_leggings" ,
-            new ArmorItem(ModArmorMaterials.NUGGET_IRON , EquipmentSlot.LEGS ,
+            new ArmorItem(ModArmorMaterials.NUGGET_IRON , ArmorItem.Type.LEGGINGS ,
                     new FabricItemSettings()));
 
     public static final Item NUGGET_IRON_BOOTS = registerItem("nugget_iron_boots" ,
-            new ArmorItem(ModArmorMaterials.NUGGET_IRON , EquipmentSlot.FEET ,
+            new ArmorItem(ModArmorMaterials.NUGGET_IRON , ArmorItem.Type.BOOTS ,
                     new FabricItemSettings()));
 
     //ingot iron------------------------------------------------------------------------------
@@ -222,19 +221,19 @@ public class ModItems {
                     new FabricItemSettings()));
 
     public static final Item INGOT_IRON_HELMET = registerItem("ingot_iron_helmet" ,
-            new ArmorItem(ModArmorMaterials.INGOT_IRON , EquipmentSlot.HEAD ,
+            new ArmorItem(ModArmorMaterials.INGOT_IRON , ArmorItem.Type.HELMET ,
                     new FabricItemSettings()));
 
     public static final Item INGOT_IRON_CHESTPLATE = registerItem("ingot_iron_chestplate" ,
-            new ArmorItem(ModArmorMaterials.INGOT_IRON , EquipmentSlot.CHEST ,
+            new ArmorItem(ModArmorMaterials.INGOT_IRON , ArmorItem.Type.CHESTPLATE ,
                     new FabricItemSettings()));
 
     public static final Item INGOT_IRON_LEGGINGS = registerItem("ingot_iron_leggings" ,
-            new ArmorItem(ModArmorMaterials.INGOT_IRON , EquipmentSlot.LEGS ,
+            new ArmorItem(ModArmorMaterials.INGOT_IRON , ArmorItem.Type.LEGGINGS ,
                     new FabricItemSettings()));
 
     public static final Item INGOT_IRON_BOOTS = registerItem("ingot_iron_boots" ,
-            new ArmorItem(ModArmorMaterials.INGOT_IRON , EquipmentSlot.FEET ,
+            new ArmorItem(ModArmorMaterials.INGOT_IRON , ArmorItem.Type.BOOTS ,
                     new FabricItemSettings()));
 
     //gold---------------------------------------------------------------------------------
@@ -259,19 +258,19 @@ public class ModItems {
                     new FabricItemSettings()));
 
     public static final Item GOLDEN_HELMET = registerItem("golden_helmet" ,
-            new ArmorItem(ModArmorMaterials.GOLD , EquipmentSlot.HEAD ,
+            new ArmorItem(ModArmorMaterials.GOLD , ArmorItem.Type.HELMET ,
                     new FabricItemSettings()));
 
     public static final Item GOLDEN_CHESTPLATE = registerItem("golden_chestplate" ,
-            new ArmorItem(ModArmorMaterials.GOLD , EquipmentSlot.CHEST ,
+            new ArmorItem(ModArmorMaterials.GOLD , ArmorItem.Type.CHESTPLATE ,
                     new FabricItemSettings()));
 
     public static final Item GOLDEN_LEGGINGS = registerItem("golden_leggings" ,
-            new ArmorItem(ModArmorMaterials.GOLD , EquipmentSlot.LEGS ,
+            new ArmorItem(ModArmorMaterials.GOLD , ArmorItem.Type.LEGGINGS ,
                     new FabricItemSettings()));
 
     public static final Item GOLDEN_BOOTS = registerItem("golden_boots" ,
-            new ArmorItem(ModArmorMaterials.GOLD , EquipmentSlot.FEET ,
+            new ArmorItem(ModArmorMaterials.GOLD , ArmorItem.Type.BOOTS ,
                     new FabricItemSettings()));
 
     //diamond gold--------------------------------------------------------------------------
@@ -296,36 +295,36 @@ public class ModItems {
                     new FabricItemSettings()));
 
     public static final Item DIAMOND_GOLDEN_HELMET = registerItem("diamond_golden_helmet" ,
-            new ArmorItem(ModArmorMaterials.DIAMOND_GOLD , EquipmentSlot.HEAD ,
+            new ArmorItem(ModArmorMaterials.DIAMOND_GOLD , ArmorItem.Type.HELMET ,
                     new FabricItemSettings()));
 
     public static final Item DIAMOND_GOLDEN_CHESTPLATE = registerItem("diamond_golden_chestplate" ,
-            new ArmorItem(ModArmorMaterials.DIAMOND_GOLD , EquipmentSlot.CHEST ,
+            new ArmorItem(ModArmorMaterials.DIAMOND_GOLD , ArmorItem.Type.CHESTPLATE ,
                     new FabricItemSettings()));
 
     public static final Item DIAMOND_GOLDEN_LEGGINGS = registerItem("diamond_golden_leggings" ,
-            new ArmorItem(ModArmorMaterials.DIAMOND_GOLD , EquipmentSlot.LEGS ,
+            new ArmorItem(ModArmorMaterials.DIAMOND_GOLD , ArmorItem.Type.LEGGINGS ,
                     new FabricItemSettings()));
 
     public static final Item DIAMOND_GOLDEN_BOOTS = registerItem("diamond_golden_boots" ,
-            new ArmorItem(ModArmorMaterials.DIAMOND_GOLD , EquipmentSlot.FEET ,
+            new ArmorItem(ModArmorMaterials.DIAMOND_GOLD , ArmorItem.Type.BOOTS ,
                     new FabricItemSettings()));
 
     //bone----------------------------------------------------------------------------------
     public static final Item BONE_HELMET = registerItem("bone_helmet" ,
-            new ArmorItem(ModArmorMaterials.BONE , EquipmentSlot.HEAD ,
+            new ArmorItem(ModArmorMaterials.BONE , ArmorItem.Type.HELMET ,
                     new FabricItemSettings()));
 
     public static final Item BONE_CHESTPLATE = registerItem("bone_chestplate" ,
-            new ArmorItem(ModArmorMaterials.BONE , EquipmentSlot.CHEST ,
+            new ArmorItem(ModArmorMaterials.BONE , ArmorItem.Type.CHESTPLATE ,
                     new FabricItemSettings()));
 
     public static final Item BONE_LEGGINGS = registerItem("bone_leggings" ,
-            new ArmorItem(ModArmorMaterials.BONE , EquipmentSlot.LEGS ,
+            new ArmorItem(ModArmorMaterials.BONE , ArmorItem.Type.LEGGINGS ,
                     new FabricItemSettings()));
 
     public static final Item BONE_BOOTS = registerItem("bone_boots" ,
-            new ArmorItem(ModArmorMaterials.BONE , EquipmentSlot.FEET ,
+            new ArmorItem(ModArmorMaterials.BONE , ArmorItem.Type.BOOTS ,
                     new FabricItemSettings()));
 
 

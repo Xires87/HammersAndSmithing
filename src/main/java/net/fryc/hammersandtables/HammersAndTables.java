@@ -5,7 +5,7 @@ import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fryc.craftingmanipulator.conditions.PressedKey;
-import net.fryc.craftingmanipulator.rules.StandNearBlockRBR;
+import net.fryc.craftingmanipulator.rules.recipeblocking.StandNearBlockRBR;
 import net.fryc.craftingmanipulator.rules.tooltips.TooltipRules;
 import net.fryc.hammersandtables.blocks.ModBlocks;
 import net.fryc.hammersandtables.config.HammersAndTablesConfig;
@@ -97,7 +97,7 @@ public class HammersAndTables implements ModInitializer {
 		ItemGroup HAMMERS_AND_SMITHING = FabricItemGroup.builder(new Identifier(MOD_ID, "hammers_and_smithing_item_group"))
 				.displayName(Text.literal("Hammers and Smithing"))
 				.icon(() -> new ItemStack(ModBlocks.COPPER_TABLE))
-				.entries((enabledFeatures, entries, operatorEnabled) -> {
+				.entries((enabledFeatures, entries) -> {
 					//tables
 					entries.add(ModBlocks.COPPER_TABLE);
 					entries.add(ModBlocks.IRON_TABLE);

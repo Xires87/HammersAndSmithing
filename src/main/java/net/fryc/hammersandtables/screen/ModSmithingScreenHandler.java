@@ -91,7 +91,7 @@ public class ModSmithingScreenHandler extends ModForgingScreenHandler {
     //shows item in output slot
     protected void showItem(List<SmithingRecipe> list){
         this.currentRecipe = (SmithingRecipe)list.get(0);
-        ItemStack itemStack = this.currentRecipe.craft(this.input);
+        ItemStack itemStack = this.currentRecipe.craft(this.input, this.world.getRegistryManager());
         this.output.setLastRecipe(this.currentRecipe);
         this.output.setStack(0, itemStack);
     }
