@@ -67,7 +67,7 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
             return this.recipes.stream().anyMatch((smithingRecipe) -> {
                 return smithingRecipe.testAddition(stack);
             });
-        }).input(3, 44, 30, (stack)->{
+        }).input(3, 44, 27, (stack)->{
             return stack.isIn(ModItemTags.HAMMERS);
         }).output(4, 98, 48).build();
     }
@@ -114,6 +114,8 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
         for(int i = 0; i < this.additionRemovalCount; i++) {
             this.decrementStack(2);
         }
+        this.getHammer().setDamage(this.getHammer().getDamage() + 4);
+        if(this.getHammer().getDamage() > this.getHammer().getMaxDamage()) this.decrementStack(3);
         this.context.run((world, pos) -> {
             world.syncWorldEvent(1044, pos, 0);
         });
@@ -147,7 +149,13 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
                 }
                 else this.additionRemovalCount = 1;
                 this.output.setLastRecipe(smithingRecipe);
-                this.output.setStack(0, itemStack);
+                if(this.currentRecipe instanceof SmithingTransformAdditionalVariables stav){
+                    if(stav.getTableTier() <= this.tier) this.output.setStack(0, itemStack);
+                    else this.output.setStack(0, ItemStack.EMPTY);
+                }
+                else{
+                    this.output.setStack(0, itemStack);
+                }
             }
         }
 

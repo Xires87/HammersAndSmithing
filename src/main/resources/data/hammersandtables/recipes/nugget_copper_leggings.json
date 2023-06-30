@@ -8,5 +8,10 @@
   },
   "result": {
     "item": "hammersandtables:nugget_copper_leggings"
-  }
+  },
+  "template": {
+    "item": "hammersandtables:iron_upgrade_smithing_template"
+  },
+  "tableTier": 1,
+  "additionCount": 7
 }

@@ -333,10 +333,11 @@ public class ModItems {
     public static final Item DIAMOND_REINFORCEMENT_SMITHING_TEMPLATE = registerItem("diamond_reinforcement_smithing_template",
             TemplatesHelper.createDiamondReinforcement());
 
+    public static final Item GOLDEN_UPGRADE_SMITHING_TEMPLATE = registerItem("golden_upgrade_smithing_template",
+            TemplatesHelper.createGoldenUpgrade());
 
-
-
-
+    public static final Item IRON_UPGRADE_SMITHING_TEMPLATE = registerItem("iron_upgrade_smithing_template",
+            TemplatesHelper.createIronUpgrade());
 
 
     //registers------------------------------------------------------------------------------------------

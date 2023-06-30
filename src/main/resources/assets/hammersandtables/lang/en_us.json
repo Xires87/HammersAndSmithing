@@ -140,5 +140,24 @@
   "item.hammersandtables.smithing_template.diamond_reinforcement.additions_slot_description": "Add Diamond",
   "item.hammersandtables.smithing_template.diamond_reinforcement.base_slot_description": "Add golden armor, weapon, or tool",
   "item.hammersandtables.smithing_template.diamond_reinforcement.ingredients": "Diamond",
-  "upgrade.hammersandtables.diamond_reinforcement": "Diamond Reinforcement"
+  "upgrade.hammersandtables.diamond_reinforcement": "Diamond Reinforcement",
+
+  "item.hammersandtables.smithing_template.golden_upgrade.applies_to": "Iron Equipment",
+  "item.hammersandtables.smithing_template.golden_upgrade.additions_slot_description": "Add Gold Nuggets/Ingot",
+  "item.hammersandtables.smithing_template.golden_upgrade.base_slot_description": "Add iron armor, weapon, or tool (Normal/Reinforced)",
+  "item.hammersandtables.smithing_template.golden_upgrade.ingredients": "Gold Nuggets/Ingot",
+  "upgrade.hammersandtables.golden_upgrade": "Golden Upgrade",
+
+  "item.hammersandtables.smithing_template.iron_upgrade.applies_to": "Copper Equipment",
+  "item.hammersandtables.smithing_template.iron_upgrade.additions_slot_description": "Add Iron Nuggets/Ingot",
+  "item.hammersandtables.smithing_template.iron_upgrade.base_slot_description": "Add copper armor, weapon, or tool (Normal/Reinforced)",
+  "item.hammersandtables.smithing_template.iron_upgrade.ingredients": "Iron Nuggets/Ingot",
+  "upgrade.hammersandtables.iron_upgrade": "Iron Upgrade",
+
+
+
+  "container.upgrade.wrong_smithing_table_tooltip": "Wrong recipe or better smithing table required",
+  "container.upgrade.wrong_hammer_tooltip": "Better hammer required",
+  "container.upgrade.wrong_addition_count_tooltip": "More ingredients required",
+  "container.upgrade.hammer_slot_decription": "Add hammer"
 }

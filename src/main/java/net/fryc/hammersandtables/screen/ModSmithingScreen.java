@@ -2,6 +2,7 @@ package net.fryc.hammersandtables.screen;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.fryc.hammersandtables.HammersAndTables;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ingame.CyclingSlotIcon;
 import net.minecraft.client.gui.screen.ingame.ForgingScreen;
@@ -27,12 +28,13 @@ import java.util.Optional;
 @Environment(EnvType.CLIENT)
 public class ModSmithingScreen extends ForgingScreen<ModSmithingScreenHandler> {
 
-    // todo zrobic informacje itd o tym ze trzeba czegos jeszcze do scraftowania
-    private static final Identifier TEXTURE = new Identifier("textures/gui/container/smithing.png");
+    private static final Identifier TEXTURE = new Identifier(HammersAndTables.MOD_ID,"textures/gui/mod_smithing.png");
     private static final Identifier EMPTY_SLOT_SMITHING_TEMPLATE_ARMOR_TRIM_TEXTURE = new Identifier("item/empty_slot_smithing_template_armor_trim");
     private static final Identifier EMPTY_SLOT_SMITHING_TEMPLATE_NETHERITE_UPGRADE_TEXTURE = new Identifier("item/empty_slot_smithing_template_netherite_upgrade");
     private static final Text MISSING_TEMPLATE_TOOLTIP = Text.translatable("container.upgrade.missing_template_tooltip");
-    private static final Text ERROR_TOOLTIP = Text.translatable("container.upgrade.error_tooltip");
+    private static final Text WRONG_SMITHING_TABLE_TOOLTIP = Text.translatable("container.upgrade.wrong_smithing_table_tooltip");
+    private static final Text WRONG_ADDITION_COUNT_TOOLTIP = Text.translatable("container.upgrade.wrong_addition_count_tooltip");
+    private static final Text WRONG_HAMMER_TOOLTIP = Text.translatable("container.upgrade.wrong_hammer_tooltip");
     private static final List<Identifier> EMPTY_SLOT_TEXTURES;
     private static final int field_42057 = 44;
     private static final int field_42058 = 15;
@@ -134,18 +136,24 @@ public class ModSmithingScreen extends ForgingScreen<ModSmithingScreenHandler> {
 
         }
     }
-
     protected void drawInvalidRecipeArrow(DrawContext context, int x, int y) {
-        if (this.hasInvalidRecipe()) {
+        if (this.hasInvalidRecipe() || this.hasInvalidHammer() || this.hasInvalidAdditionCount()) {
             context.drawTexture(TEXTURE, x + 65, y + 46, this.backgroundWidth, 0, 28, 21);
         }
-
     }
 
     private void renderSlotTooltip(DrawContext context, int mouseX, int mouseY) {
         Optional<Text> optional = Optional.empty();
         if (this.hasInvalidRecipe() && this.isPointWithinBounds(65, 46, 28, 21, (double)mouseX, (double)mouseY)) {
-            optional = Optional.of(ERROR_TOOLTIP);
+            optional = Optional.of(WRONG_SMITHING_TABLE_TOOLTIP);
+        }
+        //count
+        if (this.hasInvalidAdditionCount() && this.isPointWithinBounds(65, 46, 28, 21, (double)mouseX, (double)mouseY)) {
+            optional = Optional.of(WRONG_ADDITION_COUNT_TOOLTIP);
+        }
+        //hammer
+        if (this.hasInvalidHammer() && this.isPointWithinBounds(65, 46, 28, 21, (double)mouseX, (double)mouseY)) {
+            optional = Optional.of(WRONG_HAMMER_TOOLTIP);
         }
 
         if (this.focusedSlot != null) {
@@ -164,6 +172,8 @@ public class ModSmithingScreen extends ForgingScreen<ModSmithingScreenHandler> {
                             optional = Optional.of(smithingTemplateItem.getBaseSlotDescription());
                         } else if (this.focusedSlot.id == 2) {
                             optional = Optional.of(smithingTemplateItem.getAdditionsSlotDescription());
+                        } else if (this.focusedSlot.id == 3) {
+                            optional = Optional.of(Text.translatable("container.upgrade.hammer_slot_decription"));
                         }
                     }
                 }
@@ -175,6 +185,12 @@ public class ModSmithingScreen extends ForgingScreen<ModSmithingScreenHandler> {
         });
     }
 
+    private boolean hasInvalidHammer() {
+        return ((ModSmithingScreenHandler)this.handler).getSlot(((ModSmithingScreenHandler)this.handler).getResultSlotIndex()).hasStack() && !((ModSmithingScreenHandler)this.handler).hasCorrectHammer();
+    }
+    private boolean hasInvalidAdditionCount() {
+        return ((ModSmithingScreenHandler)this.handler).getSlot(((ModSmithingScreenHandler)this.handler).getResultSlotIndex()).hasStack() && !((ModSmithingScreenHandler)this.handler).hasCorrectAdditionCount();
+    }
     private boolean hasInvalidRecipe() {
         return ((ModSmithingScreenHandler)this.handler).getSlot(0).hasStack() && ((ModSmithingScreenHandler)this.handler).getSlot(1).hasStack() && ((ModSmithingScreenHandler)this.handler).getSlot(2).hasStack() && !((ModSmithingScreenHandler)this.handler).getSlot(((ModSmithingScreenHandler)this.handler).getResultSlotIndex()).hasStack();
     }

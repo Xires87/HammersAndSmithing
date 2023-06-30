@@ -31,7 +31,7 @@ abstract class SmithingTransformRecipeSerializerMixin {
         ItemStack itemStack = ShapedRecipe.outputFromJson(JsonHelper.getObject(jsonObject, "result"));
         int additionCount = JsonHelper.getInt(jsonObject, "additionCount", 1);
         int tableTier = JsonHelper.getInt(jsonObject, "tableTier", 0);
-        int hammerTier = JsonHelper.getInt(jsonObject, "HammerTier", tableTier);
+        int hammerTier = JsonHelper.getInt(jsonObject, "hammerTier", tableTier);
         ret.setReturnValue(ModSmithingRecipes.createNewSmithingTransformRecipe(identifier, ingredient, ingredient2, ingredient3, itemStack, additionCount, tableTier, hammerTier));
     }
 

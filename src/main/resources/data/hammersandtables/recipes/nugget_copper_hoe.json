@@ -8,5 +8,10 @@
   },
   "result": {
     "item": "hammersandtables:nugget_copper_hoe"
-  }
+  },
+  "template": {
+    "item": "hammersandtables:iron_upgrade_smithing_template"
+  },
+  "tableTier": 1,
+  "additionCount": 2
 }

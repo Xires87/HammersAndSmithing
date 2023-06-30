@@ -8,5 +8,10 @@
   },
   "result": {
     "item": "hammersandtables:ingot_iron_hammer"
-  }
+  },
+  "template": {
+    "item": "hammersandtables:golden_upgrade_smithing_template"
+  },
+  "tableTier": 2,
+  "hammerTier": 3
 }

@@ -210,6 +210,8 @@ public class HammersAndTables implements ModInitializer {
 
 					//templates
 					entries.add(ModItems.DIAMOND_REINFORCEMENT_SMITHING_TEMPLATE);
+					entries.add(ModItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE);
+					entries.add(ModItems.IRON_UPGRADE_SMITHING_TEMPLATE);
 
 				})
 				.build());

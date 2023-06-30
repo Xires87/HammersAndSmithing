@@ -8,5 +8,10 @@
   },
   "result": {
     "item": "hammersandtables:ingot_copper_sword"
-  }
+  },
+  "template": {
+    "item": "hammersandtables:iron_upgrade_smithing_template"
+  },
+  "tableTier": 1,
+  "hammerTier": 2
 }
