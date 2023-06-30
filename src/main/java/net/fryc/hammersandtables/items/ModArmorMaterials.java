@@ -28,7 +28,7 @@ public enum ModArmorMaterials implements StringIdentifiable, ArmorMaterial {
     }), 14, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{Items.COPPER_INGOT});
     }),
-    INGOT_COPPER("ingot_copper", 12, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+    INGOT_COPPER("iron", 12, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 2);
         map.put(ArmorItem.Type.LEGGINGS, 5);
         map.put(ArmorItem.Type.CHESTPLATE, 6);
@@ -44,7 +44,7 @@ public enum ModArmorMaterials implements StringIdentifiable, ArmorMaterial {
     }), 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.25F, 0.0F, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{Items.IRON_INGOT});
     }),
-    INGOT_IRON("ingot_iron", 20, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+    INGOT_IRON("gold", 20, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 2);
         map.put(ArmorItem.Type.LEGGINGS, 5);
         map.put(ArmorItem.Type.CHESTPLATE, 7);

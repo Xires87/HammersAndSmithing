@@ -1,4 +1,4 @@
-package net.fryc.hammersandtables.screen.screenNew;
+package net.fryc.hammersandtables.screen;
 
 
 import net.fryc.hammersandtables.blocks.ModBlocks;

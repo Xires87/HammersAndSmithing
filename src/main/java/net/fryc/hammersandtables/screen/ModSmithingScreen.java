@@ -1,4 +1,4 @@
-package net.fryc.hammersandtables.screen.screenNew;
+package net.fryc.hammersandtables.screen;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

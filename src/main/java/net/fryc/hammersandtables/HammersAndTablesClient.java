@@ -1,8 +1,8 @@
 package net.fryc.hammersandtables;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fryc.hammersandtables.screen.screenNew.ModScreenHandlers;
-import net.fryc.hammersandtables.screen.screenNew.ModSmithingScreen;
+import net.fryc.hammersandtables.screen.ModScreenHandlers;
+import net.fryc.hammersandtables.screen.ModSmithingScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 
 public class HammersAndTablesClient implements ClientModInitializer {

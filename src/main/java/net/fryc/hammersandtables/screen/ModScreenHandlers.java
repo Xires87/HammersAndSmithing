@@ -1,4 +1,4 @@
-package net.fryc.hammersandtables.screen.screenNew;
+package net.fryc.hammersandtables.screen;
 
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.fryc.hammersandtables.HammersAndTables;

@@ -1,6 +1,6 @@
 package net.fryc.hammersandtables.blocks.custom;
 
-import net.fryc.hammersandtables.screen.screenNew.ModSmithingScreenHandler;
+import net.fryc.hammersandtables.screen.ModSmithingScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CraftingTableBlock;
 import net.minecraft.screen.NamedScreenHandlerFactory;
