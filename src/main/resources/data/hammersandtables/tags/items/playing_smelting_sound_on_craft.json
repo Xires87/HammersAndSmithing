@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:copper_ingot",
+    "minecraft:iron_ingot",
+    "minecraft:iron_nugget",
+    "minecraft:gold_ingot",
+    "minecraft:gold_nugget",
+    "minecraft:netherite_scrap"
+  ]
+}

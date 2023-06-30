@@ -1,18 +1,14 @@
 package net.fryc.hammersandtables;
 
 import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
+import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.fryc.craftingmanipulator.conditions.PressedKey;
-import net.fryc.craftingmanipulator.rules.recipeblocking.StandNearBlockRBR;
-import net.fryc.craftingmanipulator.rules.tooltips.TooltipRules;
 import net.fryc.hammersandtables.blocks.ModBlocks;
 import net.fryc.hammersandtables.config.HammersAndTablesConfig;
+import net.fryc.hammersandtables.craftingManipulator.Rules;
 import net.fryc.hammersandtables.items.ModItems;
 import net.fryc.hammersandtables.screen.ModScreenHandlers;
-import net.fryc.hammersandtables.tag.ModBlockTags;
-import net.fryc.hammersandtables.tag.ModItemTags;
 import net.fryc.hammersandtables.villagers.ModTradeOffers;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -20,9 +16,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,63 +27,15 @@ public class HammersAndTables implements ModInitializer {
 
 	public static HammersAndTablesConfig config;
 
-	private final Formatting[] requirementsTooltip = new Formatting[]{Formatting.YELLOW};
-	private final Formatting[] tooltip = new Formatting[]{Formatting.RED};
 	public static final RegistryKey<ItemGroup> HAMMERS_AND_SMITHING = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID, "hammers_and_smithing_item_group"));
 
 	@Override
 	public void onInitialize() {
 		//config
-		AutoConfig.register(HammersAndTablesConfig.class, GsonConfigSerializer::new);
+		AutoConfig.register(HammersAndTablesConfig.class, JanksonConfigSerializer::new);
 		config = AutoConfig.getConfigHolder(HammersAndTablesConfig.class).getConfig();
 
-		//tooltip for golden items
-		if(config.isTooltipsForGoldenItemsEnabled){
-			TooltipRules LOVED_BY_PIGLINS = new TooltipRules(ItemTags.PIGLIN_LOVED, "Loved by Piglins");
-			LOVED_BY_PIGLINS.tooltipFormatting = new Formatting[]{Formatting.BLUE};
-		}
-
-		//blocking recipes with Crafting Manipulator
-		if(config.isCopperRecipeBlocked){
-			StandNearBlockRBR COPPER = new StandNearBlockRBR(ModItemTags.NEEDS_COPPER_SMITHING_TABLE, ModBlockTags.TABLES);
-			if(config.isTooltipsEnabled){
-				TooltipRules COPPER_TOOLTIP = new TooltipRules(ModItemTags.NEEDS_COPPER_SMITHING_TABLE, "Crafting Requirements (SHIFT)", PressedKey.SHIFT, "Workshop: Copper Smithing Table");
-				COPPER_TOOLTIP.tooltipWhenKeyPressedFormatting = tooltip;
-				COPPER_TOOLTIP.tooltipFormatting = requirementsTooltip;
-			}
-		}
-		if(config.isIronRecipeBlocked){
-			StandNearBlockRBR IRON = new StandNearBlockRBR(ModItemTags.NEEDS_IRON_SMITHING_TABLE, ModBlockTags.IRON_TABLES);
-			if(config.isTooltipsEnabled){
-				TooltipRules IRON_TOOLTIP = new TooltipRules(ModItemTags.NEEDS_IRON_SMITHING_TABLE, "Crafting Requirements (SHIFT)", PressedKey.SHIFT, "Workshop: Iron Smithing Table");
-				IRON_TOOLTIP.tooltipWhenKeyPressedFormatting = tooltip;
-				IRON_TOOLTIP.tooltipFormatting = requirementsTooltip;
-			}
-		}
-		if(config.isGoldRecipeBlocked){
-			StandNearBlockRBR GOLD = new StandNearBlockRBR(ModItemTags.NEEDS_GOLDEN_SMITHING_TABLE, ModBlockTags.GOLDEN_TABLES);
-			if(config.isTooltipsEnabled){
-				TooltipRules GOLD_TOOLTIP = new TooltipRules(ModItemTags.NEEDS_GOLDEN_SMITHING_TABLE, "Crafting Requirements (SHIFT)", PressedKey.SHIFT, "Workshop: Golden Smithing Table");
-				GOLD_TOOLTIP.tooltipWhenKeyPressedFormatting = tooltip;
-				GOLD_TOOLTIP.tooltipFormatting = requirementsTooltip;
-			}
-		}
-		if(config.isDiamondRecipeBlocked){
-			StandNearBlockRBR DIAMOND = new StandNearBlockRBR(ModItemTags.NEEDS_DIAMOND_SMITHING_TABLE, ModBlockTags.DIAMOND_TABLES);
-			if(config.isTooltipsEnabled){
-				TooltipRules DIAMOND_TOOLTIP = new TooltipRules(ModItemTags.NEEDS_DIAMOND_SMITHING_TABLE, "Crafting Requirements (SHIFT)", PressedKey.SHIFT, "Workshop: Diamond Smithing Table");
-				DIAMOND_TOOLTIP.tooltipWhenKeyPressedFormatting = tooltip;
-				DIAMOND_TOOLTIP.tooltipFormatting = requirementsTooltip;
-			}
-		}
-		if(config.isVanillaGoldenRecipeBlocked){
-			StandNearBlockRBR VANILLA_GOLDEN = new StandNearBlockRBR(ModItemTags.VANILLA_GOLDEN_ITEMS, ModBlockTags.PIGLINS_FORGE);
-			if(config.isTooltipsEnabled){
-				TooltipRules VANILLA_GOLDEN_TOOLTIP = new TooltipRules(ModItemTags.VANILLA_GOLDEN_ITEMS, "Crafting Requirements (SHIFT)", PressedKey.SHIFT, "Workshop: Piglins Forge");
-				VANILLA_GOLDEN_TOOLTIP.tooltipWhenKeyPressedFormatting = tooltip;
-				VANILLA_GOLDEN_TOOLTIP.tooltipFormatting = requirementsTooltip;
-			}
-		}
+		Rules.enableCraftingManipulatorRules();
 
 		//other
 		ModItems.registerModItems();
@@ -111,6 +57,7 @@ public class HammersAndTables implements ModInitializer {
 					entries.add(ModBlocks.PIGLINS_FORGE);
 
 					//hammers
+					entries.add(ModItems.SHINY_GOLDEN_HAMMER);
 					entries.add(ModItems.COPPER_HAMMER);
 					entries.add(ModItems.NUGGET_COPPER_HAMMER);
 					entries.add(ModItems.INGOT_COPPER_HAMMER);

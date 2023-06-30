@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#hammersandtables:needs_copper_smithing_table",
+    "#hammersandtables:needs_iron_smithing_table",
+    "#hammersandtables:needs_golden_smithing_table",
+    "#hammersandtables:needs_diamond_smithing_table",
+    "#hammersandtables:vanilla_golden_items"
+  ]
+}

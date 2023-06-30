@@ -21,8 +21,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(SmithingTransformRecipe.Serializer.class)
 abstract class SmithingTransformRecipeSerializerMixin {
 
-    // todo zrobic wszystkie jsony
-
     @Inject(method = "read(Lnet/minecraft/util/Identifier;Lcom/google/gson/JsonObject;)Lnet/minecraft/recipe/SmithingTransformRecipe;", at = @At("HEAD"), cancellable = true)
     private void readingJson(Identifier identifier, JsonObject jsonObject, CallbackInfoReturnable<SmithingTransformRecipe> ret) {
         Ingredient ingredient = Ingredient.fromJson(JsonHelper.getElement(jsonObject, "template"));

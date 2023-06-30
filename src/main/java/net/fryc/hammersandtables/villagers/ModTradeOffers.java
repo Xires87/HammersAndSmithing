@@ -22,7 +22,6 @@ public class ModTradeOffers extends TradeOffers{
         return new Int2ObjectOpenHashMap(map);
     }
 
-    // todo przepatrzec oferty i pozmieniac jak trzeba
     public static void registerModTradeOffers(){
         if(HammersAndTables.config.modifyTradeOffersForArmorer) TradeOffers.PROFESSION_TO_LEVELED_TRADE.replace(VillagerProfession.ARMORER, TradeOffers.PROFESSION_TO_LEVELED_TRADE.get(VillagerProfession.ARMORER), ModTradeOffers.MOD_PROFESSION_TO_LEVELED_TRADE.get(VillagerProfession.ARMORER));
         if(HammersAndTables.config.modifyTradeOffersForToolsmith) TradeOffers.PROFESSION_TO_LEVELED_TRADE.replace(VillagerProfession.TOOLSMITH, TradeOffers.PROFESSION_TO_LEVELED_TRADE.get(VillagerProfession.TOOLSMITH), ModTradeOffers.MOD_PROFESSION_TO_LEVELED_TRADE.get(VillagerProfession.TOOLSMITH));

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "hammersandtables:shiny_golden_hammer",
     "hammersandtables:copper_hammer",
     "hammersandtables:nugget_copper_hammer",
     "hammersandtables:ingot_copper_hammer",

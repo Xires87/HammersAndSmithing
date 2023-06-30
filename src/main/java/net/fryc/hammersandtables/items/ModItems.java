@@ -12,6 +12,10 @@ import net.minecraft.util.Identifier;
 public class ModItems {
 
     //hammers----------------------------------------------------------------------------------
+
+    public static final Item SHINY_GOLDEN_HAMMER = registerItem("shiny_golden_hammer" ,
+            new HammerItem(ToolMaterials.GOLD , 6 , -3.1f,
+                    new FabricItemSettings()));
     public static final Item COPPER_HAMMER = registerItem("copper_hammer" ,
             new HammerItem(ModToolMaterials.COPPER , 4 , -3.3f,
                     new FabricItemSettings()));
