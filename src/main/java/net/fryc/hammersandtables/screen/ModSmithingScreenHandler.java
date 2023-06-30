@@ -39,6 +39,8 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
     private SmithingRecipe currentRecipe;
     private final List<SmithingRecipe> recipes;
 
+    private int additionRemovalCount = 1;
+
     // 1 - copper, 2 - iron, 3 - gold, 4 - diamond
     private int tier = 1;
 
@@ -77,9 +79,8 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
         return state.isIn(ModBlockTags.TABLES);
     }
 
-    // todo zrobic zeby ilosc sprawdzalo
     protected boolean canTakeOutput(PlayerEntity player, boolean present) {
-        return this.currentRecipe != null && this.currentRecipe.matches(this.input, this.world) && this.hasCorrectHammer() && this.isCorrectSmithingTable();
+        return this.currentRecipe != null && this.currentRecipe.matches(this.input, this.world) && this.hasCorrectHammer() && this.isCorrectSmithingTable() && this.hasCorrectAdditionCount();
     }
 
     //checks if correct hammer is used
@@ -100,13 +101,19 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
         return true;
     }
 
-    // todo zrobic zeby zabieralo tyle ile jest w ilosci napisane
+    protected boolean hasCorrectAdditionCount(){
+        if(this.additionRemovalCount == 1) return true;
+        return this.additionRemovalCount <= this.getSlot(2).getStack().getCount();
+    }
+
     protected void onTakeOutput(PlayerEntity player, ItemStack stack) {
         stack.onCraft(player.getWorld(), player, stack.getCount());
         this.output.unlockLastRecipe(player, this.getInputStacks());
         this.decrementStack(0);
         this.decrementStack(1);
-        this.decrementStack(2);
+        for(int i = 0; i < this.additionRemovalCount; i++) {
+            this.decrementStack(2);
+        }
         this.context.run((world, pos) -> {
             world.syncWorldEvent(1044, pos, 0);
         });
@@ -134,6 +141,11 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
             ItemStack itemStack = smithingRecipe.craft(this.input, this.world.getRegistryManager());
             if (itemStack.isItemEnabled(this.world.getEnabledFeatures())) {
                 this.currentRecipe = smithingRecipe;
+                if(this.currentRecipe instanceof SmithingTransformAdditionalVariables stav){
+                    this.additionRemovalCount = stav.getAdditionCount();
+                    if(this.additionRemovalCount < 1) this.additionRemovalCount = 1;
+                }
+                else this.additionRemovalCount = 1;
                 this.output.setLastRecipe(smithingRecipe);
                 this.output.setStack(0, itemStack);
             }

@@ -35,7 +35,6 @@ public class HammersAndTables implements ModInitializer {
 
 	private final Formatting[] requirementsTooltip = new Formatting[]{Formatting.YELLOW};
 	private final Formatting[] tooltip = new Formatting[]{Formatting.RED};
-	// todo zrobic zeby smithing trimy dzialaly na moich armorach
 	public static final RegistryKey<ItemGroup> HAMMERS_AND_SMITHING = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID, "hammers_and_smithing_item_group"));
 
 	@Override
@@ -208,6 +207,9 @@ public class HammersAndTables implements ModInitializer {
 					entries.add(ModItems.BONE_CHESTPLATE);
 					entries.add(ModItems.BONE_LEGGINGS);
 					entries.add(ModItems.BONE_BOOTS);
+
+					//templates
+					entries.add(ModItems.DIAMOND_REINFORCEMENT_SMITHING_TEMPLATE);
 
 				})
 				.build());
