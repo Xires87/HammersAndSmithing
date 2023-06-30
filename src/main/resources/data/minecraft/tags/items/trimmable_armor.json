@@ -1,0 +1,45 @@
+{
+  "replace": false,
+  "values": [
+    "hammersandtables:copper_helmet",
+    "hammersandtables:copper_chestplate",
+    "hammersandtables:copper_leggings",
+    "hammersandtables:copper_boots",
+
+    "hammersandtables:nugget_copper_helmet",
+    "hammersandtables:nugget_copper_chestplate",
+    "hammersandtables:nugget_copper_leggings",
+    "hammersandtables:nugget_copper_boots",
+
+    "hammersandtables:ingot_copper_helmet",
+    "hammersandtables:ingot_copper_chestplate",
+    "hammersandtables:ingot_copper_leggings",
+    "hammersandtables:ingot_copper_boots",
+
+    "hammersandtables:nugget_iron_helmet",
+    "hammersandtables:nugget_iron_chestplate",
+    "hammersandtables:nugget_iron_leggings",
+    "hammersandtables:nugget_iron_boots",
+
+    "hammersandtables:ingot_iron_helmet",
+    "hammersandtables:ingot_iron_chestplate",
+    "hammersandtables:ingot_iron_leggings",
+    "hammersandtables:ingot_iron_boots",
+
+    "hammersandtables:golden_helmet",
+    "hammersandtables:golden_chestplate",
+    "hammersandtables:golden_leggings",
+    "hammersandtables:golden_boots",
+
+    "hammersandtables:diamond_golden_helmet",
+    "hammersandtables:diamond_golden_chestplate",
+    "hammersandtables:diamond_golden_leggings",
+    "hammersandtables:diamond_golden_boots",
+
+    "hammersandtables:bone_boots",
+    "hammersandtables:bone_leggings",
+    "hammersandtables:bone_chestplate",
+    "hammersandtables:bone_helmet"
+
+  ]
+}

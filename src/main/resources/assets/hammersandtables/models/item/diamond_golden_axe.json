@@ -2,13 +2,5 @@
   "parent": "item/handheld",
   "textures": {
     "layer0": "hammersandtables:item/diamond_golden_axe"
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "axeparry": 1
-      },
-      "model": "hammersandtables:item/diamond_golden_axe_parry"
-    }
-  ]
+  }
 }

@@ -133,6 +133,12 @@
   "text.autoconfig.hammersandtables.option.modifyTradeOffersForArmorer": "Modify trade offers for Armorer [Restart required]",
 
   "text.autoconfig.hammersandtables.option.forceModifiedTradeOffers": "Force trade offers from Hammers and Smithing (!!! Trade offers from other mods will not work !!!)",
-  "text.autoconfig.hammersandtables.option.forceModifiedTradeOffers.@Tooltip": "Modifies trade offers for Armorer, Toolsmith and Weaponsmith and prevents other mods from adding new trade offers (or changing existing ones) for ALL professions"
+  "text.autoconfig.hammersandtables.option.forceModifiedTradeOffers.@Tooltip": "Modifies trade offers for Armorer, Toolsmith and Weaponsmith and prevents other mods from adding new trade offers (or changing existing ones) for ALL professions",
 
+
+  "item.hammersandtables.smithing_template.diamond_reinforcement.applies_to": "Golden Equipment",
+  "item.hammersandtables.smithing_template.diamond_reinforcement.additions_slot_description": "Add Diamond",
+  "item.hammersandtables.smithing_template.diamond_reinforcement.base_slot_description": "Add golden armor, weapon, or tool",
+  "item.hammersandtables.smithing_template.diamond_reinforcement.ingredients": "Diamond",
+  "upgrade.hammersandtables.diamond_reinforcement": "Diamond Reinforcement"
 }

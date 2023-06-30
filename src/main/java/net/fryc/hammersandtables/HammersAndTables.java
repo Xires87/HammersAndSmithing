@@ -10,12 +10,16 @@ import net.fryc.craftingmanipulator.rules.tooltips.TooltipRules;
 import net.fryc.hammersandtables.blocks.ModBlocks;
 import net.fryc.hammersandtables.config.HammersAndTablesConfig;
 import net.fryc.hammersandtables.items.ModItems;
+import net.fryc.hammersandtables.screen.screenNew.ModScreenHandlers;
 import net.fryc.hammersandtables.tag.ModBlockTags;
 import net.fryc.hammersandtables.tag.ModItemTags;
 import net.fryc.hammersandtables.villagers.ModTradeOffers;
-import net.fryc.hammersandtables.screen.ModScreenHandlers;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
@@ -31,6 +35,8 @@ public class HammersAndTables implements ModInitializer {
 
 	private final Formatting[] requirementsTooltip = new Formatting[]{Formatting.YELLOW};
 	private final Formatting[] tooltip = new Formatting[]{Formatting.RED};
+	// todo zrobic zeby smithing trimy dzialaly na moich armorach
+	public static final RegistryKey<ItemGroup> HAMMERS_AND_SMITHING = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID, "hammers_and_smithing_item_group"));
 
 	@Override
 	public void onInitialize() {
@@ -89,14 +95,14 @@ public class HammersAndTables implements ModInitializer {
 		//other
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
-		ModScreenHandlers.registerAllScreenHandlers();
+		ModScreenHandlers.registerScreenHandlers();
 
 		ModTradeOffers.registerModTradeOffers();
 
-		//creative
-		ItemGroup HAMMERS_AND_SMITHING = FabricItemGroup.builder(new Identifier(MOD_ID, "hammers_and_smithing_item_group"))
-				.displayName(Text.literal("Hammers and Smithing"))
+		//Item Group
+		Registry.register(Registries.ITEM_GROUP, HAMMERS_AND_SMITHING, FabricItemGroup.builder()
 				.icon(() -> new ItemStack(ModBlocks.COPPER_TABLE))
+				.displayName(Text.literal("Hammers and Smithing"))
 				.entries((enabledFeatures, entries) -> {
 					//tables
 					entries.add(ModBlocks.COPPER_TABLE);
@@ -152,7 +158,7 @@ public class HammersAndTables implements ModInitializer {
 					entries.add(ModItems.INGOT_COPPER_CHESTPLATE);
 					entries.add(ModItems.INGOT_COPPER_LEGGINGS);
 					entries.add(ModItems.INGOT_COPPER_BOOTS);
-					
+
 					//nugget iron
 					entries.add(ModItems.NUGGET_IRON_PICKAXE);
 					entries.add(ModItems.NUGGET_IRON_AXE);
@@ -202,9 +208,10 @@ public class HammersAndTables implements ModInitializer {
 					entries.add(ModItems.BONE_CHESTPLATE);
 					entries.add(ModItems.BONE_LEGGINGS);
 					entries.add(ModItems.BONE_BOOTS);
-					
+
 				})
-				.build();
+				.build());
+
 
 	}
 }

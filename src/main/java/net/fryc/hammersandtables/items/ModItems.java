@@ -8,47 +8,48 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+
 public class ModItems {
 
     //hammers----------------------------------------------------------------------------------
     public static final Item COPPER_HAMMER = registerItem("copper_hammer" ,
-            new ModSlownessSwordItem(ModToolMaterials.COPPER , 4 , -3.3f,
+            new HammerItem(ModToolMaterials.COPPER , 4 , -3.3f,
                     new FabricItemSettings()));
 
     public static final Item NUGGET_COPPER_HAMMER = registerItem("nugget_copper_hammer" ,
-            new ModSlownessSwordItem(ModToolMaterials.NUGGET_COPPER , 4 , -3.3f,
+            new HammerItem(ModToolMaterials.NUGGET_COPPER , 4 , -3.3f,
                     new FabricItemSettings()));
 
     public static final Item INGOT_COPPER_HAMMER = registerItem("ingot_copper_hammer" ,
-            new ModSlownessSwordItem(ModToolMaterials.INGOT_COPPER , 4 , -3.3f,
+            new HammerItem(ModToolMaterials.INGOT_COPPER , 4 , -3.3f,
                     new FabricItemSettings()));
 
     public static final Item IRON_HAMMER = registerItem("iron_hammer" ,
-            new ModSlownessSwordItem(ToolMaterials.IRON , 5 , -3.3f,
+            new HammerItem(ToolMaterials.IRON , 5 , -3.3f,
                     new FabricItemSettings()));
 
     public static final Item NUGGET_IRON_HAMMER = registerItem("nugget_iron_hammer" ,
-            new ModSlownessSwordItem(ModToolMaterials.NUGGET_IRON , 4 , -3.3f,
+            new HammerItem(ModToolMaterials.NUGGET_IRON , 4 , -3.3f,
                     new FabricItemSettings()));
 
     public static final Item INGOT_IRON_HAMMER = registerItem("ingot_iron_hammer" ,
-            new ModSlownessSwordItem(ModToolMaterials.INGOT_IRON , 4 , -3.3f,
+            new HammerItem(ModToolMaterials.INGOT_IRON , 4 , -3.3f,
                     new FabricItemSettings()));
 
     public static final Item GOLDEN_HAMMER = registerItem("golden_hammer" ,
-            new ModSlownessSwordItem(ModToolMaterials.GOLD , 4 , -3.3f,
+            new HammerItem(ModToolMaterials.GOLD , 4 , -3.3f,
                     new FabricItemSettings()));
 
     public static final Item DIAMOND_GOLDEN_HAMMER = registerItem("diamond_golden_hammer" ,
-            new ModSlownessSwordItem(ModToolMaterials.DIAMOND_GOLD , 4 , -3.3f,
+            new HammerItem(ModToolMaterials.DIAMOND_GOLD , 4 , -3.3f,
                     new FabricItemSettings()));
 
     public static final Item DIAMOND_HAMMER = registerItem("diamond_hammer" ,
-            new ModSlownessSwordItem(ToolMaterials.DIAMOND , 5 , -3.3f,
+            new HammerItem(ToolMaterials.DIAMOND , 5 , -3.3f,
                     new FabricItemSettings()));
 
     public static final Item NETHERITE_HAMMER = registerItem("netherite_hammer" ,
-            new ModSlownessSwordItem(ToolMaterials.NETHERITE , 4 , -3.2f,
+            new HammerItem(ToolMaterials.NETHERITE , 4 , -3.2f,
                     new FabricItemSettings()));
     //copper ----------------------------------------------------------------------------------
     public static final Item COPPER_PICKAXE = registerItem("copper_pickaxe" ,
@@ -327,13 +328,22 @@ public class ModItems {
             new ArmorItem(ModArmorMaterials.BONE , ArmorItem.Type.BOOTS ,
                     new FabricItemSettings()));
 
+    //smithing templates----------------------------------------------------------------------------
+
+    public static final Item DIAMOND_REINFORCEMENT_SMITHING_TEMPLATE = registerItem("diamond_reinforcement_smithing_template",
+            TemplatesHelper.createDiamondReinforcement());
+
+
+
+
+
+
 
     //registers------------------------------------------------------------------------------------------
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, new Identifier(HammersAndTables.MOD_ID, name), item);
     }
     public static void registerModItems(){
-        HammersAndTables.LOGGER.info("Registering Mod Items for " + HammersAndTables.MOD_ID);
     }
 
 }

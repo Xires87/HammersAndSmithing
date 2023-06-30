@@ -2,13 +2,5 @@
   "parent": "item/handheld",
   "textures": {
     "layer0": "minecraft:item/iron_sword"
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "parry": 1
-      },
-      "model": "hammersandtables:item/iron_sword_parry"
-    }
-  ]
+  }
 }

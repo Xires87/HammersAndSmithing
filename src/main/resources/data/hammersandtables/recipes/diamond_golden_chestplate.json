@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:smithing",
+  "type": "minecraft:smithing_transform",
   "addition": {
     "item": "minecraft:diamond"
   },
@@ -8,5 +8,9 @@
   },
   "result": {
     "item": "hammersandtables:diamond_golden_chestplate"
-  }
+  },
+  "template": {
+    "item": "hammersandtables:diamond_reinforcement_smithing_template"
+  },
+  "tableTier": 3
 }

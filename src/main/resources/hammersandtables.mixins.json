@@ -11,7 +11,9 @@
     "RuinedPortalMixin",
     "WitherSkeletonMixin",
     "MobEntityMixin",
-    "VillagerEntityMixin"
+    "VillagerEntityMixin",
+    "SmithingTransformRecipeMixin",
+    "SmithingTransformRecipeSerializerMixin"
   ],
   "client": [
   ],

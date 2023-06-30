@@ -2,13 +2,5 @@
   "parent": "item/handheld",
   "textures": {
     "layer0": "hammersandtables:item/nugget_copper_hammer"
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "parry": 1
-      },
-      "model": "hammersandtables:item/nugget_copper_hammer_parry"
-    }
-  ]
+  }
 }
