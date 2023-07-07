@@ -3,8 +3,8 @@
     "icon": {
       "item": "minecraft:crafting_table"
     },
-    "title": "Hammers and Tables",
-    "description": "Advancements that will guide you through Hammers and Tables",
+    "title": "Hammers and Smithing",
+    "description": "Advancements that will guide you through Hammers and Smithing",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

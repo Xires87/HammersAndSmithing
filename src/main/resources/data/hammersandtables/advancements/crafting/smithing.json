@@ -16,7 +16,7 @@
   },
   "display": {
     "announce_to_chat": true,
-    "description": "Use three Iron Nuggets to reinforce Copper Pickaxe",
+    "description": "Use Iron Nuggets to reinforce Copper Pickaxe",
     "frame": "task",
     "hidden": false,
     "icon": {

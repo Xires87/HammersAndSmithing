@@ -16,7 +16,7 @@
   },
   "display": {
     "announce_to_chat": true,
-    "description": "Use it in Diamond Smithing Table to craft Netherite items",
+    "description": "Use it to craft Netherite items",
     "frame": "task",
     "hidden": false,
     "icon": {

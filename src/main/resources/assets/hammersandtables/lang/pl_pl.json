@@ -8,6 +8,7 @@
   "item.minecraft.golden_sword": "Lśniący Złoty Miecz",
   "item.minecraft.golden_hoe": "Lśniąca Złota Motyka",
   "item.minecraft.golden_shovel": "Lśniąca Złota Łopata",
+  "item.hammersandtables.shiny_golden_hammer": "Lśniący Złoty Młot",
 
   "item.hammersandtables.copper_pickaxe": "Miedziany Kilof",
   "item.hammersandtables.copper_axe": "Miedziana Siekiera",
@@ -116,6 +117,7 @@
   "text.autoconfig.hammersandtables.option.isTooltipsEnabled": "Dodaj podpisy dla przedmiotów, które wymagają stołu kowalskiego do wytworzenia [Wymagany Restart]",
   "text.autoconfig.hammersandtables.option.isTooltipsEnabled.@Tooltip": "Dodaje podpisy informujące który stół kowalski jest wymagany aby stworzyć przedmiot",
   "text.autoconfig.hammersandtables.option.isTooltipsForGoldenItemsEnabled": "Dodaj podpisy dla przedmiotów, które mogą być użyte do handlu z Piglinami [Wymagany Restart]",
+  "text.autoconfig.hammersandtables.option.isSoundsWhenCraftingEnabled": "Graj dźwięk kucia podczas tworzenia przedmiotów wymagających stołu kowalskiego i dźwięk gaszenia podczas wyciągania sztabek z pieca [Wymagany Restart]",
   "text.autoconfig.hammersandtables.option.isCopperRecipeBlocked": "Zablokuj miedziane receptury [Wymagany Restart]",
   "text.autoconfig.hammersandtables.option.isCopperRecipeBlocked.@Tooltip": "Miedziane przedmioty nie mogą zostać wytworzone jeśli nie stoisz przy Miedzianym Stole Kowalskim (lub lepszym stole kowalskim)",
   "text.autoconfig.hammersandtables.option.isIronRecipeBlocked": "Zablokuj żelazne receptury [Wymagany Restart]",
@@ -133,6 +135,31 @@
   "text.autoconfig.hammersandtables.option.modifyTradeOffersForArmorer": "Zmodyfikuj oferty handlowe Płatnerza [Wymagany Restart]",
 
   "text.autoconfig.hammersandtables.option.forceModifiedTradeOffers": "Wymuś oferty z Hammers and Smithing (!!! Oferty z innych modów nie będą działać !!!)",
-  "text.autoconfig.hammersandtables.option.forceModifiedTradeOffers.@Tooltip": "Modyfikuje oferty dla Płatnerza, Narzędziarza, Bibliotekarza i Zbrojmistrza i powstrzymuje inne mody przed dodawaniem nowych ofert (lub zmienianiem istniejących) dla WSZYSTKICH profesji"
+  "text.autoconfig.hammersandtables.option.forceModifiedTradeOffers.@Tooltip": "Modyfikuje oferty dla Płatnerza, Narzędziarza, Bibliotekarza i Zbrojmistrza i powstrzymuje inne mody przed dodawaniem nowych ofert (lub zmienianiem istniejących) dla WSZYSTKICH profesji",
+
+
+  "item.hammersandtables.smithing_template.diamond_reinforcement.applies_to": "Złoty Ekwipunek",
+  "item.hammersandtables.smithing_template.diamond_reinforcement.additions_slot_description": "Dodaj Diament",
+  "item.hammersandtables.smithing_template.diamond_reinforcement.base_slot_description": "Dodaj złotą zbroję, broń lub narzędzie",
+  "item.hammersandtables.smithing_template.diamond_reinforcement.ingredients": "Diament",
+  "upgrade.hammersandtables.diamond_reinforcement": "Diamentowe Wzmocnienie",
+
+  "item.hammersandtables.smithing_template.golden_upgrade.applies_to": "Żelazny Ekwipunek",
+  "item.hammersandtables.smithing_template.golden_upgrade.additions_slot_description": "Dodaj Złote(/-ą) Samorodki/Sztabkę",
+  "item.hammersandtables.smithing_template.golden_upgrade.base_slot_description": "Dodaj żelazną zbroję, broń lub narzędzie (Zwykłe/Wzmocnione)",
+  "item.hammersandtables.smithing_template.golden_upgrade.ingredients": "Złote(/-a) Samorodki/Sztabka",
+  "upgrade.hammersandtables.golden_upgrade": "Złote Ulepszenie",
+
+  "item.hammersandtables.smithing_template.iron_upgrade.applies_to": "Miedziany Ekwipunek",
+  "item.hammersandtables.smithing_template.iron_upgrade.additions_slot_description": "Dodaj Żelazne(/-ą) Samorodki/Sztabkę",
+  "item.hammersandtables.smithing_template.iron_upgrade.base_slot_description": "Dodaj miedzianą zbroję, broń lub narzędzie (Zwykłe/Wzmocnione)",
+  "item.hammersandtables.smithing_template.iron_upgrade.ingredients": "Żelazne(/-a) Samorodki/Sztabka",
+  "upgrade.hammersandtables.iron_upgrade": "Żelazne Ulepszenie",
+
+
+  "container.upgrade.wrong_smithing_table_tooltip": "Niepoprawna receptura, lub potrzeba lepszego stołu kowalskiego",
+  "container.upgrade.wrong_hammer_tooltip": "Potrzeba lepszego młota",
+  "container.upgrade.wrong_addition_count_tooltip": "Potrzeba więcej składników",
+  "container.upgrade.hammer_slot_decription": "Dodaj młot"
 
 }
