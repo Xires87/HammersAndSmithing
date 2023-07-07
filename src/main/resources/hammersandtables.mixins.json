@@ -13,7 +13,8 @@
     "MobEntityMixin",
     "VillagerEntityMixin",
     "SmithingTransformRecipeMixin",
-    "SmithingTransformRecipeSerializerMixin"
+    "SmithingTransformRecipeSerializerMixin",
+    "PlayerManagerMixin"
   ],
   "client": [
   ],

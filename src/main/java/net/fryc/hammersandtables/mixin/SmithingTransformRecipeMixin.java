@@ -3,6 +3,7 @@ package net.fryc.hammersandtables.mixin;
 import net.fryc.hammersandtables.util.SmithingTransformAdditionalVariables;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.SmithingRecipe;
 import net.minecraft.recipe.SmithingTransformRecipe;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -10,7 +11,7 @@ import org.spongepowered.asm.mixin.Shadow;
 
 
 @Mixin(SmithingTransformRecipe.class)
-abstract class SmithingTransformRecipeMixin implements SmithingTransformAdditionalVariables {
+abstract class SmithingTransformRecipeMixin implements SmithingRecipe, SmithingTransformAdditionalVariables {
 
     int hammerTier = 0;
     int tableTier = 0;

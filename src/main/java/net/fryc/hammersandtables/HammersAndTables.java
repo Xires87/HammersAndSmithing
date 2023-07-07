@@ -28,6 +28,7 @@ public class HammersAndTables implements ModInitializer {
 	public static HammersAndTablesConfig config;
 
 	public static final RegistryKey<ItemGroup> HAMMERS_AND_SMITHING = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID, "hammers_and_smithing_item_group"));
+	// todo tekstury, testy, lang i loot table
 
 	@Override
 	public void onInitialize() {
@@ -43,6 +44,7 @@ public class HammersAndTables implements ModInitializer {
 		ModScreenHandlers.registerScreenHandlers();
 
 		ModTradeOffers.registerModTradeOffers();
+
 
 		//Item Group
 		Registry.register(Registries.ITEM_GROUP, HAMMERS_AND_SMITHING, FabricItemGroup.builder()
