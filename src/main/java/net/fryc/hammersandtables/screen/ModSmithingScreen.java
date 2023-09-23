@@ -20,6 +20,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Quaternionf;
+import org.joml.Vector3f;
 
 import java.util.List;
 import java.util.Optional;
@@ -45,6 +46,7 @@ public class ModSmithingScreen extends ForgingScreen<ModSmithingScreenHandler> {
     private static final int field_42063 = 115;
     public static final int field_42068 = 210;
     public static final int field_42047 = 25;
+    private static final Vector3f field_45497;
     public static final Quaternionf ARMOR_STAND_ROTATION;
     public static final int field_42049 = 25;
     public static final int field_42050 = 75;
@@ -98,12 +100,23 @@ public class ModSmithingScreen extends ForgingScreen<ModSmithingScreenHandler> {
         this.renderSlotTooltip(context, mouseX, mouseY);
     }
 
+    /* old
     protected void drawBackground(DrawContext context, float delta, int mouseX, int mouseY) {
         super.drawBackground(context, delta, mouseX, mouseY);
         this.templateSlotIcon.render(this.handler, context, delta, this.x, this.y);
         this.baseSlotIcon.render(this.handler, context, delta, this.x, this.y);
         this.additionsSlotIcon.render(this.handler, context, delta, this.x, this.y);
         InventoryScreen.drawEntity(context, this.x + 141, this.y + 75, 25, ARMOR_STAND_ROTATION, (Quaternionf)null, this.armorStand);
+    }
+
+     */
+
+    protected void drawBackground(DrawContext context, float delta, int mouseX, int mouseY) {
+        super.drawBackground(context, delta, mouseX, mouseY);
+        this.templateSlotIcon.render(this.handler, context, delta, this.x, this.y);
+        this.baseSlotIcon.render(this.handler, context, delta, this.x, this.y);
+        this.additionsSlotIcon.render(this.handler, context, delta, this.x, this.y);
+        InventoryScreen.drawEntity(context, (float)(this.x + 141), (float)(this.y + 75), 25, field_45497, ARMOR_STAND_ROTATION, (Quaternionf)null, this.armorStand);
     }
 
     public void onSlotUpdate(ScreenHandler handler, int slotId, ItemStack stack) {
@@ -197,6 +210,7 @@ public class ModSmithingScreen extends ForgingScreen<ModSmithingScreenHandler> {
 
     static {
         EMPTY_SLOT_TEXTURES = List.of(EMPTY_SLOT_SMITHING_TEMPLATE_ARMOR_TRIM_TEXTURE, EMPTY_SLOT_SMITHING_TEMPLATE_NETHERITE_UPGRADE_TEXTURE);
+        field_45497 = new Vector3f();
         ARMOR_STAND_ROTATION = (new Quaternionf()).rotationXYZ(0.43633232F, 0.0F, 3.1415927F);
     }
 }

@@ -88,7 +88,7 @@ public enum ModArmorMaterials implements StringIdentifiable, ArmorMaterial {
     BONE("bone", 7, new int[]{1,2,3,2}, 20 , SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.5f, 0.0f, () -> Ingredient.ofItems(Items.BONE));
      */
 
-    public static final StringIdentifiable.Codec<ModArmorMaterials> CODEC = StringIdentifiable.createCodec(ModArmorMaterials::values);
+    //public static final StringIdentifiable.Codec<ModArmorMaterials> CODEC = StringIdentifiable.createCodec(ModArmorMaterials::values); todo sprawdzic czy cos sie psuje i poprawic receptury SmithingTransform
     private static final EnumMap<ArmorItem.Type, Integer> BASE_DURABILITY = (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 13);
         map.put(ArmorItem.Type.LEGGINGS, 15);

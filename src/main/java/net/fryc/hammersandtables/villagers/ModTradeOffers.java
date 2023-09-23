@@ -1,23 +1,9 @@
 package net.fryc.hammersandtables.villagers;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Maps;
-import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
-import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
-import net.fryc.hammersandtables.HammersAndTables;
-import net.fryc.hammersandtables.items.ModItems;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.*;
-import net.minecraft.item.map.MapIcon;
-import net.minecraft.registry.tag.StructureTags;
-import net.minecraft.util.Util;
-import net.minecraft.village.*;
-
-import java.util.Map;
+import net.minecraft.village.TradeOffers;
 
 public class ModTradeOffers extends TradeOffers{
-
+/*
     public static Int2ObjectMap<Factory[]> copyToFastUtilMap(ImmutableMap<Integer, Factory[]> map) {
         return new Int2ObjectOpenHashMap(map);
     }
@@ -69,4 +55,6 @@ public class ModTradeOffers extends TradeOffers{
 
     });
 
+todo zrobic oferty
+ */
 }
