@@ -82,7 +82,7 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
             });
         }).input(3, 44, 27, (stack)->{
             return stack.isIn(ModItemTags.HAMMERS);
-        }).output(3, 98, 48).build();
+        }).output(4, 98, 48).build();
     }
 
     protected boolean canUse(BlockState state) {

@@ -13,5 +13,6 @@
     "item": "hammersandtables:golden_upgrade_smithing_template"
   },
   "tableTier": 2,
+  "hammerTier": 2,
   "additionCount": 5
 }

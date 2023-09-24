@@ -80,6 +80,7 @@ public class ModSmithingScreen extends ForgingScreen<ModSmithingScreenHandler> {
         this.templateSlotIcon.updateTexture(EMPTY_SLOT_TEXTURES);
         this.baseSlotIcon.updateTexture((List)optional.map(SmithingTemplateItem::getEmptyBaseSlotTextures).orElse(List.of()));
         this.additionsSlotIcon.updateTexture((List)optional.map(SmithingTemplateItem::getEmptyAdditionsSlotTextures).orElse(List.of()));
+        if(this.handler.getSlot(4).hasStack()) this.equipArmorStand(this.handler.getSlot(4).getStack());
     }
 
     private Optional<SmithingTemplateItem> getSmithingTemplate() {
@@ -118,6 +119,7 @@ public class ModSmithingScreen extends ForgingScreen<ModSmithingScreenHandler> {
         this.additionsSlotIcon.render(this.handler, context, delta, this.x, this.y);
         InventoryScreen.drawEntity(context, (float)(this.x + 141), (float)(this.y + 75), 25, field_45497, ARMOR_STAND_ROTATION, (Quaternionf)null, this.armorStand);
     }
+
 
     public void onSlotUpdate(ScreenHandler handler, int slotId, ItemStack stack) {
         if (slotId == 4) {

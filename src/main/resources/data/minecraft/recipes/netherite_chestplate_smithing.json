@@ -12,5 +12,7 @@
   "template": {
     "item": "minecraft:netherite_upgrade_smithing_template"
   },
-  "tableTier": 4
+  "tableTier": 4,
+  "hammerTier": 4
+
 }

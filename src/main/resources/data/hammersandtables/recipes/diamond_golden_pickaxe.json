@@ -12,5 +12,6 @@
   "template": {
     "item": "hammersandtables:diamond_reinforcement_smithing_template"
   },
-  "tableTier": 3
+  "tableTier": 3,
+  "hammerTier": 3
 }

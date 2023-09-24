@@ -110,6 +110,10 @@
   "item.hammersandtables.diamond_golden_leggings": "Wzmocnione Złote Nogawice",
   "item.hammersandtables.diamond_golden_boots": "Wzmocnione Złote Buty",
 
+  "item.hammersandtables.diamond_reinforcement_smithing_template": "Szablon Kowalski",
+  "item.hammersandtables.golden_upgrade_smithing_template": "Szablon Kowalski",
+  "item.hammersandtables.iron_upgrade_smithing_template": "Szablon Kowalski",
+
   "text.autoconfig.hammersandtables.title": "Konfiguracja Hammers and Smithing",
   "text.autoconfig.hammersandtables.category.recipes": "Przedmioty i Receptury",
   "text.autoconfig.hammersandtables.category.tooltips": "Podpisy",
@@ -160,6 +164,8 @@
   "container.upgrade.wrong_smithing_table_tooltip": "Niepoprawna receptura, lub potrzeba lepszego stołu kowalskiego",
   "container.upgrade.wrong_hammer_tooltip": "Potrzeba lepszego młota",
   "container.upgrade.wrong_addition_count_tooltip": "Potrzeba więcej składników",
-  "container.upgrade.hammer_slot_decription": "Dodaj młot"
+  "container.upgrade.hammer_slot_decription": "Dodaj młot",
+
+  "text.hammersandtables.smithing_table_tooltip": "Tylko Osadnicy wiedzą jak tego użyć..."
 
 }

@@ -5,6 +5,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.fryc.hammersandtables.recipes.ModSmithingRecipes;
 import net.fryc.hammersandtables.util.SmithingTransformAdditionalVariables;
+import net.fryc.hammersandtables.util.TransformRecipeNumber;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.Ingredient;
@@ -21,7 +22,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(SmithingTransformRecipe.Serializer.class)
 abstract class SmithingTransformRecipeSerializerMixin implements RecipeSerializer<SmithingTransformRecipe> {
 
-    private static int number = 0;
 
     private static final Codec<SmithingTransformRecipe> CODEC = RecordCodecBuilder.create((instance) -> {
         return instance.group(Ingredient.ALLOW_EMPTY_CODEC.fieldOf("template").forGetter((recipe) -> {
@@ -69,8 +69,8 @@ abstract class SmithingTransformRecipeSerializerMixin implements RecipeSerialize
         Ingredient ingredient2 = Ingredient.fromPacket(packetByteBuf);
         Ingredient ingredient3 = Ingredient.fromPacket(packetByteBuf);
         ItemStack itemStack = packetByteBuf.readItemStack();
-        int[] vars = ModSmithingRecipes.smithingAdditionalVariables.get(number);
-        number++;
+        int[] vars = ModSmithingRecipes.smithingAdditionalVariables.get(TransformRecipeNumber.number);
+        TransformRecipeNumber.number++;
         int additionCount = vars[0];
         int tableTier = vars[1];
         int hammerTier = vars[2];

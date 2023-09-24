@@ -62,8 +62,5 @@ public class HammersAndTablesConfig implements ConfigData {
     @ConfigEntry.Category("trades")
     @ConfigEntry.Gui.RequiresRestart
     public boolean modifyTradeOffersForLibrarian = false;
-    @Comment("Modifies trade offers for Armorer, Toolsmith and Weaponsmith and prevents other mods from adding new trade offers (or changing existing ones) for ALL professions (!!! Trade offers from other mods will not work !!!)")
-    @ConfigEntry.Gui.Tooltip
-    @ConfigEntry.Category("trades")
-    public boolean forceModifiedTradeOffers = false;
+
 }
