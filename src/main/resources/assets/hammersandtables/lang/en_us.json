@@ -1,4 +1,7 @@
 {
+  "item.hammersandtables.wooden_hammer": "Wooden Hammer",
+  "item.hammersandtables.stone_hammer": "Stone Hammer",
+
   "item.minecraft.golden_helmet": "Shiny Golden Helmet",
   "item.minecraft.golden_chestplate": "Shiny Golden Chestplate",
   "item.minecraft.golden_leggings": "Shiny Golden Leggings",
@@ -110,6 +113,10 @@
   "item.hammersandtables.diamond_golden_leggings": "Reinforced Golden Leggings",
   "item.hammersandtables.diamond_golden_boots": "Reinforced Golden Boots",
 
+  "item.hammersandtables.diamond_reinforcement_smithing_template": "Smithing Template",
+  "item.hammersandtables.golden_upgrade_smithing_template": "Smithing Template",
+  "item.hammersandtables.iron_upgrade_smithing_template": "Smithing Template",
+
   "text.autoconfig.hammersandtables.title": "Hammers and Smithing Config",
   "text.autoconfig.hammersandtables.category.recipes": "Items and Recipes",
   "text.autoconfig.hammersandtables.category.trades": "Trade Offers",
@@ -161,5 +168,25 @@
   "container.upgrade.wrong_smithing_table_tooltip": "Wrong recipe or better smithing table required",
   "container.upgrade.wrong_hammer_tooltip": "Better hammer required",
   "container.upgrade.wrong_addition_count_tooltip": "More ingredients required",
-  "container.upgrade.hammer_slot_decription": "Add hammer"
+  "container.upgrade.hammer_slot_decription": "Add hammer",
+
+  "text.hammersandtables.smithing_table_tooltip": "Only Villagers know how to use it...",
+
+
+  "text.autoconfig.hammersandtables.category.hammer": "Hammers (Sword Parry Compatibility)",
+
+  "text.autoconfig.hammersandtables.option.hammerParryTicks": "Parry ticks",
+  "text.autoconfig.hammersandtables.option.hammerParryTicks.@Tooltip": "Example: when set to 10, the first 10 ticks of blocking with this item will count as parry",
+  "text.autoconfig.hammersandtables.option.hammerBlockMeleeDamageTaken": "% of damage taken after blocking melee attack",
+  "text.autoconfig.hammersandtables.option.hammerBlockMeleeDamageTaken.@Tooltip": "Example: when set to 15, player will take 15% of the original damage after blocking melee attack",
+  "text.autoconfig.hammersandtables.option.hammerBlockArrowDamageTaken": "% of damage taken after blocking projectile",
+  "text.autoconfig.hammersandtables.option.hammerBlockArrowDamageTaken.@Tooltip": "Example: when set to 90, player will take 90% of the original damage after blocking projectile",
+  "text.autoconfig.hammersandtables.option.hammerParryKnockbackStrength": "Parry knockback strength",
+  "text.autoconfig.hammersandtables.option.hammerSlownessAfterParry": "Parry slowness duration",
+  "text.autoconfig.hammersandtables.option.hammerSlownessAfterParryAmplifier": "Parry slowness amplifier",
+  "text.autoconfig.hammersandtables.option.hammerWeaknessAfterParry": "Parry weakness duration",
+  "text.autoconfig.hammersandtables.option.hammerWeaknessAfterParryAmplifier": "Parry weakness amplifier",
+  "text.autoconfig.hammersandtables.option.hammerDisarmAfterParry": "Parry disarm duration (for players only)",
+  "text.autoconfig.hammersandtables.option.cooldownAfterInterruptingHammerBlockAction": "Cooldown after switching item, blocking attack or interrupting block action",
+  "text.autoconfig.hammersandtables.option.cooldownAfterHammerParryAction": "Cooldown after parrying attack or projectile"
 }

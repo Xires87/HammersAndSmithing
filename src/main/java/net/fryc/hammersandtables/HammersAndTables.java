@@ -58,6 +58,8 @@ public class HammersAndTables implements ModInitializer {
 					entries.add(ModBlocks.PIGLINS_FORGE);
 
 					//hammers
+					entries.add(ModItems.WOODEN_HAMMER);
+					entries.add(ModItems.STONE_HAMMER);
 					entries.add(ModItems.SHINY_GOLDEN_HAMMER);
 					entries.add(ModItems.COPPER_HAMMER);
 					entries.add(ModItems.NUGGET_COPPER_HAMMER);

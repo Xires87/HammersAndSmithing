@@ -1,5 +1,6 @@
 package net.fryc.hammersandtables.items.custom;
 
+import net.fryc.hammersandtables.HammersAndTables;
 import net.fryc.hammersandtables.items.ModToolMaterials;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -24,5 +25,42 @@ public class HammerItem extends SwordItem {
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 20, 1),attacker);
         return super.postHit(stack, target, attacker);
+    }
+
+    public int getParryTicks(){
+        return HammersAndTables.config.hammerParryTicks;
+    }
+
+    public float getMeleeDamageTakenAfterBlock(){
+        return (float) HammersAndTables.config.hammerBlockMeleeDamageTaken/100;
+    }
+
+    public float getProjectileDamageTakenAfterBlock(){
+        return (float) HammersAndTables.config.hammerBlockArrowDamageTaken/100;
+    }
+
+    public int getCooldownAfterParryAction(){
+        return HammersAndTables.config.cooldownAfterHammerParryAction;
+    }
+    public int getCooldownAfterInterruptingBlockAction(){
+        return HammersAndTables.config.cooldownAfterInterruptingHammerBlockAction;
+    }
+    public double getKnockbackAfterParryAction(){
+        return HammersAndTables.config.hammerParryKnockbackStrength;
+    }
+    public int getSlownessAfterParryAction(){
+        return HammersAndTables.config.hammerSlownessAfterParry;
+    }
+    public int getSlownessAmplifierAfterParryAction(){
+        return HammersAndTables.config.hammerSlownessAfterParryAmplifier;
+    }
+    public int getWeaknessAfterParryAction(){
+        return HammersAndTables.config.hammerWeaknessAfterParry;
+    }
+    public int getWeaknessAmplifierAfterParryAction(){
+        return HammersAndTables.config.hammerWeaknessAfterParryAmplifier;
+    }
+    public int getDisarmedAfterParryAction(){
+        return HammersAndTables.config.hammerDisarmAfterParry;
     }
 }

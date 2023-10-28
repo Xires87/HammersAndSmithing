@@ -62,8 +62,49 @@ public class HammersAndTablesConfig implements ConfigData {
     @ConfigEntry.Category("trades")
     @ConfigEntry.Gui.RequiresRestart
     public boolean modifyTradeOffersForLibrarian = false;
-    @Comment("Modifies trade offers for Armorer, Toolsmith and Weaponsmith and prevents other mods from adding new trade offers (or changing existing ones) for ALL professions (!!! Trade offers from other mods will not work !!!)")
+
+    //Sword Parry compat
+    @Comment("Options below don't do anything unless Sword Parry is installed")
     @ConfigEntry.Gui.Tooltip
-    @ConfigEntry.Category("trades")
-    public boolean forceModifiedTradeOffers = false;
+    @ConfigEntry.Category("hammer")
+    @ConfigEntry.BoundedDiscrete(max = 30, min = 0)
+    public int hammerParryTicks = 1;
+
+    @Comment("% of damage TAKEN (not reduced) after blocking melee attack: the higher this value is, the more damage player takes when blocking")
+    @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.Category("hammer")
+    @ConfigEntry.BoundedDiscrete(max = 100, min = 0)
+    public int hammerBlockMeleeDamageTaken = 23;
+
+    @Comment("% of damage TAKEN (not reduced) after blocking projectile: the higher this value is, the more damage player takes when blocking")
+    @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.Category("hammer")
+    @ConfigEntry.BoundedDiscrete(max = 100, min = 0)
+    public int hammerBlockArrowDamageTaken = 75;
+
+    @ConfigEntry.Category("hammer")
+    public double hammerParryKnockbackStrength = 9;
+
+    @ConfigEntry.Category("hammer")
+    public int hammerSlownessAfterParry = 200;
+
+    @ConfigEntry.Category("hammer")
+    @ConfigEntry.BoundedDiscrete(max = 99, min = 1)
+    public int hammerSlownessAfterParryAmplifier = 1;
+
+    @ConfigEntry.Category("hammer")
+    public int hammerWeaknessAfterParry = 0;
+
+    @ConfigEntry.Category("hammer")
+    @ConfigEntry.BoundedDiscrete(max = 99, min = 1)
+    public int hammerWeaknessAfterParryAmplifier = 1;
+
+    @ConfigEntry.Category("hammer")
+    public int hammerDisarmAfterParry = 20;
+
+    @ConfigEntry.Category("hammer")
+    public int cooldownAfterInterruptingHammerBlockAction = 60;
+    @ConfigEntry.Category("hammer")
+    public int cooldownAfterHammerParryAction = 33;
+
 }

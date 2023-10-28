@@ -1,4 +1,7 @@
 {
+  "item.hammersandtables.wooden_hammer": "Drewniany Młot",
+  "item.hammersandtables.stone_hammer": "Kamienny Młot",
+
   "item.minecraft.golden_helmet": "Lśniący Złoty Hełm",
   "item.minecraft.golden_chestplate": "Lśniący Złoty Napierśnik",
   "item.minecraft.golden_leggings": "Lśniące Złote Nogawice",
@@ -110,6 +113,10 @@
   "item.hammersandtables.diamond_golden_leggings": "Wzmocnione Złote Nogawice",
   "item.hammersandtables.diamond_golden_boots": "Wzmocnione Złote Buty",
 
+  "item.hammersandtables.diamond_reinforcement_smithing_template": "Szablon Kowalski",
+  "item.hammersandtables.golden_upgrade_smithing_template": "Szablon Kowalski",
+  "item.hammersandtables.iron_upgrade_smithing_template": "Szablon Kowalski",
+
   "text.autoconfig.hammersandtables.title": "Konfiguracja Hammers and Smithing",
   "text.autoconfig.hammersandtables.category.recipes": "Przedmioty i Receptury",
   "text.autoconfig.hammersandtables.category.tooltips": "Podpisy",
@@ -160,6 +167,26 @@
   "container.upgrade.wrong_smithing_table_tooltip": "Niepoprawna receptura, lub potrzeba lepszego stołu kowalskiego",
   "container.upgrade.wrong_hammer_tooltip": "Potrzeba lepszego młota",
   "container.upgrade.wrong_addition_count_tooltip": "Potrzeba więcej składników",
-  "container.upgrade.hammer_slot_decription": "Dodaj młot"
+  "container.upgrade.hammer_slot_decription": "Dodaj młot",
 
+  "text.hammersandtables.smithing_table_tooltip": "Tylko Osadnicy wiedzą jak tego użyć...",
+
+
+
+  "text.autoconfig.hammersandtables.category.hammer": "Młoty (Kompatybilność ze Sword Parry)",
+
+  "text.autoconfig.hammersandtables.option.hammerParryTicks": "Ticki parowania",
+  "text.autoconfig.hammersandtables.option.hammerParryTicks.@Tooltip": "Przykład: kiedy ustawione na 10, pierwsze 10 ticków blokowania będzie liczone jako parowanie",
+  "text.autoconfig.hammersandtables.option.hammerBlockMeleeDamageTaken": "% otrzymywanych obrażeń po zablokowaniu ataku wręcz",
+  "text.autoconfig.hammersandtables.option.hammerBlockMeleeDamageTaken.@Tooltip": "Przykład: kiedy ustawione na 15, gracz otrzyma 15% oryginalnych obrażeń po zablokowaniu ataku wręcz",
+  "text.autoconfig.hammersandtables.option.hammerBlockArrowDamageTaken": "% otrzymywanych obrażeń po zablokowaniu pocisku",
+  "text.autoconfig.hammersandtables.option.hammerBlockArrowDamageTaken.@Tooltip": "Przykład: kiedy ustawione na 90, gracz otrzyma 90% oryginalnych obrażeń po zablokowaniu pocisku",
+  "text.autoconfig.hammersandtables.option.hammerParryKnockbackStrength": "Siła odrzutu z parowania",
+  "text.autoconfig.hammersandtables.option.hammerSlownessAfterParry": "Długość spowolnienia z parowania",
+  "text.autoconfig.hammersandtables.option.hammerSlownessAfterParryAmplifier": "Moc spowolnienia z parowania",
+  "text.autoconfig.hammersandtables.option.hammerWeaknessAfterParry": "Długość osłabienia z parowania",
+  "text.autoconfig.hammersandtables.option.hammerWeaknessAfterParryAmplifier": "Moc osłabienia z parowania",
+  "text.autoconfig.hammersandtables.option.hammerDisarmAfterParry": "Długość rozbrojenia z parowania (tylko dla graczy)",
+  "text.autoconfig.hammersandtables.option.cooldownAfterInterruptingHammerBlockAction": "Czas odnowienia po zmianie przedmiotu, zablokowaniu ataku, lub przerwaniu blokowania",
+  "text.autoconfig.hammersandtables.option.cooldownAfterHammerParryAction": "Czas odnowienia po sparowaniu ataku lub pocisku"
 }
