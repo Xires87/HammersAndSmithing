@@ -13,6 +13,13 @@ public class ModItems {
 
     //hammers----------------------------------------------------------------------------------
 
+    public static final Item WOODEN_HAMMER = registerItem("wooden_hammer" ,
+            new HammerItem(ToolMaterials.WOOD , 4 , -3.3f,
+                    new FabricItemSettings()));
+
+    public static final Item STONE_HAMMER = registerItem("stone_hammer" ,
+            new HammerItem(ToolMaterials.STONE , 5 , -3.3f,
+                    new FabricItemSettings()));
     public static final Item SHINY_GOLDEN_HAMMER = registerItem("shiny_golden_hammer" ,
             new HammerItem(ToolMaterials.GOLD , 6 , -3.1f,
                     new FabricItemSettings()));
