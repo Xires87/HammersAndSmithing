@@ -92,7 +92,7 @@
   "block.hammersandtables.iron_table": "Iron Smithing Table",
   "block.hammersandtables.gold_table": "Golden Smithing Table",
   "block.hammersandtables.diamond_table": "Diamond Smithing Table",
-  "block.hammersandtables.piglins_forge": "Piglins Forge",
+  "block.hammersandtables.piglins_forge": "Piglin's Forge",
 
 
   "item.hammersandtables.bone_helmet": "Bone Helmet",
@@ -120,7 +120,7 @@
   "text.autoconfig.hammersandtables.title": "Hammers and Smithing Config",
   "text.autoconfig.hammersandtables.category.recipes": "Items and Recipes",
   "text.autoconfig.hammersandtables.category.trades": "Trade Offers",
-  "text.autoconfig.hammersandtables.category.tooltips": "Tooltips and Sounds",
+  "text.autoconfig.hammersandtables.category.sounds": "Sounds",
   "text.autoconfig.hammersandtables.option.isTooltipsEnabled": "Add tooltips for items, that require smithing table to craft [Restart Required]",
   "text.autoconfig.hammersandtables.option.isTooltipsEnabled.@Tooltip": "Adds tooltips telling you which smithing table is required to craft item",
   "text.autoconfig.hammersandtables.option.isTooltipsForGoldenItemsEnabled": "Add tooltips for items that can be used to trade with piglins [Restart Required]",
@@ -171,6 +171,17 @@
   "container.upgrade.hammer_slot_decription": "Add hammer",
 
   "text.hammersandtables.smithing_table_tooltip": "Only Villagers know how to use it...",
+
+  "text.craftingmanipulator.crafting_requirements": "Crafting Requirements (SHIFT)",
+  "text.craftingmanipulator.piglin_loved": "Loved by Piglins",
+  "text.craftingmanipulator.copper_workshop_required": "Workshop: Copper Smithing Table",
+  "text.craftingmanipulator.iron_workshop_required": "Workshop: Iron Smithing Table",
+  "text.craftingmanipulator.golden_workshop_required": "Workshop: Golden Smithing Table",
+  "text.craftingmanipulator.diamond_workshop_required": "Workshop: Diamond Smithing Table",
+  "text.craftingmanipulator.piglin_workshop_required": "Workshop: Piglin's Forge",
+
+
+
 
 
   "text.autoconfig.hammersandtables.category.hammer": "Hammers (Sword Parry Compatibility)",

@@ -7,16 +7,7 @@ import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 
 @Config(name = "hammersandtables")
 public class HammersAndTablesConfig implements ConfigData {
-    @Comment("Adds tooltips telling you which smithing table is required to craft item")
-    @ConfigEntry.Gui.Tooltip
-    @ConfigEntry.Category("tooltips")
-    @ConfigEntry.Gui.RequiresRestart
-    public boolean isTooltipsEnabled = true;
-    @Comment("Adds tooltips for items that can be used to trade with piglins [Restart Required]")
-    @ConfigEntry.Category("tooltips")
-    @ConfigEntry.Gui.RequiresRestart
-    public boolean isTooltipsForGoldenItemsEnabled = true;
-    @ConfigEntry.Category("tooltips")
+    @ConfigEntry.Category("sounds")
     @ConfigEntry.Gui.RequiresRestart
     @Comment("Play smithing sounds when crafting items that require smithing table, and extinguish sound when smelting [Restart Required]")
     public boolean isSoundsWhenCraftingEnabled = true;

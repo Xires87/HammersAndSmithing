@@ -119,7 +119,7 @@
 
   "text.autoconfig.hammersandtables.title": "Konfiguracja Hammers and Smithing",
   "text.autoconfig.hammersandtables.category.recipes": "Przedmioty i Receptury",
-  "text.autoconfig.hammersandtables.category.tooltips": "Podpisy",
+  "text.autoconfig.hammersandtables.category.sounds": "Dźwięki",
   "text.autoconfig.hammersandtables.category.trades": "Oferty Handlowe",
   "text.autoconfig.hammersandtables.option.isTooltipsEnabled": "Dodaj podpisy dla przedmiotów, które wymagają stołu kowalskiego do wytworzenia [Wymagany Restart]",
   "text.autoconfig.hammersandtables.option.isTooltipsEnabled.@Tooltip": "Dodaje podpisy informujące który stół kowalski jest wymagany aby stworzyć przedmiot",
@@ -170,6 +170,14 @@
   "container.upgrade.hammer_slot_decription": "Dodaj młot",
 
   "text.hammersandtables.smithing_table_tooltip": "Tylko Osadnicy wiedzą jak tego użyć...",
+
+  "text.craftingmanipulator.crafting_requirements": "Wymagania do stworzenia (SHIFT)",
+  "text.craftingmanipulator.piglin_loved": "Uwielbiane przez Pigliny",
+  "text.craftingmanipulator.copper_workshop_required": "Warsztat: Miedziany Stół Kowalski",
+  "text.craftingmanipulator.iron_workshop_required": "Warsztat: Żelazny Stół Kowalski",
+  "text.craftingmanipulator.golden_workshop_required": "Warsztat: Złoty Stół Kowalski",
+  "text.craftingmanipulator.diamond_workshop_required": "Warsztat: Diamentowy Stół Kowalski",
+  "text.craftingmanipulator.piglin_workshop_required": "Warsztat: Kuźnia Piglinów",
 
 
 
