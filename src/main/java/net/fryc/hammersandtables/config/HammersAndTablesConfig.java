@@ -9,8 +9,13 @@ import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 public class HammersAndTablesConfig implements ConfigData {
     @ConfigEntry.Category("sounds")
     @ConfigEntry.Gui.RequiresRestart
-    @Comment("Play smithing sounds when crafting items that require smithing table, and extinguish sound when smelting [Restart Required]")
-    public boolean isSoundsWhenCraftingEnabled = true;
+    @Comment("Play smithing sounds when crafting items that require smithing table [Restart Required]")
+    public boolean isSmithingSoundWhenCraftingEnabled = true;
+
+    @ConfigEntry.Category("sounds")
+    @ConfigEntry.Gui.RequiresRestart
+    @Comment("Play extinguish sound when smelting [Restart Required]")
+    public boolean isSmeltingSoundWhenCraftingEnabled = true;
 
     @Comment("Copper items cannot be crafted if you don't stand near Copper Smithing Table (or better smithing table)")
     @ConfigEntry.Gui.Tooltip
