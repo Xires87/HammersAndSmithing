@@ -121,10 +121,9 @@
   "text.autoconfig.hammersandtables.category.recipes": "Items and Recipes",
   "text.autoconfig.hammersandtables.category.trades": "Trade Offers",
   "text.autoconfig.hammersandtables.category.sounds": "Sounds",
-  "text.autoconfig.hammersandtables.option.isTooltipsEnabled": "Add tooltips for items, that require smithing table to craft [Restart Required]",
-  "text.autoconfig.hammersandtables.option.isTooltipsEnabled.@Tooltip": "Adds tooltips telling you which smithing table is required to craft item",
   "text.autoconfig.hammersandtables.option.isTooltipsForGoldenItemsEnabled": "Add tooltips for items that can be used to trade with piglins [Restart Required]",
-  "text.autoconfig.hammersandtables.option.isSoundsWhenCraftingEnabled": "Play smithing sounds when crafting items that require smithing table, and extinguish sound when smelting [Restart Required]",
+  "text.autoconfig.hammersandtables.option.isSmithingSoundWhenCraftingEnabled": "Play smithing sounds when crafting items that require smithing table [Restart Required]",
+  "text.autoconfig.hammersandtables.option.isSmeltingSoundWhenCraftingEnabled": "Play extinguish sound when smelting [Restart Required]",
   "text.autoconfig.hammersandtables.option.isCopperRecipeBlocked": "Block copper recipes [Restart required]",
   "text.autoconfig.hammersandtables.option.isCopperRecipeBlocked.@Tooltip": "Copper items cannot be crafted if you don't stand near Copper Smithing Table (or better smithing table)",
   "text.autoconfig.hammersandtables.option.isIronRecipeBlocked": "Block iron recipes [Restart required]",
@@ -172,13 +171,12 @@
 
   "text.hammersandtables.smithing_table_tooltip": "Only Villagers know how to use it...",
 
-  "text.craftingmanipulator.crafting_requirements": "Crafting Requirements (SHIFT)",
-  "text.craftingmanipulator.piglin_loved": "Loved by Piglins",
-  "text.craftingmanipulator.copper_workshop_required": "Workshop: Copper Smithing Table",
-  "text.craftingmanipulator.iron_workshop_required": "Workshop: Iron Smithing Table",
-  "text.craftingmanipulator.golden_workshop_required": "Workshop: Golden Smithing Table",
-  "text.craftingmanipulator.diamond_workshop_required": "Workshop: Diamond Smithing Table",
-  "text.craftingmanipulator.piglin_workshop_required": "Workshop: Piglin's Forge",
+  "text.hammersandtables.piglin_loved": "Loved by Piglins",
+  "text.hammersandtables.copperRule": "Copper Smithing Table required",
+  "text.hammersandtables.ironRule": "Iron Smithing Table required",
+  "text.hammersandtables.goldRule": "Golden Smithing Table required",
+  "text.hammersandtables.diamondRule": "Diamond Smithing Table required",
+  "text.hammersandtables.vanillaGoldRule": "Piglin's Forge required",
 
 
 
