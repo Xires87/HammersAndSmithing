@@ -20,7 +20,7 @@ public class HammersAndTablesClient implements ClientModInitializer {
         config = AutoConfig.getConfigHolder(HammersAndTablesConfigClient.class).getConfig();
 
         HandledScreens.register(ModScreenHandlers.MOD_SMITHING_SCREEN_HANDLER, ModSmithingScreen::new);
-        ModPackets.registerS2CPackets();// todo lang
+        ModPackets.registerS2CPackets();
 
     }
 }

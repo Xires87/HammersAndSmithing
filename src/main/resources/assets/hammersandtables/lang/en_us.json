@@ -2,15 +2,16 @@
   "item.hammersandtables.wooden_hammer": "Wooden Hammer",
   "item.hammersandtables.stone_hammer": "Stone Hammer",
 
-  "item.minecraft.golden_helmet": "Shiny Golden Helmet",
-  "item.minecraft.golden_chestplate": "Shiny Golden Chestplate",
-  "item.minecraft.golden_leggings": "Shiny Golden Leggings",
-  "item.minecraft.golden_boots": "Shiny Golden Boots",
-  "item.minecraft.golden_axe": "Shiny Golden Axe",
-  "item.minecraft.golden_pickaxe": "Shiny Golden Pickaxe",
-  "item.minecraft.golden_sword": "Shiny Golden Sword",
-  "item.minecraft.golden_hoe": "Shiny Golden Hoe",
-  "item.minecraft.golden_shovel": "Shiny Golden Shovel",
+  "item.shiny.minecraft.golden_helmet": "Shiny Golden Helmet",
+  "item.shiny.minecraft.golden_chestplate": "Shiny Golden Chestplate",
+  "item.shiny.minecraft.golden_leggings": "Shiny Golden Leggings",
+  "item.shiny.minecraft.golden_boots": "Shiny Golden Boots",
+  "item.shiny.minecraft.golden_axe": "Shiny Golden Axe",
+  "item.shiny.minecraft.golden_pickaxe": "Shiny Golden Pickaxe",
+  "item.shiny.minecraft.golden_sword": "Shiny Golden Sword",
+  "item.shiny.minecraft.golden_hoe": "Shiny Golden Hoe",
+  "item.shiny.minecraft.golden_shovel": "Shiny Golden Shovel",
+  "item.shiny.hammersandtables.shiny_golden_hammer": "Shiny Golden Hammer",
   "item.hammersandtables.shiny_golden_hammer": "Shiny Golden Hammer",
 
   "item.hammersandtables.copper_pickaxe": "Copper Pickaxe",
@@ -171,7 +172,6 @@
 
   "text.hammersandtables.smithing_table_tooltip": "Only Villagers know how to use it...",
 
-  "text.hammersandtables.piglin_loved": "Loved by Piglins",
   "text.hammersandtables.copperRule": "Copper Smithing Table required",
   "text.hammersandtables.ironRule": "Iron Smithing Table required",
   "text.hammersandtables.goldRule": "Golden Smithing Table required",
