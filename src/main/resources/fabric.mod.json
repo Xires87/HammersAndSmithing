@@ -39,7 +39,7 @@
     "fabric-api": "*",
     "minecraft": "~1.20",
     "java": ">=17",
-    "craftingmanipulator": ">=4.1.0",
+    "craftingmanipulator": ">=4.2.0",
     "cloth-config": ">=11.0.99"
   },
   "suggests": {
