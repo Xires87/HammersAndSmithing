@@ -176,26 +176,5 @@
   "text.hammersandtables.ironRule": "Iron Smithing Table required",
   "text.hammersandtables.goldRule": "Golden Smithing Table required",
   "text.hammersandtables.diamondRule": "Diamond Smithing Table required",
-  "text.hammersandtables.vanillaGoldRule": "Piglin's Forge required",
-
-
-
-
-
-  "text.autoconfig.hammersandtables.category.hammer": "Hammers (Sword Parry Compatibility)",
-
-  "text.autoconfig.hammersandtables.option.hammerParryTicks": "Parry ticks",
-  "text.autoconfig.hammersandtables.option.hammerParryTicks.@Tooltip": "Example: when set to 10, the first 10 ticks of blocking with this item will count as parry",
-  "text.autoconfig.hammersandtables.option.hammerBlockMeleeDamageTaken": "% of damage taken after blocking melee attack",
-  "text.autoconfig.hammersandtables.option.hammerBlockMeleeDamageTaken.@Tooltip": "Example: when set to 15, player will take 15% of the original damage after blocking melee attack",
-  "text.autoconfig.hammersandtables.option.hammerBlockArrowDamageTaken": "% of damage taken after blocking projectile",
-  "text.autoconfig.hammersandtables.option.hammerBlockArrowDamageTaken.@Tooltip": "Example: when set to 90, player will take 90% of the original damage after blocking projectile",
-  "text.autoconfig.hammersandtables.option.hammerParryKnockbackStrength": "Parry knockback strength",
-  "text.autoconfig.hammersandtables.option.hammerSlownessAfterParry": "Parry slowness duration",
-  "text.autoconfig.hammersandtables.option.hammerSlownessAfterParryAmplifier": "Parry slowness amplifier",
-  "text.autoconfig.hammersandtables.option.hammerWeaknessAfterParry": "Parry weakness duration",
-  "text.autoconfig.hammersandtables.option.hammerWeaknessAfterParryAmplifier": "Parry weakness amplifier",
-  "text.autoconfig.hammersandtables.option.hammerDisarmAfterParry": "Parry disarm duration (for players only)",
-  "text.autoconfig.hammersandtables.option.cooldownAfterInterruptingHammerBlockAction": "Cooldown after switching item, blocking attack or interrupting block action",
-  "text.autoconfig.hammersandtables.option.cooldownAfterHammerParryAction": "Cooldown after parrying attack or projectile"
+  "text.hammersandtables.vanillaGoldRule": "Piglin's Forge required"
 }
