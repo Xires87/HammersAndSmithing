@@ -170,22 +170,5 @@
   "text.hammersandtables.ironRule": "Требуется железный стол кузнеца",
   "text.hammersandtables.goldRule": "Требуется золотой стол кузнеца",
   "text.hammersandtables.diamondRule": "Требуется алмазный стол кузнеца",
-  "text.hammersandtables.vanillaGoldRule": "Кузница пиглина",
-
-  "text.autoconfig.hammersandtables.category.hammer": "Молоты (Совместимость со Sword Parry)",
-
-  "text.autoconfig.hammersandtables.option.hammerParryTicks": "Такты парирования",
-  "text.autoconfig.hammersandtables.option.hammerParryTicks.@Tooltip": "Пример: если установлено на 10, первые 10 тактов блокирования этим предметов будут считаться как парирование.",
-  "text.autoconfig.hammersandtables.option.hammerBlockMeleeDamageTaken": "% урона, полученного, после блокирования атаки в ближнем бою.",
-  "text.autoconfig.hammersandtables.option.hammerBlockMeleeDamageTaken.@Tooltip": "Пример: если установлено на 15, после блокирования атаки в ближнем бою игрок будет получать 15% основного урона.",
-  "text.autoconfig.hammersandtables.option.hammerBlockArrowDamageTaken": "% урона, полученного, после блокирования снаряда.",
-  "text.autoconfig.hammersandtables.option.hammerBlockArrowDamageTaken.@Tooltip": "Пример: если установлено на 90, после блокирования снаряда игрок будет получать 90% основного урона.",
-  "text.autoconfig.hammersandtables.option.hammerParryKnockbackStrength": "Сила отбрасывания от парирования",
-  "text.autoconfig.hammersandtables.option.hammerSlownessAfterParry": "Продолжительность замедления от парирования",
-  "text.autoconfig.hammersandtables.option.hammerSlownessAfterParryAmplifier": "Усилитель замедления от парирования",
-  "text.autoconfig.hammersandtables.option.hammerWeaknessAfterParry": "Продолжительность ослабления от парирования",
-  "text.autoconfig.hammersandtables.option.hammerWeaknessAfterParryAmplifier": "Усилитель ослабления от парирования",
-  "text.autoconfig.hammersandtables.option.hammerDisarmAfterParry": "Продолжительность разоружения от парирования (только для игроков)",
-  "text.autoconfig.hammersandtables.option.cooldownAfterInterruptingHammerBlockAction": "Перезарядка после смены предмета, блокировании атаки или прерывания действия блокирования",
-  "text.autoconfig.hammersandtables.option.cooldownAfterHammerParryAction": "Перезарядка после парирования атаки или снаряда"
+  "text.hammersandtables.vanillaGoldRule": "Кузница пиглина"
 }
