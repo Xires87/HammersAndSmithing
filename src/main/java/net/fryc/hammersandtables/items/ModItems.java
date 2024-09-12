@@ -288,136 +288,136 @@ public class ModItems {
 
     public static final Item COPPER_HELMET = registerItem("copper_helmet" ,
             new ArmorItem(ModArmorMaterials.COPPER, ArmorItem.Type.HELMET ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(8))));
 
     public static final Item COPPER_CHESTPLATE = registerItem("copper_chestplate" ,
             new ArmorItem(ModArmorMaterials.COPPER, ArmorItem.Type.CHESTPLATE ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(8))));
 
     public static final Item COPPER_LEGGINGS = registerItem("copper_leggings" ,
             new ArmorItem(ModArmorMaterials.COPPER, ArmorItem.Type.LEGGINGS ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(8))));
 
     public static final Item COPPER_BOOTS = registerItem("copper_boots" ,
             new ArmorItem(ModArmorMaterials.COPPER, ArmorItem.Type.BOOTS ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(8))));
 
     public static final Item NUGGET_COPPER_HELMET = registerItem("nugget_copper_helmet" ,
             new ArmorItem(ModArmorMaterials.NUGGET_COPPER, ArmorItem.Type.HELMET ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(10))));
 
     public static final Item NUGGET_COPPER_CHESTPLATE = registerItem("nugget_copper_chestplate" ,
             new ArmorItem(ModArmorMaterials.NUGGET_COPPER, ArmorItem.Type.CHESTPLATE ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(10))));
 
     public static final Item NUGGET_COPPER_LEGGINGS = registerItem("nugget_copper_leggings" ,
             new ArmorItem(ModArmorMaterials.NUGGET_COPPER, ArmorItem.Type.LEGGINGS ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(10))));
 
     public static final Item NUGGET_COPPER_BOOTS = registerItem("nugget_copper_boots" ,
             new ArmorItem(ModArmorMaterials.NUGGET_COPPER, ArmorItem.Type.BOOTS ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(10))));
 
     public static final Item INGOT_COPPER_HELMET = registerItem("ingot_copper_helmet" ,
             new ArmorItem(ModArmorMaterials.INGOT_COPPER, ArmorItem.Type.HELMET ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(12))));
 
     public static final Item INGOT_COPPER_CHESTPLATE = registerItem("ingot_copper_chestplate" ,
             new ArmorItem(ModArmorMaterials.INGOT_COPPER, ArmorItem.Type.CHESTPLATE ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(12))));
 
     public static final Item INGOT_COPPER_LEGGINGS = registerItem("ingot_copper_leggings" ,
             new ArmorItem(ModArmorMaterials.INGOT_COPPER, ArmorItem.Type.LEGGINGS ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(12))));
 
     public static final Item INGOT_COPPER_BOOTS = registerItem("ingot_copper_boots" ,
             new ArmorItem(ModArmorMaterials.INGOT_COPPER, ArmorItem.Type.BOOTS ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(12))));
 
     //iron armor ----------------------------------------------------------------------------------
 
     public static final Item NUGGET_IRON_HELMET = registerItem("nugget_iron_helmet" ,
             new ArmorItem(ModArmorMaterials.NUGGET_IRON, ArmorItem.Type.HELMET ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(17))));
 
     public static final Item NUGGET_IRON_CHESTPLATE = registerItem("nugget_iron_chestplate" ,
             new ArmorItem(ModArmorMaterials.NUGGET_IRON, ArmorItem.Type.CHESTPLATE ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(17))));
 
     public static final Item NUGGET_IRON_LEGGINGS = registerItem("nugget_iron_leggings" ,
             new ArmorItem(ModArmorMaterials.NUGGET_IRON, ArmorItem.Type.LEGGINGS ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(17))));
 
     public static final Item NUGGET_IRON_BOOTS = registerItem("nugget_iron_boots" ,
             new ArmorItem(ModArmorMaterials.NUGGET_IRON, ArmorItem.Type.BOOTS ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(17))));
 
     public static final Item INGOT_IRON_HELMET = registerItem("ingot_iron_helmet" ,
             new ArmorItem(ModArmorMaterials.INGOT_IRON, ArmorItem.Type.HELMET ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(20))));
 
     public static final Item INGOT_IRON_CHESTPLATE = registerItem("ingot_iron_chestplate" ,
             new ArmorItem(ModArmorMaterials.INGOT_IRON, ArmorItem.Type.CHESTPLATE ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(20))));
 
     public static final Item INGOT_IRON_LEGGINGS = registerItem("ingot_iron_leggings" ,
             new ArmorItem(ModArmorMaterials.INGOT_IRON, ArmorItem.Type.LEGGINGS ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(20))));
 
     public static final Item INGOT_IRON_BOOTS = registerItem("ingot_iron_boots" ,
             new ArmorItem(ModArmorMaterials.INGOT_IRON, ArmorItem.Type.BOOTS ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(20))));
 
     //golden armor --------------------------------------------------------------------------------
 
     public static final Item GOLDEN_HELMET = registerItem("golden_helmet" ,
             new ArmorItem(ModArmorMaterials.GOLD, ArmorItem.Type.HELMET ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(23))));
 
     public static final Item GOLDEN_CHESTPLATE = registerItem("golden_chestplate" ,
             new ArmorItem(ModArmorMaterials.GOLD, ArmorItem.Type.CHESTPLATE ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(23))));
 
     public static final Item GOLDEN_LEGGINGS = registerItem("golden_leggings" ,
             new ArmorItem(ModArmorMaterials.GOLD, ArmorItem.Type.LEGGINGS ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(23))));
 
     public static final Item GOLDEN_BOOTS = registerItem("golden_boots" ,
             new ArmorItem(ModArmorMaterials.GOLD, ArmorItem.Type.BOOTS ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(23))));
 
     public static final Item DIAMOND_GOLDEN_HELMET = registerItem("diamond_golden_helmet" ,
             new ArmorItem(ModArmorMaterials.DIAMOND_GOLD, ArmorItem.Type.HELMET ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(27))));
 
     public static final Item DIAMOND_GOLDEN_CHESTPLATE = registerItem("diamond_golden_chestplate" ,
             new ArmorItem(ModArmorMaterials.DIAMOND_GOLD, ArmorItem.Type.CHESTPLATE ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(27))));
 
     public static final Item DIAMOND_GOLDEN_LEGGINGS = registerItem("diamond_golden_leggings" ,
             new ArmorItem(ModArmorMaterials.DIAMOND_GOLD, ArmorItem.Type.LEGGINGS ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(27))));
 
     public static final Item DIAMOND_GOLDEN_BOOTS = registerItem("diamond_golden_boots" ,
             new ArmorItem(ModArmorMaterials.DIAMOND_GOLD, ArmorItem.Type.BOOTS ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(27))));
 
     //bone armor ----------------------------------------------------------------------------------
     public static final Item BONE_HELMET = registerItem("bone_helmet" ,
             new ArmorItem(ModArmorMaterials.BONE, ArmorItem.Type.HELMET ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.HELMET.getMaxDamage(7))));
 
     public static final Item BONE_CHESTPLATE = registerItem("bone_chestplate" ,
             new ArmorItem(ModArmorMaterials.BONE, ArmorItem.Type.CHESTPLATE ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(7))));
 
     public static final Item BONE_LEGGINGS = registerItem("bone_leggings" ,
             new ArmorItem(ModArmorMaterials.BONE, ArmorItem.Type.LEGGINGS ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(7))));
 
     public static final Item BONE_BOOTS = registerItem("bone_boots" ,
             new ArmorItem(ModArmorMaterials.BONE, ArmorItem.Type.BOOTS ,
-                    new Item.Settings()));
+                    new Item.Settings().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(7))));
 
     //smithing templates----------------------------------------------------------------------------
 
