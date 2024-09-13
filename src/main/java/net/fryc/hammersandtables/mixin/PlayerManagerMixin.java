@@ -1,11 +1,9 @@
 package net.fryc.hammersandtables.mixin;
 
-import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
-import net.fryc.hammersandtables.network.ModPackets;
+import net.fryc.hammersandtables.network.payloads.SynchronizeSmithingRecipesPayload;
 import net.fryc.hammersandtables.recipes.ModSmithingRecipes;
 import net.minecraft.network.ClientConnection;
-import net.minecraft.network.PacketByteBuf;
 import net.minecraft.server.PlayerManager;
 import net.minecraft.server.network.ConnectedClientData;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -20,9 +18,7 @@ abstract class PlayerManagerMixin {
     @Inject(method = "onPlayerConnect(Lnet/minecraft/network/ClientConnection;Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/server/network/ConnectedClientData;)V", at = @At("HEAD"))
     private void informPlayerAboutSmithingRecipes(ClientConnection connection, ServerPlayerEntity player, ConnectedClientData clientData, CallbackInfo info) {
         //sending server's map to client
-        PacketByteBuf buf = PacketByteBufs.create();
-        buf.writeMap(ModSmithingRecipes.smithingAdditionalVariables, PacketByteBuf::writeInt, PacketByteBuf::writeIntArray);
-        connection.send(ServerPlayNetworking.createS2CPacket(ModPackets.HAMMERS_AND_SMITHING_NETWORKING, buf));
+        connection.send(ServerPlayNetworking.createS2CPacket(new SynchronizeSmithingRecipesPayload(ModSmithingRecipes.smithingAdditionalVariables)));
 
     }
 

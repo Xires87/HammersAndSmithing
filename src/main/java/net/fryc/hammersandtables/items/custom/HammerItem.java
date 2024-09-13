@@ -12,8 +12,8 @@ import net.minecraft.item.ToolMaterials;
 public class HammerItem extends SwordItem {
 
     public final int tier;
-    public HammerItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
-        super(toolMaterial, attackDamage, attackSpeed, settings);
+    public HammerItem(ToolMaterial toolMaterial, Settings settings) {
+        super(toolMaterial, settings);
         if(toolMaterial == ModToolMaterials.COPPER || toolMaterial == ModToolMaterials.NUGGET_COPPER) tier = 1;
         else if(toolMaterial == ModToolMaterials.INGOT_COPPER || toolMaterial == ModToolMaterials.NUGGET_IRON || toolMaterial == ToolMaterials.IRON) tier = 2;
         else if(toolMaterial == ModToolMaterials.INGOT_IRON || toolMaterial == ModToolMaterials.DIAMOND_GOLD || toolMaterial == ModToolMaterials.GOLD) tier = 3;

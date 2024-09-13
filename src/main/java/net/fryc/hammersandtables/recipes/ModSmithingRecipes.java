@@ -5,12 +5,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.SmithingTransformRecipe;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class ModSmithingRecipes {
 
     //map holding additional variables for smithing recipes
-    public static HashMap<Integer, int[]> smithingAdditionalVariables = new HashMap<>();
+    public static HashMap<Integer, List<Integer>> smithingAdditionalVariables = new HashMap<>();
     private static int number = 0;
 
     public static SmithingTransformRecipe createNewSmithingTransformRecipe(Ingredient template, Ingredient base, Ingredient addition, ItemStack result, int addition_count, int table_tier, int hammer_tier){
@@ -19,8 +21,12 @@ public class ModSmithingRecipes {
         ((SmithingTransformAdditionalVariables) recipe).setHammerTier(hammer_tier);
         ((SmithingTransformAdditionalVariables) recipe).setTableTier(table_tier);
 
-        smithingAdditionalVariables.put(number, new int[]{((SmithingTransformAdditionalVariables) recipe).getAdditionCount(),
-                ((SmithingTransformAdditionalVariables) recipe).getTableTier(), ((SmithingTransformAdditionalVariables) recipe).getHammerTier() });
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(((SmithingTransformAdditionalVariables) recipe).getAdditionCount());
+        list.add(((SmithingTransformAdditionalVariables) recipe).getTableTier());
+        list.add(((SmithingTransformAdditionalVariables) recipe).getHammerTier());
+
+        smithingAdditionalVariables.put(number, list);
         number++;
 
         return recipe;

@@ -1,20 +1,16 @@
 package net.fryc.hammersandtables.network.s2c;
 
-import net.fabricmc.fabric.api.networking.v1.PacketSender;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fryc.hammersandtables.network.payloads.SynchronizeSmithingRecipesPayload;
 import net.fryc.hammersandtables.recipes.ModSmithingRecipes;
 import net.fryc.hammersandtables.util.TransformRecipeNumber;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.network.ClientPlayNetworkHandler;
-import net.minecraft.network.PacketByteBuf;
-
-import java.util.HashMap;
 
 
 public class SynchronizeSmithingRecipesS2CPacket {
 
     //reading map containing all additional variables for smithing recipes
-    public static void receive(MinecraftClient client, ClientPlayNetworkHandler handler, PacketByteBuf buf, PacketSender responseSender){
-        ModSmithingRecipes.smithingAdditionalVariables = ((HashMap<Integer, int[]>) buf.readMap(PacketByteBuf::readInt, PacketByteBuf::readIntArray));
+    public static void receive(SynchronizeSmithingRecipesPayload payload, ClientPlayNetworking.Context context){
+        ModSmithingRecipes.smithingAdditionalVariables = payload.map();
         TransformRecipeNumber.number = 0;
     }
 }

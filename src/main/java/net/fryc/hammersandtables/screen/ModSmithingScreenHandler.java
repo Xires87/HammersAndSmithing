@@ -13,6 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.recipe.SmithingRecipe;
+import net.minecraft.recipe.input.SmithingRecipeInput;
 import net.minecraft.screen.ForgingScreenHandler;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.slot.ForgingSlotsManager;
@@ -46,27 +47,6 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
         this.recipes = this.world.getRecipeManager().listAllOfType(RecipeType.SMITHING);
     }
 
-    /* old
-    protected ForgingSlotsManager getForgingSlotsManager() {
-        return ForgingSlotsManager.create().input(0, 8, 48, (stack) -> {
-            return this.recipes.stream().anyMatch((recipe) -> {
-                return recipe.testTemplate(stack);
-            });
-        }).input(1, 26, 48, (stack) -> {
-            return this.recipes.stream().anyMatch((smithingRecipe) -> {
-                return smithingRecipe.testBase(stack);
-            });
-        }).input(2, 44, 48, (stack) -> {
-            return this.recipes.stream().anyMatch((smithingRecipe) -> {
-                return smithingRecipe.testAddition(stack);
-            });
-        }).input(3, 44, 27, (stack)->{
-            return stack.isIn(ModItemTags.HAMMERS);
-        }).output(4, 98, 48).build();
-    }
-
-     */
-
     protected ForgingSlotsManager getForgingSlotsManager() {
         return ForgingSlotsManager.create().input(0, 8, 48, (stack) -> {
             return this.recipes.stream().anyMatch((recipe) -> {
@@ -93,7 +73,11 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
     }
 
     protected boolean canTakeOutput(PlayerEntity player, boolean present) {
-        return this.currentRecipe != null && this.currentRecipe.value().matches(this.input, this.world) && this.hasCorrectHammer() && this.isCorrectSmithingTable() && this.hasCorrectAdditionCount();
+        return this.currentRecipe != null && this.currentRecipe.value().matches(this.createRecipeInput(), this.world) && this.hasCorrectHammer() && this.isCorrectSmithingTable() && this.hasCorrectAdditionCount();
+    }
+
+    private SmithingRecipeInput createRecipeInput() {
+        return new SmithingRecipeInput(this.input.getStack(0), this.input.getStack(1), this.input.getStack(2));
     }
 
     //checks if correct hammer is used
@@ -120,7 +104,7 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
     }
 
     protected void onTakeOutput(PlayerEntity player, ItemStack stack) {
-        stack.onCraft(player.getWorld(), player, stack.getCount());
+        stack.onCraftByPlayer(player.getWorld(), player, stack.getCount());
         this.output.unlockLastRecipe(player, this.getInputStacks());
         this.decrementStack(0);
         this.decrementStack(1);
@@ -147,43 +131,14 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
 
     }
 
-    /* old
     public void updateResult() {
-        List<SmithingRecipe> list = this.world.getRecipeManager().getAllMatches(RecipeType.SMITHING, this.input, this.world);
-        if (list.isEmpty()) {
-            this.output.setStack(0, ItemStack.EMPTY);
-        } else {
-            SmithingRecipe smithingRecipe = (SmithingRecipe)list.get(0);
-            ItemStack itemStack = smithingRecipe.craft(this.input, this.world.getRegistryManager());
-            if (itemStack.isItemEnabled(this.world.getEnabledFeatures())) {
-                this.currentRecipe = smithingRecipe;
-                if(this.currentRecipe instanceof SmithingTransformAdditionalVariables stav){
-                    this.additionRemovalCount = stav.getAdditionCount();
-                    if(this.additionRemovalCount < 1) this.additionRemovalCount = 1;
-                }
-                else this.additionRemovalCount = 1;
-                this.output.setLastRecipe(smithingRecipe);
-                if(this.currentRecipe instanceof SmithingTransformAdditionalVariables stav){
-                    if(stav.getTableTier() <= this.tier) this.output.setStack(0, itemStack);
-                    else this.output.setStack(0, ItemStack.EMPTY);
-                }
-                else{
-                    this.output.setStack(0, itemStack);
-                }
-            }
-        }
-
-    }
-
-     */
-
-    public void updateResult() {
-        List<RecipeEntry<SmithingRecipe>> list = this.world.getRecipeManager().getAllMatches(RecipeType.SMITHING, this.input, this.world);
+        SmithingRecipeInput smithingRecipeInput = this.createRecipeInput();
+        List<RecipeEntry<SmithingRecipe>> list = this.world.getRecipeManager().getAllMatches(RecipeType.SMITHING, smithingRecipeInput, this.world);
         if (list.isEmpty()) {
             this.output.setStack(0, ItemStack.EMPTY);
         } else {
             RecipeEntry<SmithingRecipe> recipeEntry = (RecipeEntry)list.get(0);
-            ItemStack itemStack = ((SmithingRecipe)recipeEntry.value()).craft(this.input, this.world.getRegistryManager());
+            ItemStack itemStack = ((SmithingRecipe)recipeEntry.value()).craft(smithingRecipeInput, this.world.getRegistryManager());
             if (itemStack.isItemEnabled(this.world.getEnabledFeatures())) {
                 this.currentRecipe = recipeEntry;
                 if(this.currentRecipe.value() instanceof SmithingTransformAdditionalVariables stav){

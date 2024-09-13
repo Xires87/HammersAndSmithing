@@ -21,8 +21,10 @@ abstract class PowderSnowBlockMixin extends Block implements FluidDrainable {
 
     //lets you walk on powder snow with bone boots
     @Inject(method = "canWalkOnPowderSnow(Lnet/minecraft/entity/Entity;)Z", at = @At("HEAD"), cancellable = true)
-    private static void level(Entity entity,CallbackInfoReturnable<Boolean> dur) {
-        dur.setReturnValue(entity.getType().isIn(EntityTypeTags.POWDER_SNOW_WALKABLE_MOBS) ||
-                (entity instanceof LivingEntity && ((LivingEntity) entity).getEquippedStack(EquipmentSlot.FEET).isIn(ModItemTags.POWDER_SNOW_WALKABLE_BOOTS)));
+    private static void level(Entity entity,CallbackInfoReturnable<Boolean> ret) {
+        if(entity.getType().isIn(EntityTypeTags.POWDER_SNOW_WALKABLE_MOBS) ||
+                (entity instanceof LivingEntity && ((LivingEntity) entity).getEquippedStack(EquipmentSlot.FEET).isIn(ModItemTags.POWDER_SNOW_WALKABLE_BOOTS))){
+            ret.setReturnValue(true);
+        }
     }
 }

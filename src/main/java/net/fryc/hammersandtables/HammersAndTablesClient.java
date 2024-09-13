@@ -6,8 +6,6 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fryc.hammersandtables.config.HammersAndTablesConfigClient;
 import net.fryc.hammersandtables.network.ModPackets;
 import net.fryc.hammersandtables.screen.ModScreenHandlers;
-import net.fryc.hammersandtables.screen.ModSmithingScreen;
-import net.minecraft.client.gui.screen.ingame.HandledScreens;
 
 public class HammersAndTablesClient implements ClientModInitializer {
 
@@ -19,7 +17,7 @@ public class HammersAndTablesClient implements ClientModInitializer {
         AutoConfig.register(HammersAndTablesConfigClient.class, JanksonConfigSerializer::new);
         config = AutoConfig.getConfigHolder(HammersAndTablesConfigClient.class).getConfig();
 
-        HandledScreens.register(ModScreenHandlers.MOD_SMITHING_SCREEN_HANDLER, ModSmithingScreen::new);
+        ModScreenHandlers.registerScreenHandlersClient();
         ModPackets.registerS2CPackets();
 
     }
