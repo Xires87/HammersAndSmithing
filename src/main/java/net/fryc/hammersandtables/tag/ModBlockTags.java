@@ -21,7 +21,7 @@ public class ModBlockTags {
     public static final TagKey<Block> INCORRECT_FOR_IRON_TOOL = ModBlockTags.register("incorrect_for_iron_tool");
     public static final TagKey<Block> INCORRECT_FOR_GOLDEN_TOOL = ModBlockTags.register("incorrect_for_golden_tool");
     public static final TagKey<Block> INCORRECT_FOR_DIAMOND_TOOL = ModBlockTags.register("incorrect_for_diamond_tool");
-    public static final TagKey<Block> INCORRECT_FOR_NETHERITE_TOOL = ModBlockTags.register("incorrect_for_netherite_tool");// TODO porobic JSONY przy czym trzeba tez stare przepatrzec i przerobic (np. copper ore)
+    public static final TagKey<Block> INCORRECT_FOR_NETHERITE_TOOL = ModBlockTags.register("incorrect_for_netherite_tool");// TODO porobic JSONY przy czym trzeba tez stare przepatrzec i przerobic (receptury powinny smigac, copper ore zrobiony)
 
     private ModBlockTags() {
     }

@@ -76,7 +76,7 @@ public class ModArmorMaterials {
             map.put(ArmorItem.Type.BODY, 5);
         }), 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
             return Ingredient.ofItems(new ItemConvertible[]{Items.IRON_INGOT});
-        });
+        }, List.of(new ArmorMaterial.Layer(Identifier.ofVanilla("iron"), "", false)));
         NUGGET_IRON = register("nugget_iron", (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
             map.put(ArmorItem.Type.BOOTS, 2);
             map.put(ArmorItem.Type.LEGGINGS, 5);
@@ -94,7 +94,7 @@ public class ModArmorMaterials {
             map.put(ArmorItem.Type.BODY, 6);
         }), 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.5F, 0.0F, () -> {
             return Ingredient.ofItems(new ItemConvertible[]{Items.GOLD_INGOT});
-        });
+        }, List.of(new ArmorMaterial.Layer(Identifier.ofVanilla("gold"), "", false)));
         GOLD = register("gold", (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
             map.put(ArmorItem.Type.BOOTS, 2);
             map.put(ArmorItem.Type.LEGGINGS, 5);
@@ -103,7 +103,7 @@ public class ModArmorMaterials {
             map.put(ArmorItem.Type.BODY, 6);
         }), 9, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.5F, 0.0F, () -> {
             return Ingredient.ofItems(new ItemConvertible[]{Items.GOLD_INGOT});
-        });
+        }, List.of(new ArmorMaterial.Layer(Identifier.ofVanilla("gold"), "", false)));
         DIAMOND_GOLD = register("diamond_gold", (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
             map.put(ArmorItem.Type.BOOTS, 2);
             map.put(ArmorItem.Type.LEGGINGS, 5);
@@ -121,7 +121,7 @@ public class ModArmorMaterials {
             map.put(ArmorItem.Type.BODY, 4);
         }), 20, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.5F, 0.0F, () -> {
             return Ingredient.ofItems(new ItemConvertible[]{Items.BONE});
-        });
+        }, List.of(new ArmorMaterial.Layer(Identifier.ofVanilla("leather"), "", true), new ArmorMaterial.Layer(Identifier.of(HammersAndTables.MOD_ID, "bone"), "", false)));
     }
 
     /*
