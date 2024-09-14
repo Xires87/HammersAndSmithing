@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "#hammersandtables:incorrect_for_golden_tool",
     "minecraft:diamond_block",
     "minecraft:diamond_ore",
     "minecraft:deepslate_diamond_ore",

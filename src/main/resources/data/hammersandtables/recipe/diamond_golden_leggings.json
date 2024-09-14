@@ -7,7 +7,7 @@
     "item": "hammersandtables:golden_leggings"
   },
   "result": {
-    "item": "hammersandtables:diamond_golden_leggings"
+    "id": "hammersandtables:diamond_golden_leggings"
   },
   "template": {
     "item": "hammersandtables:diamond_reinforcement_smithing_template"

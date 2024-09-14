@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#hammersandtables:incorrect_for_netherite_tool",
+    "#minecraft:incorrect_for_diamond_tool"
+  ]
+}

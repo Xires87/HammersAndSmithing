@@ -7,7 +7,7 @@
     "item": "hammersandtables:copper_hammer"
   },
   "result": {
-    "item": "hammersandtables:nugget_copper_hammer"
+    "id": "hammersandtables:nugget_copper_hammer"
   },
   "template": {
     "item": "hammersandtables:iron_upgrade_smithing_template"

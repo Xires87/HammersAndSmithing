@@ -7,7 +7,7 @@
     "item": "hammersandtables:diamond_hammer"
   },
   "result": {
-    "item": "hammersandtables:netherite_hammer"
+    "id": "hammersandtables:netherite_hammer"
   },
   "template": {
     "item": "minecraft:netherite_upgrade_smithing_template"

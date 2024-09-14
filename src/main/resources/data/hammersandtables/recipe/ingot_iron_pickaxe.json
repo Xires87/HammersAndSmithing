@@ -7,7 +7,7 @@
     "item": "hammersandtables:nugget_iron_pickaxe"
   },
   "result": {
-    "item": "hammersandtables:ingot_iron_pickaxe"
+    "id": "hammersandtables:ingot_iron_pickaxe"
   },
   "template": {
     "item": "hammersandtables:golden_upgrade_smithing_template"

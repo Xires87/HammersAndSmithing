@@ -7,7 +7,7 @@
     "item": "hammersandtables:golden_pickaxe"
   },
   "result": {
-    "item": "hammersandtables:diamond_golden_pickaxe"
+    "id": "hammersandtables:diamond_golden_pickaxe"
   },
   "template": {
     "item": "hammersandtables:diamond_reinforcement_smithing_template"

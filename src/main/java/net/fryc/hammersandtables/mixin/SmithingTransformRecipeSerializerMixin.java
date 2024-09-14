@@ -70,7 +70,7 @@ abstract class SmithingTransformRecipeSerializerMixin implements RecipeSerialize
 
     //reading additional variables for smithing recipes from map
     @Inject(method = "read(Lnet/minecraft/network/RegistryByteBuf;)Lnet/minecraft/recipe/SmithingTransformRecipe;", at = @At("HEAD"), cancellable = true)
-    private void readingSmithingRecipesFromPacketByteBuf(RegistryByteBuf buf, CallbackInfoReturnable<SmithingTransformRecipe> ret) {
+    private static void readingSmithingRecipesFromByteBuf(RegistryByteBuf buf, CallbackInfoReturnable<SmithingTransformRecipe> ret) {
         Ingredient ingredient = (Ingredient)Ingredient.PACKET_CODEC.decode(buf);
         Ingredient ingredient2 = (Ingredient)Ingredient.PACKET_CODEC.decode(buf);
         Ingredient ingredient3 = (Ingredient)Ingredient.PACKET_CODEC.decode(buf);

@@ -28,6 +28,6 @@ public final class ModItemTags {
     }
 
     private static TagKey<Item> register(String id) {
-        return TagKey.of(RegistryKeys.ITEM, new Identifier(HammersAndTables.MOD_ID, id));
+        return TagKey.of(RegistryKeys.ITEM, Identifier.of(HammersAndTables.MOD_ID, id));
     }
 }

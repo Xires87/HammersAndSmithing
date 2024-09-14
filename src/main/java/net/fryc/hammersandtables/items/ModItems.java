@@ -32,7 +32,7 @@ public class ModItems {
     
     //hoe
     private static final float HOE_ATTACK_SPEED = -1f;
-    private static final float HOE_ATTACK_DAMAGE = 1f;
+    private static final float HOE_ATTACK_DAMAGE = 0f;
     
     //sword
     private static final float SWORD_ATTACK_SPEED = -2.4f;

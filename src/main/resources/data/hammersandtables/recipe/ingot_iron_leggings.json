@@ -7,7 +7,7 @@
     "item": "hammersandtables:nugget_iron_leggings"
   },
   "result": {
-    "item": "hammersandtables:ingot_iron_leggings"
+    "id": "hammersandtables:ingot_iron_leggings"
   },
   "template": {
     "item": "hammersandtables:golden_upgrade_smithing_template"

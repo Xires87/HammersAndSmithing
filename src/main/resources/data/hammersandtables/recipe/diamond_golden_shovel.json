@@ -7,7 +7,7 @@
     "item": "hammersandtables:golden_shovel"
   },
   "result": {
-    "item": "hammersandtables:diamond_golden_shovel"
+    "id": "hammersandtables:diamond_golden_shovel"
   },
   "template": {
     "item": "hammersandtables:diamond_reinforcement_smithing_template"

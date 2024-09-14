@@ -7,7 +7,7 @@
     "item": "hammersandtables:golden_helmet"
   },
   "result": {
-    "item": "hammersandtables:diamond_golden_helmet"
+    "id": "hammersandtables:diamond_golden_helmet"
   },
   "template": {
     "item": "hammersandtables:diamond_reinforcement_smithing_template"

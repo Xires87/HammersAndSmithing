@@ -7,7 +7,7 @@
     "item": "hammersandtables:golden_chestplate"
   },
   "result": {
-    "item": "hammersandtables:diamond_golden_chestplate"
+    "id": "hammersandtables:diamond_golden_chestplate"
   },
   "template": {
     "item": "hammersandtables:diamond_reinforcement_smithing_template"

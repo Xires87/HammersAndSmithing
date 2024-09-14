@@ -7,7 +7,7 @@
     "item": "hammersandtables:golden_hoe"
   },
   "result": {
-    "item": "hammersandtables:diamond_golden_hoe"
+    "id": "hammersandtables:diamond_golden_hoe"
   },
   "template": {
     "item": "hammersandtables:diamond_reinforcement_smithing_template"

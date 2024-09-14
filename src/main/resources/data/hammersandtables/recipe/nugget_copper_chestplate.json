@@ -7,7 +7,7 @@
     "item": "hammersandtables:copper_chestplate"
   },
   "result": {
-    "item": "hammersandtables:nugget_copper_chestplate"
+    "id": "hammersandtables:nugget_copper_chestplate"
   },
   "template": {
     "item": "hammersandtables:iron_upgrade_smithing_template"

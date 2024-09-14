@@ -7,7 +7,7 @@
     "item": "minecraft:iron_shovel"
   },
   "result": {
-    "item": "hammersandtables:nugget_iron_shovel"
+    "id": "hammersandtables:nugget_iron_shovel"
   },
   "template": {
     "item": "hammersandtables:golden_upgrade_smithing_template"

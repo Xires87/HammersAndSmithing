@@ -7,7 +7,7 @@
     "item": "hammersandtables:golden_axe"
   },
   "result": {
-    "item": "hammersandtables:diamond_golden_axe"
+    "id": "hammersandtables:diamond_golden_axe"
   },
   "template": {
     "item": "hammersandtables:diamond_reinforcement_smithing_template"

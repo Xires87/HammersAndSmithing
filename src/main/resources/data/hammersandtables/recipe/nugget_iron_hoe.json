@@ -7,7 +7,7 @@
     "item": "minecraft:iron_hoe"
   },
   "result": {
-    "item": "hammersandtables:nugget_iron_hoe"
+    "id": "hammersandtables:nugget_iron_hoe"
   },
   "template": {
     "item": "hammersandtables:golden_upgrade_smithing_template"

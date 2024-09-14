@@ -7,7 +7,7 @@
     "item": "minecraft:iron_sword"
   },
   "result": {
-    "item": "hammersandtables:nugget_iron_sword"
+    "id": "hammersandtables:nugget_iron_sword"
   },
   "template": {
     "item": "hammersandtables:golden_upgrade_smithing_template"

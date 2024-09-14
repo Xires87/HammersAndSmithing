@@ -7,7 +7,7 @@
     "item": "hammersandtables:golden_sword"
   },
   "result": {
-    "item": "hammersandtables:diamond_golden_sword"
+    "id": "hammersandtables:diamond_golden_sword"
   },
   "template": {
     "item": "hammersandtables:diamond_reinforcement_smithing_template"

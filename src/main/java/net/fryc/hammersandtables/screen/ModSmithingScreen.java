@@ -29,28 +29,17 @@ import java.util.Optional;
 @Environment(EnvType.CLIENT)
 public class ModSmithingScreen extends ForgingScreen<ModSmithingScreenHandler> {
 
-    private static final Identifier TEXTURE = new Identifier(HammersAndTables.MOD_ID,"textures/gui/mod_smithing.png");
-    private static final Identifier EMPTY_SLOT_SMITHING_TEMPLATE_ARMOR_TRIM_TEXTURE = new Identifier("item/empty_slot_smithing_template_armor_trim");
-    private static final Identifier EMPTY_SLOT_SMITHING_TEMPLATE_NETHERITE_UPGRADE_TEXTURE = new Identifier("item/empty_slot_smithing_template_netherite_upgrade");
+    private static final Identifier TEXTURE = Identifier.of(HammersAndTables.MOD_ID,"textures/gui/mod_smithing.png");
+    private static final Identifier EMPTY_SLOT_SMITHING_TEMPLATE_ARMOR_TRIM_TEXTURE = Identifier.of("item/empty_slot_smithing_template_armor_trim");
+    private static final Identifier EMPTY_SLOT_SMITHING_TEMPLATE_NETHERITE_UPGRADE_TEXTURE = Identifier.of("item/empty_slot_smithing_template_netherite_upgrade");
     private static final Text MISSING_TEMPLATE_TOOLTIP = Text.translatable("container.upgrade.missing_template_tooltip");
     private static final Text WRONG_SMITHING_TABLE_TOOLTIP = Text.translatable("container.upgrade.wrong_smithing_table_tooltip");
     private static final Text WRONG_ADDITION_COUNT_TOOLTIP = Text.translatable("container.upgrade.wrong_addition_count_tooltip");
     private static final Text WRONG_HAMMER_TOOLTIP = Text.translatable("container.upgrade.wrong_hammer_tooltip");
     private static final List<Identifier> EMPTY_SLOT_TEXTURES;
-    private static final int field_42057 = 44;
-    private static final int field_42058 = 15;
-    private static final int field_42059 = 28;
-    private static final int field_42060 = 21;
-    private static final int field_42061 = 65;
-    private static final int field_42062 = 46;
-    private static final int field_42063 = 115;
-    public static final int field_42068 = 210;
-    public static final int field_42047 = 25;
     private static final Vector3f field_45497;
     public static final Quaternionf ARMOR_STAND_ROTATION;
-    public static final int field_42049 = 25;
-    public static final int field_42050 = 75;
-    public static final int field_42051 = 141;
+
     private final CyclingSlotIcon templateSlotIcon = new CyclingSlotIcon(0);
     private final CyclingSlotIcon baseSlotIcon = new CyclingSlotIcon(1);
     private final CyclingSlotIcon additionsSlotIcon = new CyclingSlotIcon(2);

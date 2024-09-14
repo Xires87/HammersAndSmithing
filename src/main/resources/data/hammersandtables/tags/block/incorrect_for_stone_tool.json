@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "#hammersandtables:incorrect_for_copper_tool",
     "minecraft:iron_block",
     "minecraft:raw_iron_block",
     "minecraft:iron_ore",

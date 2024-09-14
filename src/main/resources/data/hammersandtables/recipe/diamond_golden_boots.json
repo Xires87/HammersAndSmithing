@@ -7,7 +7,7 @@
     "item": "hammersandtables:golden_boots"
   },
   "result": {
-    "item": "hammersandtables:diamond_golden_boots"
+    "id": "hammersandtables:diamond_golden_boots"
   },
   "template": {
     "item": "hammersandtables:diamond_reinforcement_smithing_template"

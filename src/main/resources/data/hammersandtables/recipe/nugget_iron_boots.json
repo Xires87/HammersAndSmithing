@@ -7,7 +7,7 @@
     "item": "minecraft:iron_boots"
   },
   "result": {
-    "item": "hammersandtables:nugget_iron_boots"
+    "id": "hammersandtables:nugget_iron_boots"
   },
   "template": {
     "item": "hammersandtables:golden_upgrade_smithing_template"
