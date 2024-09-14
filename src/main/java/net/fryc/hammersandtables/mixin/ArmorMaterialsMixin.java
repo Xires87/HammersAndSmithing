@@ -1,34 +1,45 @@
 package net.fryc.hammersandtables.mixin;
 
-import net.minecraft.item.ArmorMaterials;
+import net.minecraft.item.*;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.sound.SoundEvent;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
+
+import java.util.EnumMap;
+import java.util.List;
+import java.util.function.Supplier;
 
 @Mixin(ArmorMaterials.class)
 abstract class ArmorMaterialsMixin {
 
-    /* TODO zinjectowac w register zeby chainmail byl lepszy (sprawdzajac po id)
-
-    //sets chainmail boots armor to 2
-    @Inject(method = "getProtection(Lnet/minecraft/item/ArmorItem$Type;)I", at = @At("HEAD"), cancellable = true)
-    private void armor(ArmorItem.Type type, CallbackInfoReturnable<Integer> dur) {
-        ArmorMaterials dys = ((ArmorMaterials)(Object)this);
-        if(type == ArmorItem.Type.BOOTS && dys.equals(ArmorMaterials.CHAIN)) dur.setReturnValue(2);
+    @ModifyVariable(method = "register(Ljava/lang/String;Ljava/util/EnumMap;ILnet/minecraft/registry/entry/RegistryEntry;FFLjava/util/function/Supplier;Ljava/util/List;)Lnet/minecraft/registry/entry/RegistryEntry;", at = @At("HEAD"), ordinal = 0)
+    private static float modifyChainmailToughness(float toughness, String id, EnumMap<ArmorItem.Type, Integer> defense, int enchantability, RegistryEntry<SoundEvent> equipSound, float toughnessv2, float knockbackResistance, Supplier<Ingredient> repairIngredient, List<ArmorMaterial.Layer> layers) {
+        if(id.equals("chainmail")){
+            return toughness + 0.75f;
+        }
+        return toughness;
     }
 
-    //sets chainmal armors toughness to 0.75
-    @Inject(method = "getToughness()F", at = @At("HEAD"), cancellable = true)
-    private void toughness(CallbackInfoReturnable<Float> dur) {
-        ArmorMaterials dys = ((ArmorMaterials)(Object)this);
-        if(dys.equals(ArmorMaterials.CHAIN)) dur.setReturnValue(0.75F);
+    @ModifyVariable(method = "register(Ljava/lang/String;Ljava/util/EnumMap;ILnet/minecraft/registry/entry/RegistryEntry;FFLjava/util/function/Supplier;Ljava/util/List;)Lnet/minecraft/registry/entry/RegistryEntry;", at = @At("HEAD"), ordinal = 0)
+    private static EnumMap<ArmorItem.Type, Integer> modifyChainmailBootsArmor(EnumMap<ArmorItem.Type, Integer> defense, String id, EnumMap<ArmorItem.Type, Integer> defensev2, int enchantability, RegistryEntry<SoundEvent> equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient, List<ArmorMaterial.Layer> layers) {
+        if(id.equals("chainmail")){
+            defense.put(ArmorItem.Type.BOOTS, defense.get(ArmorItem.Type.BOOTS)+1);
+        }
+        return defense;
     }
 
-    //sets repair ingredient of chainmail armor to chain
-    @Inject(method = "getRepairIngredient()Lnet/minecraft/recipe/Ingredient;", at = @At("HEAD"), cancellable = true)
-    private void repair(CallbackInfoReturnable<Ingredient> dur) {
-        ArmorMaterials dys = ((ArmorMaterials)(Object)this);
-        if(dys.equals(ArmorMaterials.CHAIN)) dur.setReturnValue(Ingredient.ofItems(Items.CHAIN));
+    @ModifyVariable(method = "register(Ljava/lang/String;Ljava/util/EnumMap;ILnet/minecraft/registry/entry/RegistryEntry;FFLjava/util/function/Supplier;Ljava/util/List;)Lnet/minecraft/registry/entry/RegistryEntry;", at = @At("HEAD"), ordinal = 0)
+    private static Supplier<Ingredient> modifyChainmailRepairIngredient(Supplier<Ingredient> repairIngredient, String id, EnumMap<ArmorItem.Type, Integer> defense, int enchantability, RegistryEntry<SoundEvent> equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredientv2, List<ArmorMaterial.Layer> layers) {
+        if(id.equals("chainmail")){
+            repairIngredient = () -> {
+                return Ingredient.ofItems(new ItemConvertible[]{Items.CHAIN});
+            };
+            return repairIngredient;
+        }
+        return repairIngredient;
     }
-
-     */
 
 }
