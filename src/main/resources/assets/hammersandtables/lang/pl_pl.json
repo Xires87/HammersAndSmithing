@@ -1,4 +1,15 @@
 {
+  "tag.item.hammersandtables.hammers": "Młoty używane do kowalstwa",
+  "tag.item.hammersandtables.copper_blocks": "Bloki miedzi z których można stworzyć Miedziany Stół Kowalski",
+  "tag.item.hammersandtables.vanilla_golden_items": "Przedmioty wymagające Kuźni Piglinów do stworzenia",
+  "tag.item.hammersandtables.needs_copper_smithing_table": "Przedmioty wymagające Miedzianego Stołu Kowalskiego do stworzenia",
+  "tag.item.hammersandtables.needs_iron_smithing_table": "Przedmioty wymagające Żelaznego Stołu Kowalskiego do stworzenia",
+  "tag.item.hammersandtables.needs_golden_smithing_table": "Przedmioty wymagające Złotego Stołu Kowalskiego do stworzenia",
+  "tag.item.hammersandtables.needs_diamond_smithing_table": "Przedmioty wymagające Diamentowego Stołu Kowalskiego do stworzenia",
+  "tag.item.hammersandtables.powder_snow_walkable_boots": "Buty pozwalające chodzić po sypkim śniegu bez tonięcia w nim",
+  "tag.item.hammersandtables.playing_smithing_sound_on_craft": "Przedmioty odtwarzające dźwięk kucia przy stworzeniu",
+  "tag.item.hammersandtables.playing_smelting_sound_on_craft": "Przedmioty odtwarzające dźwięk przetapiania przy stworzeniu",
+
   "item.hammersandtables.wooden_hammer": "Drewniany Młot",
   "item.hammersandtables.stone_hammer": "Kamienny Młot",
 

@@ -1,4 +1,16 @@
 {
+  "tag.item.hammersandtables.hammers": "Hammers used in smithing",
+  "tag.item.hammersandtables.copper_blocks": "Copper blocks that can be used to craft Copper Smithing Table",
+  "tag.item.hammersandtables.vanilla_golden_items": "Items that need Piglin's Forge nearby to be crafted",
+  "tag.item.hammersandtables.needs_copper_smithing_table": "Items that need Copper Smithing Table nearby to be crafted",
+  "tag.item.hammersandtables.needs_iron_smithing_table": "Items that need Iron Smithing Table nearby to be crafted",
+  "tag.item.hammersandtables.needs_golden_smithing_table": "Items that need Golden Smithing Table nearby to be crafted",
+  "tag.item.hammersandtables.needs_diamond_smithing_table": "Items that need Diamond Smithing Table nearby to be crafted",
+  "tag.item.hammersandtables.powder_snow_walkable_boots": "Boots that let you walk on powder snow without sinking in it",
+  "tag.item.hammersandtables.playing_smithing_sound_on_craft": "Items that play smithing sound when crafted",
+  "tag.item.hammersandtables.playing_smelting_sound_on_craft": "Items that play smelting sound when crafted",
+
+
   "item.hammersandtables.wooden_hammer": "Wooden Hammer",
   "item.hammersandtables.stone_hammer": "Stone Hammer",
 
