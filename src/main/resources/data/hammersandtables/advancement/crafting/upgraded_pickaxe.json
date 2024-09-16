@@ -20,7 +20,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "minecraft:iron_pickaxe"
+      "id": "minecraft:iron_pickaxe"
     },
     "show_toast": true,
     "title": "Almost like Iron Pickaxe"

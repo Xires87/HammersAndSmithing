@@ -20,7 +20,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "hammersandtables:copper_table"
+      "id": "hammersandtables:copper_table"
     },
     "show_toast": true,
     "title": "Copper Workshop"

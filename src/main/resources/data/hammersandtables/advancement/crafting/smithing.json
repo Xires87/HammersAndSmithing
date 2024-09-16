@@ -20,7 +20,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "hammersandtables:nugget_copper_pickaxe"
+      "id": "hammersandtables:nugget_copper_pickaxe"
     },
     "show_toast": true,
     "title": "Smithing"

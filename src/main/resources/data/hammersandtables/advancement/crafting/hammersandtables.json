@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:crafting_table"
+      "id": "minecraft:crafting_table"
     },
     "title": "Hammers and Smithing",
     "description": "Advancements that will guide you through Hammers and Smithing",

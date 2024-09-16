@@ -20,7 +20,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "hammersandtables:diamond_hammer"
+      "id": "hammersandtables:diamond_hammer"
     },
     "show_toast": true,
     "title": "Diamond Hammer"

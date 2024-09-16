@@ -20,7 +20,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "hammersandtables:piglins_forge"
+      "id": "hammersandtables:piglins_forge"
     },
     "show_toast": true,
     "title": "Piglins Workshop"
