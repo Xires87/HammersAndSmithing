@@ -9,6 +9,12 @@
   "tag.item.hammersandtables.powder_snow_walkable_boots": "Buty pozwalające chodzić po sypkim śniegu bez tonięcia w nim",
   "tag.item.hammersandtables.playing_smithing_sound_on_craft": "Przedmioty odtwarzające dźwięk kucia przy stworzeniu",
   "tag.item.hammersandtables.playing_smelting_sound_on_craft": "Przedmioty odtwarzające dźwięk przetapiania przy stworzeniu",
+  "tag.item.hammersandtables.enchantable.breach": "Przedmioty, które można zakląć Przedarciem używając Stołu do Zaklinania",
+  "tag.item.hammersandtables.enchantable.smite": "Przedmioty, które można zakląć Pogromcą Nieumarłych używając Stołu do Zaklinania",
+  "tag.item.hammersandtables.enchantable.bane_of_arthropods": "Przedmioty, które można zakląć Zmorą Stawonogów używając Stołu do Zaklinania",
+  "tag.item.hammersandtables.enchantable.looting": "Przedmioty, które można zakląć Grabieżą używając Stołu do Zaklinania",
+  "tag.item.hammersandtables.enchantable.knockback": "Przedmioty, które można zakląć Odrzutem używając Stołu do Zaklinania",
+  "tag.item.hammersandtables.enchantable.fire_aspect": "Przedmioty, które można zakląć Zaklętym Ogniem używając Stołu do Zaklinania",
 
   "item.hammersandtables.wooden_hammer": "Drewniany Młot",
   "item.hammersandtables.stone_hammer": "Kamienny Młot",

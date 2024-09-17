@@ -22,6 +22,13 @@ public final class ModItemTags {
     public static final TagKey<Item> PLAYING_SMITHING_SOUND_ON_CRAFT = ModItemTags.register("playing_smithing_sound_on_craft");
     public static final TagKey<Item> PLAYING_SMELTING_SOUND_ON_CRAFT = ModItemTags.register("playing_smelting_sound_on_craft");
 
+    public static final TagKey<Item> BREACH_ENCHANTABLE = ModItemTags.register("enchantable/breach");
+    public static final TagKey<Item> SMITE_ENCHANTABLE = ModItemTags.register("enchantable/smite");
+    public static final TagKey<Item> BANE_OF_ARTHROPODS_ENCHANTABLE = ModItemTags.register("enchantable/bane_of_arthropods");
+    public static final TagKey<Item> LOOTING_ENCHANTABLE = ModItemTags.register("enchantable/looting");
+    public static final TagKey<Item> KNOCKBACK_ENCHANTABLE = ModItemTags.register("enchantable/knockback");
+    public static final TagKey<Item> FIRE_ASPECT_ENCHANTABLE = ModItemTags.register("enchantable/fire_aspect");
+
 
 
     private ModItemTags() {
