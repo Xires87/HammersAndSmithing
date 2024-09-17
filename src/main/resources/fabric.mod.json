@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Hammers and Smithing",
-  "description": "Adds hammers and smithing tables which are required for crafting",
+  "description": "Modifies smithing, brings additional requirements for crafting and mining and adds new tools, armors, smithing recipes and more",
   "authors": [
     "Wookash Fryc",
     "sheslong (artist)"

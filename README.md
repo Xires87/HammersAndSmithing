@@ -1,5 +1,5 @@
 # Hammers and Smithing
-This mod changes mining levels, adds hammers, new smithing recipes and smithing tables required for crafting.
+Modifies smithing, brings additional requirements for crafting and mining and adds new tools, armors, smithing recipes and more
 
 ---------------
 
