@@ -3,7 +3,9 @@ Modifies smithing, brings additional requirements for crafting and mining and ad
 
 ---------------
 
-[CurseForge](https://www.curseforge.com/minecraft/mc-mods/hammers-and-smithing)
+### [CurseForge](https://www.curseforge.com/minecraft/mc-mods/hammers-and-smithing)
+### [Modrinth](https://modrinth.com/mod/hammers-and-smithing)
+
 -----------------------------------------------------------------------
 
 # Credits:
