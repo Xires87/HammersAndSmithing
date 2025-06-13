@@ -2,8 +2,6 @@ package net.fryc.hammersandtables.craftingManipulator;
 
 import net.fryc.craftingmanipulator.rules.recipeblocking.StandNearBlockRBR;
 import net.fryc.craftingmanipulator.util.ConditionsHelper;
-import net.fryc.hammersandtables.HammersAndTables;
-import net.fryc.hammersandtables.items.components.BadQualityComponent;
 import net.fryc.hammersandtables.items.components.ModComponents;
 import net.fryc.hammersandtables.util.ComponentHelper;
 import net.minecraft.block.Block;
