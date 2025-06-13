@@ -17,15 +17,15 @@ public class Rules {
     public static final Text VANILLA_GOLD_RULE_TOOLTIP = Text.translatable("text.hammersandtables.vanillaGoldRule");
 
     public static final StandNearBlockWithTooltipRBR COPPER = (StandNearBlockWithTooltipRBR) CMRegistries.registerCraftingRule("hammersandtables_copperRule",
-            new StandNearBlockWithTooltipRBR(ModItemTags.NEEDS_COPPER_SMITHING_TABLE, ModBlockTags.TABLES, COPPER_RULE_TOOLTIP));
+            new StandNearBlockWithTooltipRBR(ModItemTags.NEEDS_COPPER_SMITHING_TABLE, ModBlockTags.TABLES, COPPER_RULE_TOOLTIP, RuleTier.COPPER));
     public static final StandNearBlockWithTooltipRBR IRON = (StandNearBlockWithTooltipRBR) CMRegistries.registerCraftingRule("hammersandtables_ironRule",
-            new StandNearBlockWithTooltipRBR(ModItemTags.NEEDS_IRON_SMITHING_TABLE, ModBlockTags.IRON_TABLES, IRON_RULE_TOOLTIP));
+            new StandNearBlockWithTooltipRBR(ModItemTags.NEEDS_IRON_SMITHING_TABLE, ModBlockTags.IRON_TABLES, IRON_RULE_TOOLTIP, RuleTier.IRON));
     public static final StandNearBlockWithTooltipRBR GOLD = (StandNearBlockWithTooltipRBR) CMRegistries.registerCraftingRule("hammersandtables_goldRule",
-            new StandNearBlockWithTooltipRBR(ModItemTags.NEEDS_GOLDEN_SMITHING_TABLE, ModBlockTags.GOLDEN_TABLES, GOLD_RULE_TOOLTIP));
+            new StandNearBlockWithTooltipRBR(ModItemTags.NEEDS_GOLDEN_SMITHING_TABLE, ModBlockTags.GOLDEN_TABLES, GOLD_RULE_TOOLTIP, RuleTier.GOLD));
     public static final StandNearBlockWithTooltipRBR DIAMOND = (StandNearBlockWithTooltipRBR) CMRegistries.registerCraftingRule("hammersandtables_diamondRule",
-            new StandNearBlockWithTooltipRBR(ModItemTags.NEEDS_DIAMOND_SMITHING_TABLE, ModBlockTags.DIAMOND_TABLES, DIAMOND_RULE_TOOLTIP));
+            new StandNearBlockWithTooltipRBR(ModItemTags.NEEDS_DIAMOND_SMITHING_TABLE, ModBlockTags.DIAMOND_TABLES, DIAMOND_RULE_TOOLTIP, RuleTier.DIAMOND));
     public static final StandNearBlockWithTooltipRBR VANILLA_GOLDEN = (StandNearBlockWithTooltipRBR) CMRegistries.registerCraftingRule("hammersandtables_vanillaGoldRule",
-            new StandNearBlockWithTooltipRBR(ModItemTags.VANILLA_GOLDEN_ITEMS, ModBlockTags.PIGLINS_FORGE, VANILLA_GOLD_RULE_TOOLTIP));
+            new StandNearBlockWithTooltipRBR(ModItemTags.VANILLA_GOLDEN_ITEMS, ModBlockTags.PIGLINS_FORGE, VANILLA_GOLD_RULE_TOOLTIP, RuleTier.NONE));
 
     public static final PlaySoundOCR SMITHING_SOUNDS = (PlaySoundOCR) CMRegistries.registerCraftingRule("hammersandtables_smithingSoundsRule",
             new PlaySoundOCR(ModItemTags.PLAYING_SMITHING_SOUND_ON_CRAFT, SoundEvents.BLOCK_SMITHING_TABLE_USE, 0.65f, 0.9f));

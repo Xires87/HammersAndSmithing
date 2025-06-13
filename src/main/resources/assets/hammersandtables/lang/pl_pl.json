@@ -17,6 +17,13 @@
   "tag.item.hammersandtables.enchantable.fire_aspect": "Przedmioty, które można zakląć Zaklętym Ogniem używając Stołu do Zaklinania",
 
   "item.hammersandtables.master_tools": "Mistrzowskie Narzędzia",
+  "item.hammersandtables.iron_crafting_kit": "Żelazny Zestaw Rzemieślniczy",
+  "item.hammersandtables.golden_crafting_kit": "Złoty Zestaw Rzemieślniczy",
+  "item.hammersandtables.diamond_crafting_kit": "Diamentowy Zestaw Rzemieślniczy",
+
+  "text.hammersandtables.item.craftingKit.for.copper": "Pozwala ci tworzyć miedziane przedmioty bez stołu kowalskiego",
+  "text.hammersandtables.item.craftingKit.for.iron": "Pozwala ci tworzyć żelazne przedmioty bez stołu kowalskiego",
+  "text.hammersandtables.item.craftingKit.for.gold": "Pozwala ci tworzyć złote przedmioty bez stołu kowalskiego",
 
   "item.hammersandtables.wooden_hammer": "Drewniany Młot",
   "item.hammersandtables.stone_hammer": "Kamienny Młot",

@@ -438,6 +438,15 @@ public class ModItems {
     public static final Item MASTER_TOOLS = registerItem("master_tools",
             new MasterToolsItem(new Item.Settings().maxDamage(21)));
 
+    public static final Item IRON_CRAFTING_KIT = registerItem("iron_crafting_kit",
+            new CraftingKitItem(new Item.Settings().maxDamage(21), "copper"));
+
+    public static final Item GOLDEN_CRAFTING_KIT = registerItem("golden_crafting_kit",
+            new CraftingKitItem(new Item.Settings().maxDamage(21), "iron"));
+
+    public static final Item DIAMOND_CRAFTING_KIT = registerItem("diamond_crafting_kit",
+            new CraftingKitItem(new Item.Settings().maxDamage(21), "gold"));
+
     //registers------------------------------------------------------------------------------------------
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(HammersAndTables.MOD_ID, name), item);
@@ -563,6 +572,9 @@ public class ModItems {
 
                     //master tools
                     entries.add(ModItems.MASTER_TOOLS);
+                    entries.add(ModItems.IRON_CRAFTING_KIT);
+                    entries.add(ModItems.GOLDEN_CRAFTING_KIT);
+                    entries.add(ModItems.DIAMOND_CRAFTING_KIT);
 
                 })
                 .build());
