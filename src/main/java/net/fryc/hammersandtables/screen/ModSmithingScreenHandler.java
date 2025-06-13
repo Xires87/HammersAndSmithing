@@ -4,6 +4,7 @@ package net.fryc.hammersandtables.screen;
 import net.fryc.hammersandtables.blocks.ModBlocks;
 import net.fryc.hammersandtables.items.custom.HammerItem;
 import net.fryc.hammersandtables.items.custom.HasHammerTier;
+import net.fryc.hammersandtables.items.custom.MasterToolsItem;
 import net.fryc.hammersandtables.tag.ModBlockTags;
 import net.fryc.hammersandtables.tag.ModItemTags;
 import net.fryc.hammersandtables.util.SmithingTransformAdditionalVariables;
@@ -62,7 +63,7 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
                 return ((SmithingRecipe)recipe.value()).testAddition(stack);
             });
         }).input(3, 44, 27, (stack)->{
-            return stack.isIn(ModItemTags.HAMMERS);
+            return stack.isDamageable() && stack.isIn(ModItemTags.HAMMERS);
         }).output(4, 98, 48).build();
     }
 
@@ -107,16 +108,34 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
     protected void onTakeOutput(PlayerEntity player, ItemStack stack) {
         stack.onCraftByPlayer(player.getWorld(), player, stack.getCount());
         this.output.unlockLastRecipe(player, this.getInputStacks());
+        this.damageHammer();
         this.decrementStack(0);
         this.decrementStack(1);
         for(int i = 0; i < this.additionRemovalCount; i++) {
             this.decrementStack(2);
         }
-        this.getHammer().setDamage(this.getHammer().getDamage() + 4);
-        if(this.getHammer().getDamage() > this.getHammer().getMaxDamage()) this.decrementStack(3);
+        this.removeHammerWhenNecessary();
         this.context.run((world, pos) -> {
             world.syncWorldEvent(1044, pos, 0);
         });
+    }
+
+    private void damageHammer(){
+        ItemStack hammer = this.getHammer();
+        if(hammer.getItem() instanceof MasterToolsItem){
+            if(this.currentRecipe.value() instanceof SmithingTransformAdditionalVariables stav){
+                hammer.setDamage(hammer.getDamage() + stav.getHammerTier() + 1);
+                return;
+            }
+        }
+
+        this.getHammer().setDamage(this.getHammer().getDamage() + 4);
+    }
+
+    private void removeHammerWhenNecessary(){
+        if(this.getHammer().getDamage() > this.getHammer().getMaxDamage()){
+            this.decrementStack(3);
+        }
     }
 
     private List<ItemStack> getInputStacks() {
