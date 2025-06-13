@@ -1,6 +1,6 @@
 package net.fryc.hammersandtables.mixin;
 
-import net.fryc.hammersandtables.util.SmithingTransformAdditionalVariables;
+import net.fryc.hammersandtables.recipes.SmithingTransformAdditionalVariables;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.SmithingRecipe;

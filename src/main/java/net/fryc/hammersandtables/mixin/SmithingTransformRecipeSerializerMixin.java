@@ -3,11 +3,11 @@ package net.fryc.hammersandtables.mixin;
 
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.fryc.hammersandtables.recipes.ModSmithingRecipes;
-import net.fryc.hammersandtables.util.SmithingTransformAdditionalVariables;
-import net.fryc.hammersandtables.util.TransformRecipeNumber;
+import net.fryc.hammersandtables.recipes.SmithingTransformAdditionalVariables;
+import net.fryc.hammersandtables.util.TransformRecipeHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.RegistryByteBuf;
+import net.minecraft.network.codec.PacketCodecs;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.SmithingTransformRecipe;
@@ -15,9 +15,8 @@ import net.minecraft.util.dynamic.Codecs;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
-import java.util.List;
 
 
 @Mixin(SmithingTransformRecipe.Serializer.class)
@@ -39,28 +38,9 @@ abstract class SmithingTransformRecipeSerializerMixin implements RecipeSerialize
             return ((SmithingTransformAdditionalVariables) tableTier).getTableTier();
         }), Codecs.POSITIVE_INT.fieldOf("hammerTier").orElse(0).forGetter((hammerTier) -> {
             return ((SmithingTransformAdditionalVariables) hammerTier).getHammerTier();
-        })).apply(instance, ModSmithingRecipes::createNewSmithingTransformRecipe);
+        })).apply(instance, TransformRecipeHelper::createNewSmithingTransformRecipe);
     });
 
-    /*
-    private static final Codec<SmithingTransformRecipe> CODEC = RecordCodecBuilder.create((instance) -> {
-        return instance.group(Ingredient.ALLOW_EMPTY_CODEC.fieldOf("template").forGetter((recipe) -> {
-            return ((SmithingTransformAdditionalVariables) recipe).getSmithingTemplate();
-        }), Ingredient.ALLOW_EMPTY_CODEC.fieldOf("base").forGetter((recipe) -> {
-            return ((SmithingTransformAdditionalVariables) recipe).getSmithingBase();
-        }), Ingredient.ALLOW_EMPTY_CODEC.fieldOf("addition").forGetter((recipe) -> {
-            return ((SmithingTransformAdditionalVariables) recipe).getSmithingAddition();
-        }), RecipeCodecs.CRAFTING_RESULT.fieldOf("result").forGetter((recipe) -> {
-            return ((SmithingTransformAdditionalVariables) recipe).getSmithingResult();
-        }), Codecs.createStrictOptionalFieldCodec(Codecs.POSITIVE_INT, "additionCount", 1).forGetter((additionCount) ->{
-            return ((SmithingTransformAdditionalVariables) additionCount).getAdditionCount();
-        }), Codecs.createStrictOptionalFieldCodec(Codecs.POSITIVE_INT, "tableTier", 0).forGetter((tableTier) ->{
-            return ((SmithingTransformAdditionalVariables) tableTier).getTableTier();
-        }), Codecs.createStrictOptionalFieldCodec(Codecs.POSITIVE_INT, "hammerTier", 0).forGetter((hammerTier) ->{
-            return ((SmithingTransformAdditionalVariables) hammerTier).getHammerTier();
-        })).apply(instance, ModSmithingRecipes::createNewSmithingTransformRecipe);
-    });
-     */
 
     @Inject(method = "codec()Lcom/mojang/serialization/MapCodec;", at = @At("HEAD"), cancellable = true)
     private void replacingCodec(CallbackInfoReturnable<MapCodec<SmithingTransformRecipe>> ret) {
@@ -76,13 +56,18 @@ abstract class SmithingTransformRecipeSerializerMixin implements RecipeSerialize
         Ingredient ingredient3 = (Ingredient)Ingredient.PACKET_CODEC.decode(buf);
         ItemStack itemStack = (ItemStack)ItemStack.PACKET_CODEC.decode(buf);
 
-        List<Integer> vars = ModSmithingRecipes.smithingAdditionalVariables.get(TransformRecipeNumber.number);
-        TransformRecipeNumber.number++;
-        int additionCount = vars.get(0);
-        int tableTier = vars.get(1);
-        int hammerTier = vars.get(2);
-        ret.setReturnValue(ModSmithingRecipes.createNewSmithingTransformRecipe(ingredient, ingredient2, ingredient3, itemStack, additionCount, tableTier, hammerTier));
+        int additionCount = PacketCodecs.INTEGER.decode(buf);
+        int tableTier = PacketCodecs.INTEGER.decode(buf);
+        int hammerTier = PacketCodecs.INTEGER.decode(buf);
+
+        ret.setReturnValue(TransformRecipeHelper.createNewSmithingTransformRecipe(ingredient, ingredient2, ingredient3, itemStack, additionCount, tableTier, hammerTier));
     }
 
-
+    @Inject(method = "write(Lnet/minecraft/network/RegistryByteBuf;Lnet/minecraft/recipe/SmithingTransformRecipe;)V", at = @At("TAIL"), cancellable = true)
+    private static void readingSmithingRecipesFromByteBuf(RegistryByteBuf buf, SmithingTransformRecipe recipe, CallbackInfo info) {
+        SmithingTransformAdditionalVariables stav = ((SmithingTransformAdditionalVariables) recipe);
+        PacketCodecs.INTEGER.encode(buf, stav.getAdditionCount());
+        PacketCodecs.INTEGER.encode(buf, stav.getTableTier());
+        PacketCodecs.INTEGER.encode(buf, stav.getHammerTier());
+    }
 }

@@ -6,7 +6,6 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fryc.hammersandtables.config.HammersAndTablesConfigClient;
 import net.fryc.hammersandtables.items.ModItems;
-import net.fryc.hammersandtables.network.ModPackets;
 import net.fryc.hammersandtables.screen.ModScreenHandlers;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.util.math.ColorHelper;
@@ -22,7 +21,6 @@ public class HammersAndTablesClient implements ClientModInitializer {
         config = AutoConfig.getConfigHolder(HammersAndTablesConfigClient.class).getConfig();
 
         ModScreenHandlers.registerScreenHandlersClient();
-        ModPackets.registerS2CPackets();
 
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
             if(tintIndex == 0){
