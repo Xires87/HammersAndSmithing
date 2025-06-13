@@ -2,12 +2,11 @@ package net.fryc.hammersandtables.screen;
 
 
 import net.fryc.hammersandtables.blocks.ModBlocks;
-import net.fryc.hammersandtables.items.custom.HammerItem;
 import net.fryc.hammersandtables.items.custom.HasHammerTier;
 import net.fryc.hammersandtables.items.custom.MasterToolsItem;
 import net.fryc.hammersandtables.tag.ModBlockTags;
 import net.fryc.hammersandtables.tag.ModItemTags;
-import net.fryc.hammersandtables.util.SmithingTransformAdditionalVariables;
+import net.fryc.hammersandtables.recipes.SmithingTransformAdditionalVariables;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
