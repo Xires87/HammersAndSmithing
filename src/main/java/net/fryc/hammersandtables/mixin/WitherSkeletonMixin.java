@@ -21,17 +21,6 @@ abstract class WitherSkeletonMixin extends AbstractSkeletonEntity {
         super(entityType, world);
     }
 
-    //old
-    /*
-    @Redirect(method = "initEquipment(Lnet/minecraft/util/math/random/Random;Lnet/minecraft/world/LocalDifficulty;)V",
-            at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/mob/WitherSkeletonEntity;equipStack(Lnet/minecraft/entity/EquipmentSlot;Lnet/minecraft/item/ItemStack;)V"))
-    private void ironSword(WitherSkeletonEntity witherskeletonentity, EquipmentSlot slot, ItemStack stack) {
-        slot = EquipmentSlot.MAINHAND;
-        stack = new ItemStack(Items.IRON_SWORD);
-        witherskeletonentity.equipStack(slot, stack);
-    }
-
-     */
 
     @Inject(method = "initEquipment(Lnet/minecraft/util/math/random/Random;Lnet/minecraft/world/LocalDifficulty;)V",
             at = @At("TAIL"))
