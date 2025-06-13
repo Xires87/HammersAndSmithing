@@ -3,6 +3,7 @@ package net.fryc.hammersandtables.recipes;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.fryc.hammersandtables.items.components.ModComponents;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.RegistryByteBuf;
 import net.minecraft.network.codec.PacketCodec;
@@ -57,6 +58,7 @@ public class SmithingRepairRecipe implements SmithingRecipe, SmithingAdditionalV
         ItemStack itemStack = input.base().copyComponentsToNewStack(input.base().getItem(), input.base().getCount());
         itemStack.applyUnvalidatedChanges(input.base().getComponentChanges());
 
+        itemStack.set(DataComponentTypes.ATTRIBUTE_MODIFIERS, itemStack.get(ModComponents.BAD_QUALITY_COMPONENT));
         itemStack.remove(ModComponents.BAD_QUALITY_COMPONENT);
 
         return itemStack;

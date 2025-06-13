@@ -35,12 +35,29 @@ public class StandNearBlockWithTooltipRBR extends StandNearBlockRBR {
 
     @Override
     public ItemStack modifyCraftedItem(ItemStack craftedItem, ServerPlayerEntity player, ServerWorld world, ScreenHandler handler, RecipeInputInventory craftingInventory, CraftingResultInventory resultInventory) {
+        if(!this.isItemAffectedByThisRule(craftedItem)){
+            return craftedItem;
+        }
+
         if(!ConditionsHelper.hasCorrectItemInInventory(player, null, this.ruleTier.getUnlockItems())){
             craftedItem = super.modifyCraftedItem(craftedItem, player, world, handler, craftingInventory, resultInventory);
         }
 
         if(ComponentHelper.shouldAddBadQualityComponent(craftedItem)){
-            craftedItem.set(ModComponents.BAD_QUALITY_COMPONENT, new BadQualityComponent(-1F, -1F, -1F, -1F, -1F));
+            craftedItem.set(ModComponents.BAD_QUALITY_PLACEHOLDER, true);
+        }
+
+        return craftedItem;
+    }
+
+    @Override
+    public ItemStack modifyItemCrafterIsAboutToCraft(ItemStack craftedItem, ServerWorld world, BlockState crafterState, BlockPos crafterPos) {
+        craftedItem = super.modifyItemCrafterIsAboutToCraft(craftedItem, world, crafterState, crafterPos);
+
+        if(this.isItemAffectedByThisRule(craftedItem)){
+            if(ComponentHelper.shouldAddBadQualityComponent(craftedItem)){
+                craftedItem.set(ModComponents.BAD_QUALITY_PLACEHOLDER, true);
+            }
         }
 
         return craftedItem;

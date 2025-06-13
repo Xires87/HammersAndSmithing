@@ -14,6 +14,9 @@
     "hammersandtables:diamond_golden_hammer",
     "hammersandtables:diamond_hammer",
     "hammersandtables:netherite_hammer",
-    "hammersandtables:master_tools"
+    "hammersandtables:master_tools",
+    "hammersandtables:iron_crafting_kit",
+    "hammersandtables:golden_crafting_kit",
+    "hammersandtables:diamond_crafting_kit"
   ]
 }
