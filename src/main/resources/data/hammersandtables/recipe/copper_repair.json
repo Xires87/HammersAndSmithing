@@ -1,0 +1,10 @@
+{
+  "type": "hammersandtables:smithing_repair",
+  "addition": {
+    "item": "minecraft:copper_ingot"
+  },
+  "hammerTier": 5,
+  "tableTier": 1,
+  "hammerDamage": 1,
+  "additionCount": 1
+}

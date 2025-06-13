@@ -3,10 +3,9 @@ package net.fryc.hammersandtables.screen;
 
 import net.fryc.hammersandtables.blocks.ModBlocks;
 import net.fryc.hammersandtables.items.custom.HasHammerTier;
-import net.fryc.hammersandtables.items.custom.MasterToolsItem;
+import net.fryc.hammersandtables.recipes.SmithingAdditionalVariables;
 import net.fryc.hammersandtables.tag.ModBlockTags;
 import net.fryc.hammersandtables.tag.ModItemTags;
-import net.fryc.hammersandtables.recipes.SmithingTransformAdditionalVariables;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -84,7 +83,7 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
     //checks if correct hammer is used
     protected boolean hasCorrectHammer(){
         if(!this.getSlot(3).hasStack()) return false;
-        if(this.currentRecipe.value() instanceof SmithingTransformAdditionalVariables recipe){
+        if(this.currentRecipe.value() instanceof SmithingAdditionalVariables recipe){
             return ((HasHammerTier) this.getHammer().getItem()).getHammerTier() >= recipe.getHammerTier();
         }
         return true;
@@ -93,7 +92,7 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
     //checks if correct smithing table is used
     protected boolean isCorrectSmithingTable(){
         if(this.tier > 3) return true;
-        if(this.currentRecipe.value() instanceof SmithingTransformAdditionalVariables recipe){
+        if(this.currentRecipe.value() instanceof SmithingAdditionalVariables recipe){
             return this.tier >= recipe.getTableTier();
         }
         return true;
@@ -120,12 +119,9 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
     }
 
     private void damageHammer(){
-        ItemStack hammer = this.getHammer();
-        if(hammer.getItem() instanceof MasterToolsItem){
-            if(this.currentRecipe.value() instanceof SmithingTransformAdditionalVariables stav){
-                hammer.setDamage(hammer.getDamage() + stav.getHammerTier() + 1);
-                return;
-            }
+        if(this.currentRecipe.value() instanceof SmithingAdditionalVariables av){
+            this.getHammer().setDamage(this.getHammer().getDamage() + av.getHammerDamage());
+            return;
         }
 
         this.getHammer().setDamage(this.getHammer().getDamage() + 4);
@@ -160,13 +156,13 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
             ItemStack itemStack = ((SmithingRecipe)recipeEntry.value()).craft(smithingRecipeInput, this.world.getRegistryManager());
             if (itemStack.isItemEnabled(this.world.getEnabledFeatures())) {
                 this.currentRecipe = recipeEntry;
-                if(this.currentRecipe.value() instanceof SmithingTransformAdditionalVariables stav){
+                if(this.currentRecipe.value() instanceof SmithingAdditionalVariables stav){
                     this.additionRemovalCount = stav.getAdditionCount();
                     if(this.additionRemovalCount < 1) this.additionRemovalCount = 1;
                 }
                 else this.additionRemovalCount = 1;
                 this.output.setLastRecipe(recipeEntry);
-                if(this.currentRecipe.value() instanceof SmithingTransformAdditionalVariables stav){
+                if(this.currentRecipe.value() instanceof SmithingAdditionalVariables stav){
                     if(stav.getTableTier() <= this.tier) this.output.setStack(0, itemStack);
                     else this.output.setStack(0, ItemStack.EMPTY);
                 }

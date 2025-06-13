@@ -16,6 +16,7 @@ abstract class SmithingTransformRecipeMixin implements SmithingRecipe, SmithingT
     int hammerTier = 0;
     int tableTier = 0;
     int additionCount = 1;
+    int hammerDamage = 4;
 
     @Shadow @Final Ingredient template;
     @Shadow @Final Ingredient base;
@@ -39,6 +40,11 @@ abstract class SmithingTransformRecipeMixin implements SmithingRecipe, SmithingT
     }
 
     @Override
+    public void setHammerDamage(int damage) {
+        hammerDamage = damage;
+    }
+
+    @Override
     public int getHammerTier() {
         return hammerTier;
     }
@@ -51,6 +57,11 @@ abstract class SmithingTransformRecipeMixin implements SmithingRecipe, SmithingT
     @Override
     public int getAdditionCount() {
         return additionCount;
+    }
+
+    @Override
+    public int getHammerDamage() {
+        return hammerDamage;
     }
 
     @Override

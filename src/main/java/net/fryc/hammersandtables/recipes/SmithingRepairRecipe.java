@@ -2,6 +2,7 @@ package net.fryc.hammersandtables.recipes;
 
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.fryc.hammersandtables.items.components.ModComponents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.RegistryByteBuf;
 import net.minecraft.network.codec.PacketCodec;
@@ -16,30 +17,18 @@ import net.minecraft.world.World;
 
 public class SmithingRepairRecipe implements SmithingRecipe, SmithingAdditionalVariables {
 
-    final Ingredient base;
-    final Ingredient addition;
-    final ItemStack result;
+    private final int hammerTier;
+    private final int tableTier;
+    private final int additionCount;
+    private final int hammerDamage;
+    private final Ingredient addition;
 
-    int hammerTier;
-    int tableTier;
-    int additionCount;
-
-    public SmithingRepairRecipe(Ingredient base, Ingredient addition, ItemStack result, int additionCount, int tableTier, int hammerTier){
-        this.base = base;
+    public SmithingRepairRecipe(Ingredient addition, int hammerTier, int tableTier, int additionCount, int hammerDamage){
         this.addition = addition;
-        this.result = result;
-        this.additionCount = additionCount;
-        this.tableTier = tableTier;
         this.hammerTier = hammerTier;
-    }
-
-    public SmithingRepairRecipe(Ingredient base, Ingredient addition, ItemStack result){
-        this.base = base;
-        this.addition = addition;
-        this.result = result;
-        this.additionCount = 1;
-        this.tableTier = 0;
-        this.hammerTier = 0;
+        this.tableTier = tableTier;
+        this.additionCount = additionCount;
+        this.hammerDamage = hammerDamage;
     }
 
     @Override
@@ -49,7 +38,7 @@ public class SmithingRepairRecipe implements SmithingRecipe, SmithingAdditionalV
 
     @Override
     public boolean testBase(ItemStack stack) {
-        return this.base.test(stack);
+        return stack.getComponents().contains(ModComponents.BAD_QUALITY_COMPONENT);
     }
 
     @Override
@@ -59,20 +48,23 @@ public class SmithingRepairRecipe implements SmithingRecipe, SmithingAdditionalV
 
     @Override
     public boolean matches(SmithingRecipeInput input, World world) {
-        return this.base.test(input.base()) && this.addition.test(input.addition());
+        return this.testTemplate(input.template()) && this.addition.test(input.addition()) &&
+                this.testBase(input.base()) && input.base().getItem().canRepair(input.base(), input.addition());
     }
 
     @Override
     public ItemStack craft(SmithingRecipeInput input, RegistryWrapper.WrapperLookup lookup) {
-        ItemStack itemStack = input.base().copyComponentsToNewStack(this.result.getItem(), this.result.getCount());
-        itemStack.applyUnvalidatedChanges(this.result.getComponentChanges());
-        //itemStack.remove(); TODO tutaj usuwac ten komponent co daje low quality
+        ItemStack itemStack = input.base().copyComponentsToNewStack(input.base().getItem(), input.base().getCount());
+        itemStack.applyUnvalidatedChanges(input.base().getComponentChanges());
+
+        itemStack.remove(ModComponents.BAD_QUALITY_COMPONENT);
+
         return itemStack;
     }
 
     @Override
     public ItemStack getResult(RegistryWrapper.WrapperLookup registriesLookup) {
-        return this.result;
+        return ItemStack.EMPTY;
     }
 
     @Override
@@ -82,17 +74,22 @@ public class SmithingRepairRecipe implements SmithingRecipe, SmithingAdditionalV
 
     @Override
     public void setHammerTier(int tier) {
-        this.hammerTier = tier;
     }
 
     @Override
     public void setTableTier(int tier) {
-        this.tableTier = tier;
     }
 
     @Override
     public void setAdditionCount(int count) {
-        this.additionCount = count;
+    }
+
+    @Override
+    public void setHammerDamage(int damage) {
+    }
+
+    public Ingredient getAddition(){
+        return this.addition;
     }
 
     @Override
@@ -110,14 +107,18 @@ public class SmithingRepairRecipe implements SmithingRecipe, SmithingAdditionalV
         return this.additionCount;
     }
 
+    @Override
+    public int getHammerDamage() {
+        return this.hammerDamage;
+    }
+
     public static class Serializer implements RecipeSerializer<SmithingRepairRecipe> {
         private static final MapCodec<SmithingRepairRecipe> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(
-                Ingredient.ALLOW_EMPTY_CODEC.fieldOf("base").forGetter((recipe) -> recipe.base),
-                Ingredient.ALLOW_EMPTY_CODEC.fieldOf("addition").forGetter((recipe) -> recipe.addition),
-                ItemStack.VALIDATED_CODEC.fieldOf("result").forGetter((recipe) -> recipe.result),
-                Codecs.POSITIVE_INT.fieldOf("additionCount").orElse(1).forGetter((recipe) -> recipe.additionCount),
-                Codecs.POSITIVE_INT.fieldOf("tableTier").orElse(0).forGetter((recipe) -> recipe.tableTier),
-                Codecs.POSITIVE_INT.fieldOf("hammerTier").orElse(0).forGetter((recipe) -> recipe.hammerTier)
+                Ingredient.ALLOW_EMPTY_CODEC.fieldOf("addition").forGetter(SmithingRepairRecipe::getAddition),
+                Codecs.POSITIVE_INT.fieldOf("hammerTier").orElse(5).forGetter(SmithingRepairRecipe::getHammerTier),
+                Codecs.POSITIVE_INT.fieldOf("tableTier").orElse(0).forGetter(SmithingRepairRecipe::getTableTier),
+                Codecs.POSITIVE_INT.fieldOf("additionCount").orElse(1).forGetter(SmithingRepairRecipe::getAdditionCount),
+                Codecs.POSITIVE_INT.fieldOf("hammerDamage").orElse(4).forGetter(SmithingRepairRecipe::getHammerDamage)
         ).apply(instance, SmithingRepairRecipe::new));
         public static final PacketCodec<RegistryByteBuf, SmithingRepairRecipe> PACKET_CODEC = PacketCodec.ofStatic(SmithingRepairRecipe.Serializer::write, SmithingRepairRecipe.Serializer::read);
 
@@ -133,22 +134,21 @@ public class SmithingRepairRecipe implements SmithingRecipe, SmithingAdditionalV
         }
 
         private static SmithingRepairRecipe read(RegistryByteBuf buf) {
-            Ingredient ingredient2 = (Ingredient)Ingredient.PACKET_CODEC.decode(buf);
-            Ingredient ingredient3 = (Ingredient)Ingredient.PACKET_CODEC.decode(buf);
-            ItemStack itemStack = (ItemStack)ItemStack.PACKET_CODEC.decode(buf);
-            int additionCount = PacketCodecs.INTEGER.decode(buf);
-            int tableTier = PacketCodecs.INTEGER.decode(buf);
+            Ingredient ingredient = (Ingredient)Ingredient.PACKET_CODEC.decode(buf);
             int hammerTier = PacketCodecs.INTEGER.decode(buf);
-            return new SmithingRepairRecipe(ingredient2, ingredient3, itemStack, additionCount, tableTier, hammerTier);
+            int tableTier = PacketCodecs.INTEGER.decode(buf);
+            int additionCount = PacketCodecs.INTEGER.decode(buf);
+            int hammerDamage = PacketCodecs.INTEGER.decode(buf);
+
+            return new SmithingRepairRecipe(ingredient, hammerTier, tableTier, additionCount, hammerDamage);
         }
 
         private static void write(RegistryByteBuf buf, SmithingRepairRecipe recipe) {
-            Ingredient.PACKET_CODEC.encode(buf, recipe.base);
             Ingredient.PACKET_CODEC.encode(buf, recipe.addition);
-            ItemStack.PACKET_CODEC.encode(buf, recipe.result);
-            PacketCodecs.INTEGER.encode(buf, recipe.additionCount);
-            PacketCodecs.INTEGER.encode(buf, recipe.tableTier);
             PacketCodecs.INTEGER.encode(buf, recipe.hammerTier);
+            PacketCodecs.INTEGER.encode(buf, recipe.tableTier);
+            PacketCodecs.INTEGER.encode(buf, recipe.additionCount);
+            PacketCodecs.INTEGER.encode(buf, recipe.hammerDamage);
         }
     }
 }

@@ -38,6 +38,8 @@ abstract class SmithingTransformRecipeSerializerMixin implements RecipeSerialize
             return ((SmithingTransformAdditionalVariables) tableTier).getTableTier();
         }), Codecs.POSITIVE_INT.fieldOf("hammerTier").orElse(0).forGetter((hammerTier) -> {
             return ((SmithingTransformAdditionalVariables) hammerTier).getHammerTier();
+        }), Codecs.POSITIVE_INT.fieldOf("hammerDamage").orElse(4).forGetter((hammerTier) -> {
+            return ((SmithingTransformAdditionalVariables) hammerTier).getHammerTier();
         })).apply(instance, TransformRecipeHelper::createNewSmithingTransformRecipe);
     });
 
@@ -59,8 +61,9 @@ abstract class SmithingTransformRecipeSerializerMixin implements RecipeSerialize
         int additionCount = PacketCodecs.INTEGER.decode(buf);
         int tableTier = PacketCodecs.INTEGER.decode(buf);
         int hammerTier = PacketCodecs.INTEGER.decode(buf);
+        int hammerDamage = PacketCodecs.INTEGER.decode(buf);
 
-        ret.setReturnValue(TransformRecipeHelper.createNewSmithingTransformRecipe(ingredient, ingredient2, ingredient3, itemStack, additionCount, tableTier, hammerTier));
+        ret.setReturnValue(TransformRecipeHelper.createNewSmithingTransformRecipe(ingredient, ingredient2, ingredient3, itemStack, additionCount, tableTier, hammerTier, hammerDamage));
     }
 
     @Inject(method = "write(Lnet/minecraft/network/RegistryByteBuf;Lnet/minecraft/recipe/SmithingTransformRecipe;)V", at = @At("TAIL"), cancellable = true)
@@ -69,5 +72,6 @@ abstract class SmithingTransformRecipeSerializerMixin implements RecipeSerialize
         PacketCodecs.INTEGER.encode(buf, stav.getAdditionCount());
         PacketCodecs.INTEGER.encode(buf, stav.getTableTier());
         PacketCodecs.INTEGER.encode(buf, stav.getHammerTier());
+        PacketCodecs.INTEGER.encode(buf, stav.getHammerDamage());
     }
 }

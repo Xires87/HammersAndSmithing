@@ -2,6 +2,10 @@ package net.fryc.hammersandtables.craftingManipulator;
 
 import net.fryc.craftingmanipulator.rules.recipeblocking.StandNearBlockRBR;
 import net.fryc.craftingmanipulator.util.ConditionsHelper;
+import net.fryc.hammersandtables.HammersAndTables;
+import net.fryc.hammersandtables.items.components.BadQualityComponent;
+import net.fryc.hammersandtables.items.components.ModComponents;
+import net.fryc.hammersandtables.util.ComponentHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.inventory.CraftingResultInventory;
@@ -33,6 +37,10 @@ public class StandNearBlockWithTooltipRBR extends StandNearBlockRBR {
     public ItemStack modifyCraftedItem(ItemStack craftedItem, ServerPlayerEntity player, ServerWorld world, ScreenHandler handler, RecipeInputInventory craftingInventory, CraftingResultInventory resultInventory) {
         if(!ConditionsHelper.hasCorrectItemInInventory(player, null, this.ruleTier.getUnlockItems())){
             craftedItem = super.modifyCraftedItem(craftedItem, player, world, handler, craftingInventory, resultInventory);
+        }
+
+        if(ComponentHelper.shouldAddBadQualityComponent(craftedItem)){
+            craftedItem.set(ModComponents.BAD_QUALITY_COMPONENT, new BadQualityComponent(-1F, -1F, -1F, -1F, -1F));
         }
 
         return craftedItem;

@@ -7,6 +7,7 @@ import net.fryc.hammersandtables.blocks.ModBlocks;
 import net.fryc.hammersandtables.config.HammersAndTablesConfig;
 import net.fryc.hammersandtables.craftingManipulator.Rules;
 import net.fryc.hammersandtables.items.ModItems;
+import net.fryc.hammersandtables.items.components.ModComponents;
 import net.fryc.hammersandtables.recipes.ModRecipeSerializers;
 import net.fryc.hammersandtables.screen.ModScreenHandlers;
 import net.fryc.hammersandtables.villagers.ModTradeOffers;
@@ -40,6 +41,8 @@ public class HammersAndTables implements ModInitializer {
 		ModScreenHandlers.registerScreenHandlers();
 
 		ModTradeOffers.registerModTradeOffers();
+
+		ModComponents.registerModComponents();
 
 	}
 }
