@@ -13,7 +13,6 @@
     "MobEntityMixin",
     "SmithingTransformRecipeMixin",
     "SmithingTransformRecipeSerializerMixin",
-    "PlayerManagerMixin",
     "MiningToolItemMixin"
   ],
   "client": [
