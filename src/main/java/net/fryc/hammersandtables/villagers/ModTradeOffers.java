@@ -42,19 +42,19 @@ public class ModTradeOffers extends TradeOffers{
                 2, new Factory[]{new BuyItemFactory(Items.IRON_INGOT, 4, 12, 10), new SellEnchantedToolFactory(ModItems.COPPER_PICKAXE, 2, 3, 10, 0.2F) },
                 3, new Factory[]{new BuyItemFactory(Items.FLINT, 30, 12, 20), new SellEnchantedToolFactory(ModItems.GOLDEN_HOE, 2, 3, 10, 0.2F), new SellEnchantedToolFactory(Items.IRON_SHOVEL, 2, 3, 10, 0.2F)},
                 4, new Factory[]{new BuyItemFactory(Items.GOLD_INGOT, 3, 12, 10), new SellEnchantedToolFactory(Items.IRON_PICKAXE, 6, 3, 15, 0.2F), new SellEnchantedToolFactory(ModItems.GOLDEN_SHOVEL, 3, 3, 15, 0.2F)},
-                5, new Factory[]{new SellEnchantedToolFactory(ModItems.GOLDEN_PICKAXE, 9, 3, 30, 0.2F), new SellItemFactory(new ItemStack(Items.BELL), 36, 1, 12, 5, 0.2F)})));
+                5, new Factory[]{new SellEnchantedToolFactory(ModItems.GOLDEN_PICKAXE, 9, 3, 30, 0.2F), new SellItemFactory(new ItemStack(Items.BELL), 36, 1, 12, 5, 0.2F), new SellItemFactory(new ItemStack(ModItems.MASTER_TOOLS), 32, 1, 1, 30, 0.2F)})));
 
         map.put(VillagerProfession.ARMORER, copyToFastUtilMap(ImmutableMap.of(1, new Factory[]{new BuyItemFactory(Items.COAL, 15, 16, 2), new SellItemFactory(new ItemStack(ModItems.COPPER_LEGGINGS), 5, 1, 12, 1, 0.2F), new SellItemFactory(new ItemStack(ModItems.COPPER_BOOTS), 1, 1, 12, 1, 0.2F), new SellItemFactory(new ItemStack(ModItems.COPPER_HELMET), 2, 1, 12, 1, 0.2F), new SellItemFactory(new ItemStack(ModItems.COPPER_CHESTPLATE), 6, 1, 12, 1, 0.2F)},
                 2, new Factory[]{new BuyItemFactory(Items.IRON_INGOT, 4, 12, 10), new SellItemFactory(new ItemStack(Items.CHAINMAIL_BOOTS), 5, 1, 12, 5, 0.2F), new SellItemFactory(new ItemStack(Items.CHAINMAIL_LEGGINGS), 8, 1, 12, 5, 0.2F), new SellItemFactory(new ItemStack(Items.SHIELD), 5, 1, 12, 10, 0.2F)},
                 3, new Factory[]{new BuyItemFactory(Items.LAVA_BUCKET, 1, 12, 20), new SellItemFactory(new ItemStack(Items.CHAINMAIL_HELMET), 6, 1, 12, 10, 0.2F), new SellItemFactory(new ItemStack(Items.CHAINMAIL_CHESTPLATE), 10, 1, 12, 10, 0.2F)},
                 4, new Factory[]{new BuyItemFactory(Items.GOLD_INGOT, 3, 12, 10), new ProcessItemFactory(Items.IRON_CHESTPLATE, 1, 2, ModItems.INGOT_IRON_CHESTPLATE, 1, 1 ,15, 0.2F)},
-                5, new Factory[]{new SellEnchantedToolFactory(ModItems.GOLDEN_HELMET, 6, 3, 30, 0.2F), new SellEnchantedToolFactory(ModItems.GOLDEN_CHESTPLATE, 12, 3, 30, 0.2F), new SellEnchantedToolFactory(ModItems.GOLDEN_LEGGINGS, 10, 3, 30, 0.2F) , new SellEnchantedToolFactory(ModItems.GOLDEN_BOOTS, 4, 3, 30, 0.2F)})));
+                5, new Factory[]{new SellEnchantedToolFactory(ModItems.GOLDEN_HELMET, 6, 3, 30, 0.2F), new SellEnchantedToolFactory(ModItems.GOLDEN_CHESTPLATE, 12, 3, 30, 0.2F), new SellEnchantedToolFactory(ModItems.GOLDEN_LEGGINGS, 10, 3, 30, 0.2F) , new SellEnchantedToolFactory(ModItems.GOLDEN_BOOTS, 4, 3, 30, 0.2F), new SellItemFactory(new ItemStack(ModItems.MASTER_TOOLS), 32, 1, 1, 30, 0.2F)})));
 
         map.put(VillagerProfession.WEAPONSMITH, copyToFastUtilMap(ImmutableMap.of(1, new Factory[]{new BuyItemFactory(Items.COAL, 15, 16, 2), new SellItemFactory(new ItemStack(ModItems.COPPER_AXE), 2, 1, 12, 1, 0.2F), new SellItemFactory(new ItemStack(ModItems.COPPER_SWORD), 1, 1, 12, 1, 0.2F)},
                 2, new Factory[]{new BuyItemFactory(Items.IRON_INGOT, 4, 12, 10), new BuyItemFactory(Items.FLINT, 24, 12, 20)},
                 3, new Factory[]{new SellEnchantedToolFactory(Items.IRON_AXE, 4, 3, 15), new SellEnchantedToolFactory(Items.IRON_SWORD, 4, 3, 15)},
                 4, new Factory[]{new BuyItemFactory(Items.DIAMOND, 1, 12, 30), new ProcessItemFactory(Items.IRON_SWORD, 1, 2, ModItems.INGOT_IRON_SWORD, 1, 1 ,15, 0.2F)},
-                5, new Factory[]{new SellEnchantedToolFactory(ModItems.GOLDEN_SWORD, 6, 3, 30, 0.2F), new SellEnchantedToolFactory(ModItems.GOLDEN_AXE, 6, 3, 30, 0.2F)})));
+                5, new Factory[]{new SellEnchantedToolFactory(ModItems.GOLDEN_SWORD, 6, 3, 30, 0.2F), new SellEnchantedToolFactory(ModItems.GOLDEN_AXE, 6, 3, 30, 0.2F), new SellItemFactory(new ItemStack(ModItems.MASTER_TOOLS), 32, 1, 1, 30, 0.2F)})));
 
     });
 
