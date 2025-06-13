@@ -9,16 +9,19 @@ import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.ToolMaterials;
 
-public class HammerItem extends SwordItem {
+public class HammerItem extends SwordItem implements HasHammerTier {
 
     public final int tier;
     public HammerItem(ToolMaterial toolMaterial, Settings settings) {
         super(toolMaterial, settings);
-        if(toolMaterial == ModToolMaterials.COPPER || toolMaterial == ModToolMaterials.NUGGET_COPPER) tier = 1;
-        else if(toolMaterial == ModToolMaterials.INGOT_COPPER || toolMaterial == ModToolMaterials.NUGGET_IRON || toolMaterial == ToolMaterials.IRON) tier = 2;
-        else if(toolMaterial == ModToolMaterials.INGOT_IRON || toolMaterial == ModToolMaterials.DIAMOND_GOLD || toolMaterial == ModToolMaterials.GOLD) tier = 3;
-        else if(toolMaterial == ToolMaterials.DIAMOND || toolMaterial == ToolMaterials.NETHERITE) tier = 4;
-        else tier = 0;
+        switch (toolMaterial) {
+            case ModToolMaterials.COPPER, ModToolMaterials.NUGGET_COPPER -> tier = 1;
+            case ModToolMaterials.INGOT_COPPER, ModToolMaterials.NUGGET_IRON, ToolMaterials.IRON -> tier = 2;
+            case ModToolMaterials.INGOT_IRON, ModToolMaterials.DIAMOND_GOLD, ModToolMaterials.GOLD -> tier = 3;
+            case ToolMaterials.DIAMOND -> tier = 4;
+            case ToolMaterials.NETHERITE -> tier = 5;
+            default -> tier = 0;
+        }
     }
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
@@ -26,4 +29,8 @@ public class HammerItem extends SwordItem {
         return super.postHit(stack, target, attacker);
     }
 
+    @Override
+    public int getHammerTier() {
+        return this.tier;
+    }
 }

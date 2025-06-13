@@ -3,6 +3,7 @@ package net.fryc.hammersandtables.screen;
 
 import net.fryc.hammersandtables.blocks.ModBlocks;
 import net.fryc.hammersandtables.items.custom.HammerItem;
+import net.fryc.hammersandtables.items.custom.HasHammerTier;
 import net.fryc.hammersandtables.tag.ModBlockTags;
 import net.fryc.hammersandtables.tag.ModItemTags;
 import net.fryc.hammersandtables.util.SmithingTransformAdditionalVariables;
@@ -84,7 +85,7 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
     protected boolean hasCorrectHammer(){
         if(!this.getSlot(3).hasStack()) return false;
         if(this.currentRecipe.value() instanceof SmithingTransformAdditionalVariables recipe){
-            return ((HammerItem) this.getHammer().getItem()).tier >= recipe.getHammerTier();
+            return ((HasHammerTier) this.getHammer().getItem()).getHammerTier() >= recipe.getHammerTier();
         }
         return true;
     }

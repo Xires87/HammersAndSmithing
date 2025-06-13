@@ -433,6 +433,10 @@ public class ModItems {
     public static final Item IRON_UPGRADE_SMITHING_TEMPLATE = registerItem("iron_upgrade_smithing_template",
             TemplatesHelper.createIronUpgrade());
 
+    //master tools------------------------------------------------------------------------------------
+
+    public static final Item MASTER_TOOLS = registerItem("master_tools",
+            new MasterToolsItem(new Item.Settings().maxDamage(21)));
 
     //registers------------------------------------------------------------------------------------------
     private static Item registerItem(String name, Item item){
@@ -556,6 +560,9 @@ public class ModItems {
                     entries.add(ModItems.DIAMOND_REINFORCEMENT_SMITHING_TEMPLATE);
                     entries.add(ModItems.GOLDEN_UPGRADE_SMITHING_TEMPLATE);
                     entries.add(ModItems.IRON_UPGRADE_SMITHING_TEMPLATE);
+
+                    //master tools
+                    entries.add(ModItems.MASTER_TOOLS);
 
                 })
                 .build());
