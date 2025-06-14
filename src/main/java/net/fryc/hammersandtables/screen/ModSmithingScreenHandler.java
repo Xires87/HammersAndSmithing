@@ -128,7 +128,7 @@ public class ModSmithingScreenHandler extends ForgingScreenHandler {
     }
 
     private void removeHammerWhenNecessary(){
-        if(this.getHammer().getDamage() > this.getHammer().getMaxDamage()){
+        if(this.getHammer().getDamage() >= this.getHammer().getMaxDamage()){
             this.decrementStack(3);
         }
     }
