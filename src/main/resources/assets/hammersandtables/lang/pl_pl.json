@@ -25,6 +25,8 @@
   "text.hammersandtables.item.craftingKit.for.iron": "Pozwala ci tworzyć żelazne przedmioty bez stołu kowalskiego",
   "text.hammersandtables.item.craftingKit.for.gold": "Pozwala ci tworzyć złote przedmioty bez stołu kowalskiego",
 
+  "text.hammersandtables.tooltip.bad_quality_item": "Kiepska jakość",
+
   "item.hammersandtables.wooden_hammer": "Drewniany Młot",
   "item.hammersandtables.stone_hammer": "Kamienny Młot",
 

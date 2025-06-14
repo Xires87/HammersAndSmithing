@@ -25,6 +25,8 @@
   "text.hammersandtables.item.craftingKit.for.iron": "Let's you craft iron items without smithing table",
   "text.hammersandtables.item.craftingKit.for.gold": "Let's you craft golden items without smithing table",
 
+  "text.hammersandtables.tooltip.bad_quality_item": "Low quality",
+
   "item.hammersandtables.wooden_hammer": "Wooden Hammer",
   "item.hammersandtables.stone_hammer": "Stone Hammer",
 
