@@ -52,9 +52,11 @@ public class StandNearBlockWithTooltipRBR extends StandNearBlockRBR {
     public ItemStack modifyItemCrafterIsAboutToCraft(ItemStack craftedItem, ServerWorld world, BlockState crafterState, BlockPos crafterPos) {
         craftedItem = super.modifyItemCrafterIsAboutToCraft(craftedItem, world, crafterState, crafterPos);
 
-        if(this.isItemAffectedByThisRule(craftedItem)){
-            if(ComponentHelper.shouldAddBadQualityComponent(craftedItem)){
-                craftedItem.set(ModComponents.BAD_QUALITY_PLACEHOLDER, true);
+        if(this.ruleTier != RuleTier.NONE){
+            if(this.isItemAffectedByThisRule(craftedItem)){
+                if(ComponentHelper.shouldAddBadQualityComponent(craftedItem)){
+                    craftedItem.set(ModComponents.BAD_QUALITY_PLACEHOLDER, true);
+                }
             }
         }
 

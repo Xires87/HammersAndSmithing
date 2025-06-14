@@ -1,0 +1,10 @@
+{
+  "type": "hammersandtables:smithing_repair",
+  "addition": {
+    "item": "minecraft:diamond"
+  },
+  "hammerTier": 5,
+  "tableTier": 1,
+  "hammerDamage": 4,
+  "additionCount": 1
+}
