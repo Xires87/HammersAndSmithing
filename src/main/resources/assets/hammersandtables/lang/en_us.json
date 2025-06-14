@@ -21,6 +21,7 @@
   "item.hammersandtables.golden_crafting_kit": "Golden Crafting Kit",
   "item.hammersandtables.diamond_crafting_kit": "Diamond Crafting Kit",
 
+  "text.hammersandtables.item.master_tools": "Let's you upgrade low quality items",
   "text.hammersandtables.item.craftingKit.for.copper": "Let's you craft copper items without smithing table",
   "text.hammersandtables.item.craftingKit.for.iron": "Let's you craft iron items without smithing table",
   "text.hammersandtables.item.craftingKit.for.gold": "Let's you craft golden items without smithing table",
