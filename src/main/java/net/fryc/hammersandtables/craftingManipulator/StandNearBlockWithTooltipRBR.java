@@ -41,8 +41,10 @@ public class StandNearBlockWithTooltipRBR extends StandNearBlockRBR {
             craftedItem = super.modifyCraftedItem(craftedItem, player, world, handler, craftingInventory, resultInventory);
         }
 
-        if(ComponentHelper.shouldAddBadQualityComponent(craftedItem)){
-            craftedItem.set(ModComponents.BAD_QUALITY_PLACEHOLDER, true);
+        if(this.ruleTier != RuleTier.NONE){
+            if(ComponentHelper.shouldAddBadQualityComponent(craftedItem)){
+                craftedItem.set(ModComponents.BAD_QUALITY_PLACEHOLDER, true);
+            }
         }
 
         return craftedItem;
