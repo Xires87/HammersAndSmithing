@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Hammers and Smithing",
-  "description": "Modifies smithing, brings additional requirements for crafting and mining and adds new tools, armors, smithing recipes and more",
+  "description": "Modifies smithing, brings additional requirements for crafting and mining, and adds new tools, armors, smithing recipes and more \n \n Translations by: \n 'pl_pl' - Xires87 \n 'ru_ru' - Heimdallr-1",
   "authors": [
     "Wookash Fryc",
     "sheslong (artist)"
