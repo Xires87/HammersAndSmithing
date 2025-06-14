@@ -20,8 +20,6 @@ import java.util.concurrent.ThreadLocalRandom;
 public class ComponentHelper {
 
     private static final Set<RegistryEntry<EntityAttribute>> BAD_QUALITY_ATTRIBUTES = ImmutableSet.of(
-            EntityAttributes.GENERIC_ARMOR,
-            EntityAttributes.GENERIC_ARMOR_TOUGHNESS,
             EntityAttributes.GENERIC_ATTACK_DAMAGE,
             EntityAttributes.GENERIC_ATTACK_SPEED,
             EntityAttributes.PLAYER_MINING_EFFICIENCY
@@ -41,7 +39,7 @@ public class ComponentHelper {
                 stack.set(ModComponents.BAD_QUALITY_COMPONENT, armorItem.getAttributeModifiers());
 
                 double armor = random.nextDouble(0.05 * armorItem.getProtection(), 0.22 * armorItem.getProtection());
-                double toughness = armorItem.getToughness() > 0.0F ? random.nextDouble(0.03 * armorItem.getToughness(), 0.18 * armorItem.getToughness()) : 0;
+                double toughness = armorItem.getToughness() > 0.0F ? random.nextDouble(0.08 * armorItem.getToughness(), 0.22 * armorItem.getToughness()) : 0;
 
                 if(toughness > 0){
                     stack.set(DataComponentTypes.ATTRIBUTE_MODIFIERS, armorItem.getAttributeModifiers().with(
