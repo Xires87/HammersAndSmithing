@@ -3,6 +3,7 @@ package net.fryc.hammersandtables.util;
 import com.google.common.collect.ImmutableSet;
 import net.fryc.hammersandtables.HammersAndTables;
 import net.fryc.hammersandtables.items.components.ModComponents;
+import net.fryc.hammersandtables.tag.ModItemTags;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
@@ -33,6 +34,10 @@ public class ComponentHelper {
     );
 
     public static boolean shouldAddBadQualityComponent(ItemStack stack){
+        if(stack.isIn(ModItemTags.ALWAYS_GOOD_QUALITY)){
+            return false;
+        }
+
         return stack.getComponents().contains(DataComponentTypes.ATTRIBUTE_MODIFIERS) &&
                 (stack.get(DataComponentTypes.ATTRIBUTE_MODIFIERS).modifiers().stream().anyMatch(entry -> {
                     return BAD_QUALITY_ATTRIBUTES.contains(entry.attribute());

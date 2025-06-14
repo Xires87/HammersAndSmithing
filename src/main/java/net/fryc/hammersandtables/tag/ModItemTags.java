@@ -19,6 +19,7 @@ public final class ModItemTags {
     public static final TagKey<Item> POWDER_SNOW_WALKABLE_BOOTS = ModItemTags.register("powder_snow_walkable_boots");
 
     public static final TagKey<Item> SLOWS_DOWN_WHEN_IN_INVENTORY = ModItemTags.register("slows_down_when_in_inventory");
+    public static final TagKey<Item> ALWAYS_GOOD_QUALITY = ModItemTags.register("always_good_quality");
 
     //for sounds
     public static final TagKey<Item> PLAYING_SMITHING_SOUND_ON_CRAFT = ModItemTags.register("playing_smithing_sound_on_craft");
