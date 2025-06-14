@@ -5,10 +5,6 @@
       "bonus_rolls": 0.0,
       "entries": [
         {
-          "type": "minecraft:empty",
-          "weight": 49
-        },
-        {
           "type": "minecraft:item",
           "name": "hammersandtables:master_tools",
           "functions": [
@@ -16,8 +12,13 @@
               "function": "minecraft:set_damage",
               "damage": 0.05
             }
-          ],
-          "weight": 1
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "chance": 0.02,
+          "condition": "minecraft:random_chance"
         }
       ],
       "rolls": 1.0

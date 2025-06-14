@@ -29,8 +29,6 @@ abstract class ItemStackMixin implements ComponentHolder, FabricItemStack {
 
     private int tickDelay = 0;
 
-// TODO TESTY
-    // TODO dodac master toole do loot tabli
 
     @Inject(
             method = "inventoryTick(Lnet/minecraft/world/World;Lnet/minecraft/entity/Entity;IZ)V",
