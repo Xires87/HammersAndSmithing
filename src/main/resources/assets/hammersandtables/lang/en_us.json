@@ -16,6 +16,8 @@
   "tag.item.hammersandtables.enchantable.knockback": "Items that can be enchanted with Knockback using Enchanting Table",
   "tag.item.hammersandtables.enchantable.fire_aspect": "Items that can be enchanted with Fire Aspect using Enchanting Table",
 
+  "tag.item.hammersandtables.slows_down_when_in_inventory": "Slows player down",
+
   "item.hammersandtables.master_tools": "Master Tools",
   "item.hammersandtables.iron_crafting_kit": "Iron Crafting Kit",
   "item.hammersandtables.golden_crafting_kit": "Golden Crafting Kit",
@@ -27,6 +29,7 @@
   "text.hammersandtables.item.craftingKit.for.gold": "Let's you craft golden items without smithing table",
 
   "text.hammersandtables.tooltip.bad_quality_item": "Low quality",
+  "text.hammersandtables.tooltip.heavy_item": "Heavy",
 
   "item.hammersandtables.wooden_hammer": "Wooden Hammer",
   "item.hammersandtables.stone_hammer": "Stone Hammer",

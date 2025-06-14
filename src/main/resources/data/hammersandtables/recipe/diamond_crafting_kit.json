@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:diamond"
+  },
+  "base": {
+    "item": "hammersandtables:master_tools"
+  },
+  "result": {
+    "id": "hammersandtables:diamond_crafting_kit"
+  },
+  "template": {
+    "item": "hammersandtables:diamond_reinforcement_smithing_template"
+  },
+  "tableTier": 4,
+  "hammerTier": 5
+}

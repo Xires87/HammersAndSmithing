@@ -14,7 +14,8 @@
     "SmithingTransformRecipeMixin",
     "SmithingTransformRecipeSerializerMixin",
     "MiningToolItemMixin",
-    "ItemStackMixin"
+    "ItemStackMixin",
+    "LivingEntityMixin"
   ],
   "client": [
     "ItemMixin"

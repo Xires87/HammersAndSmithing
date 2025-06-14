@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:iron_ingot"
+  },
+  "base": {
+    "item": "hammersandtables:master_tools"
+  },
+  "result": {
+    "id": "hammersandtables:iron_crafting_kit"
+  },
+  "template": {
+    "item": "hammersandtables:iron_upgrade_smithing_template"
+  },
+  "tableTier": 1,
+  "hammerTier": 2
+}

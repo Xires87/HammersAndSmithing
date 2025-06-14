@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:gold_ingot"
+  },
+  "base": {
+    "item": "hammersandtables:master_tools"
+  },
+  "result": {
+    "id": "hammersandtables:golden_crafting_kit"
+  },
+  "template": {
+    "item": "hammersandtables:golden_upgrade_smithing_template"
+  },
+  "tableTier": 2,
+  "hammerTier": 3
+}
