@@ -58,8 +58,8 @@ public class SmithingRepairRecipe implements SmithingRecipe, SmithingAdditionalV
         ItemStack itemStack = input.base().copyComponentsToNewStack(input.base().getItem(), input.base().getCount());
         itemStack.applyUnvalidatedChanges(input.base().getComponentChanges());
 
-        itemStack.set(DataComponentTypes.ATTRIBUTE_MODIFIERS, itemStack.get(ModComponents.BAD_QUALITY_COMPONENT));
         itemStack.remove(ModComponents.BAD_QUALITY_COMPONENT);
+        itemStack.set(DataComponentTypes.ATTRIBUTE_MODIFIERS, itemStack.getItem().getDefaultStack().get(DataComponentTypes.ATTRIBUTE_MODIFIERS));
 
         return itemStack;
     }
