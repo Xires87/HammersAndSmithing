@@ -23,6 +23,11 @@ public class HammerItem extends SwordItem implements HasHammerTier {
             default -> tier = 0;
         }
     }
+
+    public HammerItem(ToolMaterial toolMaterial, Settings settings, int tier) {
+        super(toolMaterial, settings);
+        this.tier = tier;
+    }
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 20, 1),attacker);

@@ -57,52 +57,52 @@ public class ModItems {
     public static final Item COPPER_HAMMER = registerItem("copper_hammer" ,
             new HammerItem(ModToolMaterials.COPPER, new Item.Settings().attributeModifiers(
                     AttributesHelper.createHammerAttributeModifiers(ModToolMaterials.COPPER, HAMMER_ATTACK_DAMAGE, HAMMER_ATTACK_SPEED)
-            )));
+            ), 1));
 
     public static final Item NUGGET_COPPER_HAMMER = registerItem("nugget_copper_hammer" ,
             new HammerItem(ModToolMaterials.NUGGET_COPPER, new Item.Settings().attributeModifiers(
                     AttributesHelper.createHammerAttributeModifiers(ModToolMaterials.NUGGET_COPPER, HAMMER_ATTACK_DAMAGE, HAMMER_ATTACK_SPEED)
-            )));
+            ), 1));
 
     public static final Item INGOT_COPPER_HAMMER = registerItem("ingot_copper_hammer" ,
             new HammerItem(ModToolMaterials.INGOT_COPPER, new Item.Settings().attributeModifiers(
                     AttributesHelper.createHammerAttributeModifiers(ModToolMaterials.INGOT_COPPER, HAMMER_ATTACK_DAMAGE, HAMMER_ATTACK_SPEED)
-            )));
+            ), 2));
 
     public static final Item IRON_HAMMER = registerItem("iron_hammer" ,
             new HammerItem(ToolMaterials.IRON, new Item.Settings().attributeModifiers(
                     AttributesHelper.createHammerAttributeModifiers(ToolMaterials.IRON, HAMMER_ATTACK_DAMAGE, HAMMER_ATTACK_SPEED)
-            )));
+            ), 2));
 
     public static final Item NUGGET_IRON_HAMMER = registerItem("nugget_iron_hammer" ,
             new HammerItem(ModToolMaterials.NUGGET_IRON , new Item.Settings().attributeModifiers(
                     AttributesHelper.createHammerAttributeModifiers(ModToolMaterials.NUGGET_IRON, HAMMER_ATTACK_DAMAGE, HAMMER_ATTACK_SPEED)
-            )));
+            ), 2));
 
     public static final Item INGOT_IRON_HAMMER = registerItem("ingot_iron_hammer" ,
             new HammerItem(ModToolMaterials.INGOT_IRON, new Item.Settings().attributeModifiers(
                     AttributesHelper.createHammerAttributeModifiers(ModToolMaterials.INGOT_IRON, HAMMER_ATTACK_DAMAGE, HAMMER_ATTACK_SPEED)
-            )));
+            ), 3));
 
     public static final Item GOLDEN_HAMMER = registerItem("golden_hammer" ,
             new HammerItem(ModToolMaterials.GOLD, new Item.Settings().attributeModifiers(
                     AttributesHelper.createHammerAttributeModifiers(ModToolMaterials.GOLD, HAMMER_ATTACK_DAMAGE, HAMMER_ATTACK_SPEED)
-            )));
+            ), 3));
 
     public static final Item DIAMOND_GOLDEN_HAMMER = registerItem("diamond_golden_hammer" ,
             new HammerItem(ModToolMaterials.DIAMOND_GOLD, new Item.Settings().attributeModifiers(
                     AttributesHelper.createHammerAttributeModifiers(ModToolMaterials.DIAMOND_GOLD, HAMMER_ATTACK_DAMAGE, HAMMER_ATTACK_SPEED)
-            )));
+            ), 3));
 
     public static final Item DIAMOND_HAMMER = registerItem("diamond_hammer" ,
             new HammerItem(ToolMaterials.DIAMOND, new Item.Settings().attributeModifiers(
                     AttributesHelper.createHammerAttributeModifiers(ToolMaterials.DIAMOND, HAMMER_ATTACK_DAMAGE, HAMMER_ATTACK_SPEED)
-            )));
+            ), 4));
 
     public static final Item NETHERITE_HAMMER = registerItem("netherite_hammer" ,
             new HammerItem(ToolMaterials.NETHERITE, new Item.Settings().attributeModifiers(
                     AttributesHelper.createHammerAttributeModifiers(ToolMaterials.NETHERITE, HAMMER_ATTACK_DAMAGE, HAMMER_ATTACK_SPEED)
-            )));
+            ), 5));
     
     //pickaxes ----------------------------------------------------------------------------------
     public static final Item COPPER_PICKAXE = registerItem("copper_pickaxe" ,

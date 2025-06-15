@@ -4,6 +4,7 @@ import net.fryc.hammersandtables.items.components.ModComponents;
 import net.fryc.hammersandtables.recipes.SmithingTransformAdditionalVariables;
 import net.fryc.hammersandtables.util.ComponentHelper;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.SmithingRecipe;
@@ -35,13 +36,17 @@ abstract class SmithingTransformRecipeMixin implements SmithingRecipe, SmithingT
     private void handleBadQualityComponent(SmithingRecipeInput smithingRecipeInput, RegistryWrapper.WrapperLookup wrapperLookup, CallbackInfoReturnable<ItemStack> ret) {
         if(smithingRecipeInput.base().getComponents().contains(ModComponents.BAD_QUALITY_COMPONENT)){
             ItemStack copy = smithingRecipeInput.base().copy();
-            copy.set(DataComponentTypes.ATTRIBUTE_MODIFIERS, copy.getItem().getDefaultStack().get(DataComponentTypes.ATTRIBUTE_MODIFIERS));
+
+            copy.set(ModComponents.BAD_QUALITY_COMPONENT, new AttributeModifiersComponent(
+                    copy.getOrDefault(DataComponentTypes.ATTRIBUTE_MODIFIERS, AttributeModifiersComponent.DEFAULT).modifiers()
+                    , true
+            ));
+
+            copy.set(DataComponentTypes.ATTRIBUTE_MODIFIERS, copy.getItem().getDefaultStack().getOrDefault(DataComponentTypes.ATTRIBUTE_MODIFIERS, AttributeModifiersComponent.DEFAULT));
             ItemStack itemStack = copy.copyComponentsToNewStack(this.result.getItem(), this.result.getCount());
             itemStack.applyUnvalidatedChanges(this.result.getComponentChanges());
 
-            itemStack.set(ModComponents.BAD_QUALITY_COMPONENT, copy.get(ModComponents.BAD_QUALITY_COMPONENT));
             ComponentHelper.applyBadQualityComponentFromExistingComponent(itemStack);
-
 
             ret.setReturnValue(itemStack);
         }
