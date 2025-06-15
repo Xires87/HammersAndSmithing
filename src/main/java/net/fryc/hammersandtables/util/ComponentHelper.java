@@ -14,8 +14,10 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -25,23 +27,62 @@ public class ComponentHelper {
 
     private static final Identifier BAD_QUALITY_ARMOR_ID = Identifier.of(HammersAndTables.MOD_ID, "bad_quality_armor");
     private static final Identifier BAD_QUALITY_TOUGHNESS_ID = Identifier.of(HammersAndTables.MOD_ID, "bad_quality_toughness");
-    private static final Identifier BAD_QUALITY_DAMAGE_ID = Identifier.of(HammersAndTables.MOD_ID, "bad_quality_damage");
-    private static final Identifier BAD_QUALITY_SPEED_ID = Identifier.of(HammersAndTables.MOD_ID, "bad_quality_speed");
-    private static final Identifier BAD_QUALITY_MINING_ID = Identifier.of(HammersAndTables.MOD_ID, "bad_quality_mining");
 
-    private static final Set<RegistryEntry<EntityAttribute>> BAD_QUALITY_ATTRIBUTES = ImmutableSet.of(
+    private static final Identifier BAD_QUALITY_DAMAGE_ID = Identifier.of(HammersAndTables.MOD_ID, "bad_quality_damage");
+    private static final Identifier BAD_QUALITY_ATTACK_SPEED_ID = Identifier.of(HammersAndTables.MOD_ID, "bad_quality_attack_speed");
+    private static final Identifier BAD_QUALITY_ENTITY_INTERACTION_RANGE_ID = Identifier.of(HammersAndTables.MOD_ID, "bad_quality_entity_interaction_range");
+    private static final Identifier BAD_QUALITY_ATTACK_KNOCKBACK_ID = Identifier.of(HammersAndTables.MOD_ID, "bad_quality_attack_knockback");
+
+    private static final Identifier BAD_QUALITY_BLOCK_INTERACTION_RANGE_ID = Identifier.of(HammersAndTables.MOD_ID, "bad_quality_block_interaction_range");
+    private static final Identifier BAD_QUALITY_BLOCK_BREAK_SPEED_ID = Identifier.of(HammersAndTables.MOD_ID, "bad_quality_block_break_speed");
+    private static final Identifier BAD_QUALITY_MINING_EFFICIENCY_ID = Identifier.of(HammersAndTables.MOD_ID, "bad_quality_mining_efficiency");
+
+    private static final Identifier UNSUPPORTED = Identifier.of(HammersAndTables.MOD_ID, "unsupported_bad_quality_attribute");
+
+    private static final Set<RegistryEntry<EntityAttribute>> BAD_QUALITY_WEAPON_ATTRIBUTES = ImmutableSet.of(
+            EntityAttributes.GENERIC_ATTACK_KNOCKBACK,
             EntityAttributes.GENERIC_ATTACK_DAMAGE,
             EntityAttributes.GENERIC_ATTACK_SPEED,
-            EntityAttributes.PLAYER_MINING_EFFICIENCY
+            EntityAttributes.PLAYER_ENTITY_INTERACTION_RANGE
+    );
+
+    private static final Set<RegistryEntry<EntityAttribute>> BAD_QUALITY_MINING_ATTRIBUTES = ImmutableSet.of(
+            EntityAttributes.PLAYER_MINING_EFFICIENCY,
+            EntityAttributes.PLAYER_BLOCK_INTERACTION_RANGE,
+            EntityAttributes.PLAYER_BLOCK_BREAK_SPEED
+    );
+
+    private static final Set<RegistryEntry<EntityAttribute>> BAD_QUALITY_ARMOR_ATTRIBUTES = ImmutableSet.of(
+            EntityAttributes.GENERIC_ARMOR,
+            EntityAttributes.GENERIC_ARMOR_TOUGHNESS
     );
 
     private static final Set<Identifier> BAD_QUALITY_IDENTIFIERS = ImmutableSet.of(
             BAD_QUALITY_ARMOR_ID,
             BAD_QUALITY_TOUGHNESS_ID,
             BAD_QUALITY_DAMAGE_ID,
-            BAD_QUALITY_SPEED_ID,
-            BAD_QUALITY_MINING_ID
+            BAD_QUALITY_ATTACK_SPEED_ID,
+            BAD_QUALITY_ENTITY_INTERACTION_RANGE_ID,
+            BAD_QUALITY_ATTACK_KNOCKBACK_ID,
+            BAD_QUALITY_BLOCK_INTERACTION_RANGE_ID,
+            BAD_QUALITY_BLOCK_BREAK_SPEED_ID,
+            BAD_QUALITY_MINING_EFFICIENCY_ID
     );
+
+    public static Identifier getIdentifierForAttribute(RegistryEntry<EntityAttribute> selectedAttribute){
+        return switch(selectedAttribute.getIdAsString()){
+            case "generic.attack_damage" -> BAD_QUALITY_DAMAGE_ID;
+            case "generic.attack_knockback" -> BAD_QUALITY_ATTACK_KNOCKBACK_ID;
+            case "generic.attack_speed" -> BAD_QUALITY_ATTACK_SPEED_ID;
+            case "player.entity_interaction_range" -> BAD_QUALITY_ENTITY_INTERACTION_RANGE_ID;
+            case "player.block_break_speed" -> BAD_QUALITY_BLOCK_BREAK_SPEED_ID;
+            case "player.block_interaction_range" -> BAD_QUALITY_BLOCK_INTERACTION_RANGE_ID;
+            case "player.mining_efficiency" -> BAD_QUALITY_MINING_EFFICIENCY_ID;
+            case "generic.armor" -> BAD_QUALITY_ARMOR_ID;
+            case "generic.armor_toughness" -> BAD_QUALITY_TOUGHNESS_ID;
+            default -> UNSUPPORTED;
+        };
+    }
 
     public static boolean shouldAddBadQualityComponent(ItemStack stack){
         if(stack.isIn(ModItemTags.ALWAYS_GOOD_QUALITY)){
@@ -50,7 +91,7 @@ public class ComponentHelper {
 
         return stack.getComponents().contains(DataComponentTypes.ATTRIBUTE_MODIFIERS) &&
                 (stack.get(DataComponentTypes.ATTRIBUTE_MODIFIERS).modifiers().stream().anyMatch(entry -> {
-                    return BAD_QUALITY_ATTRIBUTES.contains(entry.attribute());
+                    return BAD_QUALITY_WEAPON_ATTRIBUTES.contains(entry.attribute()) || BAD_QUALITY_MINING_ATTRIBUTES.contains(entry.attribute());
                 }) || stack.getItem() instanceof ArmorItem);
     }
 
@@ -84,25 +125,30 @@ public class ComponentHelper {
                 stack.set(ModComponents.BAD_QUALITY_COMPONENT, new AttributeModifiersComponent(stack.get(DataComponentTypes.ATTRIBUTE_MODIFIERS).modifiers(), true));
             }
             else {
-                double damage = (double) random.nextInt(8, 28) /100;
-                double speed = (double) random.nextInt(6, 28) /100;
-                double miningSpeed = (double) random.nextInt(7, 28) /100;
+                List<RegistryEntry<EntityAttribute>> selectedAttributes = new ArrayList<>();
 
+                if(stack.isIn(ItemTags.PICKAXES) || stack.isIn(ItemTags.SHOVELS) || stack.isIn(ItemTags.HOES) || stack.isIn(ItemTags.AXES)){
+                    selectedAttributes.addAll(BAD_QUALITY_MINING_ATTRIBUTES);
+                }
+                if(stack.isIn(ItemTags.SWORDS) || stack.isIn(ModItemTags.HAMMERS) || stack.isIn(ItemTags.AXES)){
+                    selectedAttributes.addAll(BAD_QUALITY_WEAPON_ATTRIBUTES);
+                }
 
-                stack.set(DataComponentTypes.ATTRIBUTE_MODIFIERS, stack.get(DataComponentTypes.ATTRIBUTE_MODIFIERS).with(
-                        EntityAttributes.GENERIC_ATTACK_DAMAGE,
-                        new EntityAttributeModifier(BAD_QUALITY_DAMAGE_ID, -damage, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                        AttributeModifierSlot.forEquipmentSlot(EquipmentSlot.MAINHAND)
-                ).with(
-                        EntityAttributes.GENERIC_ATTACK_SPEED,
-                        new EntityAttributeModifier(BAD_QUALITY_SPEED_ID, -speed, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                        AttributeModifierSlot.forEquipmentSlot(EquipmentSlot.MAINHAND)
-                ).with(
-                        EntityAttributes.PLAYER_MINING_EFFICIENCY,
-                        new EntityAttributeModifier(BAD_QUALITY_MINING_ID, -miningSpeed, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                        AttributeModifierSlot.forEquipmentSlot(EquipmentSlot.MAINHAND)
-                ));
+                float chance = 1.0F;
+                AttributeModifiersComponent component = stack.getOrDefault(DataComponentTypes.ATTRIBUTE_MODIFIERS, AttributeModifiersComponent.DEFAULT);
+                while(!selectedAttributes.isEmpty() && random.nextFloat() <= chance){
+                    RegistryEntry<EntityAttribute> selectedAttribute = selectedAttributes.get(random.nextInt(0, selectedAttributes.size()));
+                    component = component.with(
+                            selectedAttribute,
+                            new EntityAttributeModifier(getIdentifierForAttribute(selectedAttribute), -(double) random.nextInt(5, 25) /100, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                            AttributeModifierSlot.forEquipmentSlot(EquipmentSlot.MAINHAND)
+                    );
 
+                    selectedAttributes.remove(selectedAttribute);
+                    chance -= 0.29F;
+                }
+
+                stack.set(DataComponentTypes.ATTRIBUTE_MODIFIERS, component);
                 stack.set(ModComponents.BAD_QUALITY_COMPONENT, new AttributeModifiersComponent(stack.get(DataComponentTypes.ATTRIBUTE_MODIFIERS).modifiers(), true));
             }
         }
