@@ -21,7 +21,7 @@ public class ModComponents {
     );
 
     public static final ComponentType<AttributeModifiersComponent> BAD_QUALITY_COMPONENT = register(
-            "attribute_modifiers",
+            "bad_quality",
             (builder) -> {
                 return builder.codec(AttributeModifiersComponent.CODEC).packetCodec(AttributeModifiersComponent.PACKET_CODEC).cache();
             }
