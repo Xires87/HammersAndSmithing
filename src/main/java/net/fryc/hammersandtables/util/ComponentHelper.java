@@ -66,20 +66,21 @@ public class ComponentHelper {
             BAD_QUALITY_ATTACK_KNOCKBACK_ID,
             BAD_QUALITY_BLOCK_INTERACTION_RANGE_ID,
             BAD_QUALITY_BLOCK_BREAK_SPEED_ID,
-            BAD_QUALITY_MINING_EFFICIENCY_ID
+            BAD_QUALITY_MINING_EFFICIENCY_ID,
+            UNSUPPORTED
     );
 
     public static Identifier getIdentifierForAttribute(RegistryEntry<EntityAttribute> selectedAttribute){
         return switch(selectedAttribute.getIdAsString()){
-            case "generic.attack_damage" -> BAD_QUALITY_DAMAGE_ID;
-            case "generic.attack_knockback" -> BAD_QUALITY_ATTACK_KNOCKBACK_ID;
-            case "generic.attack_speed" -> BAD_QUALITY_ATTACK_SPEED_ID;
-            case "player.entity_interaction_range" -> BAD_QUALITY_ENTITY_INTERACTION_RANGE_ID;
-            case "player.block_break_speed" -> BAD_QUALITY_BLOCK_BREAK_SPEED_ID;
-            case "player.block_interaction_range" -> BAD_QUALITY_BLOCK_INTERACTION_RANGE_ID;
-            case "player.mining_efficiency" -> BAD_QUALITY_MINING_EFFICIENCY_ID;
-            case "generic.armor" -> BAD_QUALITY_ARMOR_ID;
-            case "generic.armor_toughness" -> BAD_QUALITY_TOUGHNESS_ID;
+            case "minecraft:generic.attack_damage" -> BAD_QUALITY_DAMAGE_ID;
+            case "minecraft:generic.attack_knockback" -> BAD_QUALITY_ATTACK_KNOCKBACK_ID;
+            case "minecraft:generic.attack_speed" -> BAD_QUALITY_ATTACK_SPEED_ID;
+            case "minecraft:player.entity_interaction_range" -> BAD_QUALITY_ENTITY_INTERACTION_RANGE_ID;
+            case "minecraft:player.block_break_speed" -> BAD_QUALITY_BLOCK_BREAK_SPEED_ID;
+            case "minecraft:player.block_interaction_range" -> BAD_QUALITY_BLOCK_INTERACTION_RANGE_ID;
+            case "minecraft:player.mining_efficiency" -> BAD_QUALITY_MINING_EFFICIENCY_ID;
+            case "minecraft:generic.armor" -> BAD_QUALITY_ARMOR_ID;
+            case "minecraft:generic.armor_toughness" -> BAD_QUALITY_TOUGHNESS_ID;
             default -> UNSUPPORTED;
         };
     }
@@ -138,6 +139,7 @@ public class ComponentHelper {
                 AttributeModifiersComponent component = stack.getOrDefault(DataComponentTypes.ATTRIBUTE_MODIFIERS, AttributeModifiersComponent.DEFAULT);
                 while(!selectedAttributes.isEmpty() && random.nextFloat() <= chance){
                     RegistryEntry<EntityAttribute> selectedAttribute = selectedAttributes.get(random.nextInt(0, selectedAttributes.size()));
+                    HammersAndTables.LOGGER.warn("Wybieram attribute: " + selectedAttribute.getIdAsString());
                     component = component.with(
                             selectedAttribute,
                             new EntityAttributeModifier(getIdentifierForAttribute(selectedAttribute), -(double) random.nextInt(5, 25) /100, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE),
@@ -189,12 +191,14 @@ public class ComponentHelper {
 
             HashSet<Identifier> set = new HashSet<>();
             for(AttributeModifiersComponent.Entry entry : defaultModifiers){
+                HammersAndTables.LOGGER.warn("Wsadzam: " + entry.modifier().id().toString());
                 builder.add(entry.attribute(), entry.modifier(), entry.slot());
                 set.add(entry.modifier().id());
             }
 
             for(AttributeModifiersComponent.Entry entry : stack.get(ModComponents.BAD_QUALITY_COMPONENT).modifiers()){
                 if(!set.contains(entry.modifier().id()) && !BAD_QUALITY_IDENTIFIERS.contains(entry.modifier().id())){
+                    HammersAndTables.LOGGER.warn("Druga tura wsadzam: " + entry.modifier().id().toString());
                     builder.add(entry.attribute(), entry.modifier(), entry.slot());
                 }
             }
