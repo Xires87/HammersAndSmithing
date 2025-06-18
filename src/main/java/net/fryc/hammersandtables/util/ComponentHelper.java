@@ -139,7 +139,6 @@ public class ComponentHelper {
                 AttributeModifiersComponent component = stack.getOrDefault(DataComponentTypes.ATTRIBUTE_MODIFIERS, AttributeModifiersComponent.DEFAULT);
                 while(!selectedAttributes.isEmpty() && random.nextFloat() <= chance){
                     RegistryEntry<EntityAttribute> selectedAttribute = selectedAttributes.get(random.nextInt(0, selectedAttributes.size()));
-                    HammersAndTables.LOGGER.warn("Wybieram attribute: " + selectedAttribute.getIdAsString());
                     component = component.with(
                             selectedAttribute,
                             new EntityAttributeModifier(getIdentifierForAttribute(selectedAttribute), -(double) random.nextInt(5, 25) /100, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE),
@@ -191,14 +190,12 @@ public class ComponentHelper {
 
             HashSet<Identifier> set = new HashSet<>();
             for(AttributeModifiersComponent.Entry entry : defaultModifiers){
-                HammersAndTables.LOGGER.warn("Wsadzam: " + entry.modifier().id().toString());
                 builder.add(entry.attribute(), entry.modifier(), entry.slot());
                 set.add(entry.modifier().id());
             }
 
             for(AttributeModifiersComponent.Entry entry : stack.get(ModComponents.BAD_QUALITY_COMPONENT).modifiers()){
                 if(!set.contains(entry.modifier().id()) && !BAD_QUALITY_IDENTIFIERS.contains(entry.modifier().id())){
-                    HammersAndTables.LOGGER.warn("Druga tura wsadzam: " + entry.modifier().id().toString());
                     builder.add(entry.attribute(), entry.modifier(), entry.slot());
                 }
             }
