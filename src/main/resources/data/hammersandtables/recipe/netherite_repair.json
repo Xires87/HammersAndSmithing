@@ -1,0 +1,10 @@
+{
+  "type": "hammersandtables:smithing_repair",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "hammerTier": 5,
+  "tableTier": 1,
+  "hammerDamage": 5,
+  "additionCount": 1
+}
