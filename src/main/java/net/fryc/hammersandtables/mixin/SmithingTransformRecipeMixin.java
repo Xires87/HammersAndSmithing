@@ -1,22 +1,27 @@
 package net.fryc.hammersandtables.mixin;
 
-import net.fryc.hammersandtables.items.components.ModComponents;
 import net.fryc.hammersandtables.recipes.SmithingTransformAdditionalVariables;
-import net.fryc.hammersandtables.util.ComponentHelper;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.AttributeModifiersComponent;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.SmithingRecipe;
 import net.minecraft.recipe.SmithingTransformRecipe;
 import net.minecraft.recipe.input.SmithingRecipeInput;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 
 @Mixin(SmithingTransformRecipe.class)
@@ -34,22 +39,23 @@ abstract class SmithingTransformRecipeMixin implements SmithingRecipe, SmithingT
 
     @Inject(at = @At("HEAD"), method = "craft(Lnet/minecraft/recipe/input/SmithingRecipeInput;Lnet/minecraft/registry/RegistryWrapper$WrapperLookup;)Lnet/minecraft/item/ItemStack;", cancellable = true)
     private void handleBadQualityComponent(SmithingRecipeInput smithingRecipeInput, RegistryWrapper.WrapperLookup wrapperLookup, CallbackInfoReturnable<ItemStack> ret) {
-        if(smithingRecipeInput.base().getComponents().contains(ModComponents.BAD_QUALITY_COMPONENT)){
-            ItemStack copy = smithingRecipeInput.base().copy();
+        List<AttributeModifiersComponent.Entry> defaultModifiers = this.result.getItem() instanceof ArmorItem armor ?
+                armor.getAttributeModifiers().modifiers() :
+                this.result.getOrDefault(DataComponentTypes.ATTRIBUTE_MODIFIERS, AttributeModifiersComponent.DEFAULT).modifiers();
 
-            copy.set(ModComponents.BAD_QUALITY_COMPONENT, new AttributeModifiersComponent(
-                    copy.getOrDefault(DataComponentTypes.ATTRIBUTE_MODIFIERS, AttributeModifiersComponent.DEFAULT).modifiers()
-                    , true
-            ));
+        ItemStack itemStack = smithingRecipeInput.base().copyComponentsToNewStack(this.result.getItem(), this.result.getCount());
+        itemStack.applyUnvalidatedChanges(this.result.getComponentChanges());
 
-            copy.set(DataComponentTypes.ATTRIBUTE_MODIFIERS, copy.getItem().getDefaultStack().getOrDefault(DataComponentTypes.ATTRIBUTE_MODIFIERS, AttributeModifiersComponent.DEFAULT));
-            ItemStack itemStack = copy.copyComponentsToNewStack(this.result.getItem(), this.result.getCount());
-            itemStack.applyUnvalidatedChanges(this.result.getComponentChanges());
+        ArrayList<AttributeModifiersComponent.Entry> allModifiers = new ArrayList<>(defaultModifiers);
+        Set<Identifier> defaultIdentifiers = new HashSet<>();
+        AttributeModifiersComponent.Builder builder = AttributeModifiersComponent.builder();
 
-            ComponentHelper.applyBadQualityComponentFromExistingComponent(itemStack);
+        defaultModifiers.forEach(entry -> defaultIdentifiers.add(entry.modifier().id()));
+        allModifiers.addAll(itemStack.getOrDefault(DataComponentTypes.ATTRIBUTE_MODIFIERS, AttributeModifiersComponent.DEFAULT).modifiers().stream().filter(entry -> !defaultIdentifiers.contains(entry.modifier().id())).toList());
+        allModifiers.forEach(entry -> builder.add(entry.attribute(), entry.modifier(), entry.slot()));
 
-            ret.setReturnValue(itemStack);
-        }
+        itemStack.set(DataComponentTypes.ATTRIBUTE_MODIFIERS, builder.build());
+        ret.setReturnValue(itemStack);
     }
 
 
