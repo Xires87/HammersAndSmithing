@@ -67,13 +67,13 @@ public class ModComponents {
         });
 
         BadQualityTypes.registerBadQualityType(BAD_QUALITY_MOVEMENT_SPEED_ID, EntityAttributes.GENERIC_MOVEMENT_SPEED, stack -> {
-            return ThreadLocalRandom.current().nextDouble(0.01, 0.05);
+            return (double) ThreadLocalRandom.current().nextInt(1, 5)/100;
         }, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE, stack -> {
             return stack.getItem() instanceof ArmorItem;
         });
 
         BadQualityTypes.registerBadQualityType(BAD_QUALITY_SNEAKING_SPEED_ID, EntityAttributes.PLAYER_SNEAKING_SPEED, stack -> {
-            return ThreadLocalRandom.current().nextDouble(0.04, 0.09);
+            return (double) ThreadLocalRandom.current().nextInt(8, 25)/100;
         }, EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE, stack -> {
             return stack.getItem() instanceof ArmorItem;
         });
